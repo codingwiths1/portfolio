@@ -53,7 +53,7 @@ class YAnimation extends StatelessWidget {
         )
         .slideY(
           begin: offset,
-          duration: Duration(seconds: 1),
+          duration: 500.milliseconds,
           curve: Curves.easeIn,
         );
   }

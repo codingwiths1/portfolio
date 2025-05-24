@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:portfolio/front_end/responsive/responsive.dart';
 
-import 'front_end/screens/home/home.dart';
 import 'front_end/theme/theme.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         darkTheme: ThemeData.dark(),
         themeMode: TTheme.isDark.value ? ThemeMode.dark : ThemeMode.light,
         debugShowCheckedModeBanner: false,
-        home: THome(),
+        home: TResponsive(),
       ),
     );
   }
