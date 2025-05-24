@@ -14,13 +14,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Obx(
-      () => MaterialApp(
-        theme: ThemeData.light(),
-        darkTheme: ThemeData.dark(),
-        themeMode: TTheme.isDark.value ? ThemeMode.dark : ThemeMode.light,
-        debugShowCheckedModeBanner: false,
-        home: TResponsive(),
+    return NotificationListener<OverscrollIndicatorNotification>(
+      onNotification: (notification) {
+        notification.disallowIndicator();
+        return true;
+      },
+      child: Obx(
+        () => MaterialApp(
+          theme: ThemeData.light(),
+          darkTheme: ThemeData.dark(),
+          themeMode: TTheme.isDark.value ? ThemeMode.dark : ThemeMode.light,
+          debugShowCheckedModeBanner: false,
+          home: TResponsive(),
+        ),
       ),
     );
   }

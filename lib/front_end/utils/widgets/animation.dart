@@ -21,11 +21,6 @@ class XAnimation extends StatelessWidget {
         .fadeIn(
           duration: Duration(seconds: 1),
           curve: Curves.easeIn,
-        )
-        .slideX(
-          begin: offset,
-          duration: Duration(seconds: 1),
-          curve: Curves.easeIn,
         );
   }
 }
@@ -49,11 +44,6 @@ class YAnimation extends StatelessWidget {
         )
         .fadeIn(
           duration: Duration(seconds: 1),
-          curve: Curves.easeIn,
-        )
-        .slideY(
-          begin: offset,
-          duration: 500.milliseconds,
           curve: Curves.easeIn,
         );
   }
