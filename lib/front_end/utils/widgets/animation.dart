@@ -51,12 +51,12 @@ class YAnimation extends StatelessWidget {
 
 class FadeInAnimation extends StatelessWidget {
   const FadeInAnimation(
-      {super.key, required this.widget, required this.animationController});
-  final Widget widget;
+      {super.key, required this.child, required this.animationController});
+  final Widget child;
   final AnimationController animationController;
   @override
   Widget build(BuildContext context) {
-    return widget
+    return child
         .animate(controller: animationController)
         .fadeIn(duration: 200.milliseconds);
   }

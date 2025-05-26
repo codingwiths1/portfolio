@@ -13,7 +13,7 @@ class TDesktopPortfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RxList<bool> isHovering = List.generate(100, (_) => false).obs;
+    RxList<bool> isHovering = List.generate(12, (_) => false).obs;
     List<Map> tGridview = [
       {
         "url": "assets/images/1efaaf8832ac02dab09cf6aeb5bf3645.jpg",
