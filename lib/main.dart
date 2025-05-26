@@ -19,14 +19,13 @@ class MyApp extends StatelessWidget {
         notification.disallowIndicator();
         return true;
       },
-      child: Obx(
-        () => MaterialApp(
+      child:  MaterialApp(
           theme: ThemeData.light(),
           darkTheme: ThemeData.dark(),
-          themeMode: TTheme.isDark.value ? ThemeMode.dark : ThemeMode.light,
+          themeMode:  ThemeMode.dark,
           debugShowCheckedModeBanner: false,
           home: TResponsive(),
-        ),
+
       ),
     );
   }

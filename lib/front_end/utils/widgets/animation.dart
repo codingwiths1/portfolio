@@ -48,3 +48,16 @@ class YAnimation extends StatelessWidget {
         );
   }
 }
+
+class ScaleAnimation extends StatelessWidget {
+  const ScaleAnimation(
+      {super.key, required this.widget, required this.animationController});
+  final Widget widget;
+  final AnimationController animationController;
+  @override
+  Widget build(BuildContext context) {
+    return widget
+        .animate(controller: animationController)
+        .scale(duration: 200.milliseconds);
+  }
+}

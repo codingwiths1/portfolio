@@ -7,5 +7,7 @@ class TColors {
   static Color black87 = Colors.black87;
   static Color orange = Colors.orange;
   static Color blue = Color(0xff605bff);
+  static Color black = Colors.black;
+
 
 }

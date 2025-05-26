@@ -320,7 +320,7 @@ class TText extends StatelessWidget {
     this.letterSpacing = 1,
     this.color,
     required this.text,
-    this.fontWeight = FontWeight.w400,  this.fontFamily = "Inter",
+    this.fontWeight = FontWeight.w400,  this.fontFamily = "Inter",  this.fontStyle =  FontStyle.normal,
   });
   final double fontSize;
   final double letterSpacing;
@@ -328,13 +328,14 @@ class TText extends StatelessWidget {
   final String text;
   final FontWeight fontWeight;
   final String fontFamily;
+  final FontStyle fontStyle;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       overflow: TextOverflow.clip,
       text,
-      style: TextStyle(
+      style: TextStyle(fontStyle: fontStyle ,
         fontFamily: fontFamily,
         color: color,
         fontSize: fontSize,
