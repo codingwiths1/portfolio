@@ -14,7 +14,7 @@ class TResponsive extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth >= 1200) {
-        return TDesktopContact();
+        return TDesktopPortfolio();
       } else if (constraints.maxWidth > 700) {
         return TTabletHome();
       } else if (constraints.maxWidth > 300) {

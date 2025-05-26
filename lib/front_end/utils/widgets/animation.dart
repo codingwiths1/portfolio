@@ -49,8 +49,8 @@ class YAnimation extends StatelessWidget {
   }
 }
 
-class ScaleAnimation extends StatelessWidget {
-  const ScaleAnimation(
+class FadeInAnimation extends StatelessWidget {
+  const FadeInAnimation(
       {super.key, required this.widget, required this.animationController});
   final Widget widget;
   final AnimationController animationController;
@@ -58,6 +58,6 @@ class ScaleAnimation extends StatelessWidget {
   Widget build(BuildContext context) {
     return widget
         .animate(controller: animationController)
-        .scale(duration: 200.milliseconds);
+        .fadeIn(duration: 200.milliseconds);
   }
 }
