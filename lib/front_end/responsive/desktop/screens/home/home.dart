@@ -177,8 +177,7 @@ class TNav extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerRight,
         child: Container(
-          padding:
-              EdgeInsets.symmetric(horizontal: 5, vertical: 20),
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
           decoration: BoxDecoration(
             color: TColors.orange,
             borderRadius: BorderRadius.circular(
@@ -321,13 +320,14 @@ class TText extends StatelessWidget {
     this.letterSpacing = 1,
     this.color,
     required this.text,
-    this.fontWeight = FontWeight.w400,
+    this.fontWeight = FontWeight.w400,  this.fontFamily = "Inter",
   });
   final double fontSize;
   final double letterSpacing;
   final Color? color;
   final String text;
   final FontWeight fontWeight;
+  final String fontFamily;
 
   @override
   Widget build(BuildContext context) {
@@ -335,7 +335,7 @@ class TText extends StatelessWidget {
       overflow: TextOverflow.clip,
       text,
       style: TextStyle(
-        fontFamily: "Inter",
+        fontFamily: fontFamily,
         color: color,
         fontSize: fontSize,
         fontWeight: fontWeight,
