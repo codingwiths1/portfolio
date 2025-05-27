@@ -87,6 +87,11 @@ flutter:
     - family: AscendantSerif
       fonts:
         - asset: assets/font/AscendantSerif-PersonalUse-Regular.otf
+
+
+    - family: Betty
+      fonts:
+        - asset: assets/font/Belly Betty.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

@@ -11,6 +11,46 @@ class TDesktopTestimonial extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Map> details = [
+      {
+        "url":
+            "assets/images/662c092880a6d18c31995dfd_66236531e8288ee0657ae7a7_Business%20Professional.webp",
+        "package": "The Elite Experience",
+        "price": "2,500",
+        "brand": "NOIR Audio",
+        "name": "Amélie Rousseau",
+        "review":
+            "Shalom has a rare ability to blend technology and sophistication. Our site feels powerful, cinematic, and beautifully silent — just like our speakers.He gave us exactly the tone and polish we needed to impress high-end distributors and audiophiles alike."
+      },
+      {
+        "url":
+            "assets/images/free-linkedin-ai-profile-picture-generator@3898895-6f9a6031-5f70-4244-90e6-3bce4fdb3f6e.webp",
+        "package": "The Prestige Suite",
+        "price": "5,000",
+        "brand": "Liora Fine Jewellery",
+        "name": "Clara DuBois",
+        "review":
+            "Shalom didn’t just build us a website — he built an experience. Every scroll, every transition, every pixel reflects the elegance of our brand. It exceeded expectations in every sense. Our clients now say the digital experience mirrors the luxury of our pieces."
+      },
+      {
+        "url": "assets/images/MainPhoto_cropped.jpg",
+        "package": "The Legacy",
+        "price": "10,000",
+        "brand": "Voss Private Estates",
+        "name": "Daniel Voss",
+        "review":
+            "From the moment we connected, Shalom understood the essence of luxury. His eye for clean design and mobile responsiveness helped us attract high-net-worth clients with ease, and I’d gladly do it again. It felt like working with a digital architect, not just a developer."
+      },
+      {
+        "url": "assets/images/women-AI-Profile-Picture.jpg",
+        "package": "The Elite Experience",
+        "price": "2,500",
+        "brand": "VELVET84",
+        "name": "Isabella Martens",
+        "review":
+            "I’ve worked with many creatives, but Shalom’s process was refreshingly elevated. I felt the quality, care, and couture-level attention that defines true luxury. Our launch was seamless, and our visuals now feel like an extension of the runway."
+      },
+    ];
     return Scaffold(
       body: TConstraints(
         child: Row(
@@ -154,71 +194,125 @@ class TDesktopTestimonial extends StatelessWidget {
                                   padding: EdgeInsets.all(
                                     15,
                                   ),
-                                  color: Colors.blue,
-                                  height: 220,
                                   child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Container(
-                                        color: Colors.purple,
-                                        child: Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Flexible(
-                                              child: Container(
-                                                height: 150,
-                                                width: 150,
-                                                color: Colors.white,
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Image.asset(
+                                            details[index]["url"],
+                                            fit: BoxFit.cover,
+                                            height: 100,
+                                            width: 100,
+                                          ),
+                                          SizedBox(
+                                            width: 10,
+                                          ),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.start,
+                                              children: [
+                                                TText(
+                                                  text: details[index]["name"],
+                                                  letterSpacing: 2,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 16,
+                                                  fontFamily: "Betty",
+                                                ),
+                                                TText(
+                                                  text: details[index]["brand"],
+                                                  letterSpacing: 2,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 8,
+                                                  fontFamily: "AscendantSerif",
+                                                ),
+                                                SizedBox(
+                                                  height: 10,
+                                                ),
+                                                TText(
+                                                  text: details[index]
+                                                      ["review"],
+                                                  fontSize: 10,
+                                                  fontStyle: FontStyle.italic,
+                                                ),
+                                              ],
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 15,
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Row(
+                                            children: List.generate(
+                                              5,
+                                              (_) => Icon(
+                                                Icons.star_rate,
+                                                color: Colors.orange,
+                                                size: 20,
                                               ),
                                             ),
-                                            Expanded(
-                                              child: Container(
-                                                color: Colors.red,
-                                                child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.max,
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    TText(
-                                                      text: "Clara DuBois",
-                                                      letterSpacing: 2,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 16,
-                                                      fontFamily:
-                                                          "AscendantSerif",
-                                                    ),
-                                                    Text.rich(
-                                                      TextSpan(
-                                                        children: [
-                                                          TextSpan(
-                                                              style: TextStyle(
-                                                                fontSize: 10,
-                                                                fontFamily:
-                                                                    "AscendantSerif",
-                                                                overflow:
-                                                                    TextOverflow
-                                                                        .clip,
-                                                              ),
-                                                              text:
-                                                                  "Shalom didn’t just build us a website — he built an experience. Every scroll, every transition, every pixel reflects the elegance of our brand. The Signature Build exceeded expectations in every sense. Our clients now say the digital experience mirrors the luxury of our pieces."),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  ],
+                                          ),
+                                          Text.rich(
+                                            TextSpan(
+                                              children: [
+                                                TextSpan(
+                                                  text: details[index]
+                                                      ["package"],
+                                                  style: TextStyle(
+                                                    fontStyle: FontStyle.italic,
+                                                    fontFamily:
+                                                        "AscendantSerif",
+                                                    fontWeight: FontWeight.w100,
+                                                    fontSize: 10,
+                                                  ),
                                                 ),
-                                              ),
-                                            )
-                                          ],
-                                        ),
+                                                TextSpan(
+                                                  text: " - ",
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.w100,
+                                                    fontSize: 10,
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: "£",
+                                                  style: TextStyle(
+                                                    fontStyle: FontStyle.italic,
+                                                    fontWeight: FontWeight.w100,
+                                                    fontSize: 10,
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: details[index]["price"],
+                                                  style: TextStyle(
+                                                    fontStyle: FontStyle.italic,
+                                                    fontFamily:
+                                                        "AscendantSerif",
+                                                    fontWeight: FontWeight.w100,
+                                                    fontSize: 10,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ],
                                       ),
                                     ],
                                   ),
                                 );
                               },
+                            ),
+                            SizedBox(
+                              height: 70,
                             ),
                           ],
                         ),
