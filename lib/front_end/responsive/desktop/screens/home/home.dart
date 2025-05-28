@@ -339,7 +339,7 @@ class TText extends StatelessWidget {
       text,
       style: TextStyle(
         fontStyle: fontStyle,
-        fontFamilyFallback: ["Inter"],
+        fontFamilyFallback: ["Picasso"],
         fontFamily: fontFamily,
         color: color,
         fontSize: fontSize,

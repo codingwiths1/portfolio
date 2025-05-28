@@ -143,8 +143,7 @@ class TDesktopPackages extends StatelessWidget {
                             /// Package Cards
                             Row(
                               crossAxisAlignment: CrossAxisAlignment.end,
-                              mainAxisAlignment:
-                                  MainAxisAlignment.spaceAround,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 TPackage(
                                   onTap: () {
@@ -410,553 +409,551 @@ class TDesktopPackages extends StatelessWidget {
                             SizedBox(
                               height: 70,
                             ),
-                            SizedBox(
-                              height: 565,
-                              child: Row(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  TPackage(
-                                    package: 'The Signature Build',
-                                    description:
-                                        'Tailored for industry leaders and timeless brands.',
-                                    price: '5,000',
-                                    details1: Text.rich(
-                                      TextSpan(
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                TPackage(
+                                  onTap: () {
+                                    debugPrint("PACKAGE 4 TAPPED");
+                                  },
+                                  package: 'The Signature Build',
+                                  description:
+                                      'Tailored for industry leaders and timeless brands.',
+                                  price: '5,000',
+                                  details1: Text.rich(
+                                    TextSpan(
+                                      children: [
+                                        TextSpan(
+                                          text: "Custom full",
+                                          style: TextStyle(
+                                            overflow: TextOverflow.clip,
+                                            fontSize: 10,
+                                            fontFamily: "AscendantSerif",
+                                            color: TColors.black,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text: "-",
+                                          style: TextStyle(
+                                            overflow: TextOverflow.clip,
+                                            fontSize: 10,
+                                            fontFamily: "Inter",
+                                            color: TColors.black,
+                                          ),
+                                        ),
+                                        TextSpan(
+                                          text:
+                                              "width visuals, parallax design",
+                                          style: TextStyle(
+                                            overflow: TextOverflow.clip,
+                                            fontSize: 10,
+                                            fontFamily: "AscendantSerif",
+                                            color: TColors.black,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  stack: Row(
+                                    children: [
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 14,
+                                        width: 14,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 14,
+                                        width: 14,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 14,
+                                        width: 14,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 14,
+                                        width: 14,
+                                        color: TColors.orange,
+                                      ),
+                                    ],
+                                  ),
+                                  details2: TText(
+                                    text: "Cinematic interactions",
+                                    fontFamily: "AscendantSerif",
+                                    color: TColors.black,
+                                    fontSize: 10,
+                                  ),
+                                  widget: Column(
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
                                         children: [
-                                          TextSpan(
-                                            text: "Custom full",
-                                            style: TextStyle(
-                                              overflow: TextOverflow.clip,
-                                              fontSize: 10,
-                                              fontFamily: "AscendantSerif",
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 5.0,
+                                            ),
+                                            child: Icon(
+                                              Icons.circle,
+                                              size: 3,
                                               color: TColors.black,
                                             ),
                                           ),
-                                          TextSpan(
-                                            text: "-",
-                                            style: TextStyle(
-                                              overflow: TextOverflow.clip,
-                                              fontSize: 10,
-                                              fontFamily: "Inter",
-                                              color: TColors.black,
-                                            ),
+                                          SizedBox(
+                                            width: 5,
                                           ),
-                                          TextSpan(
-                                            text:
-                                                "width visuals, parallax design",
-                                            style: TextStyle(
-                                              overflow: TextOverflow.clip,
-                                              fontSize: 10,
-                                              fontFamily: "AscendantSerif",
-                                              color: TColors.black,
+                                          Expanded(
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "Fully bespoke UX",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "/",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "UX flow",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                         ],
                                       ),
-                                    ),
-                                    stack: Row(
-                                      children: [
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 14,
-                                          width: 14,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 14,
-                                          width: 14,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 14,
-                                          width: 14,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 14,
-                                          width: 14,
-                                          color: TColors.orange,
-                                        ),
-                                      ],
-                                    ),
-                                    details2: TText(
-                                      text: "Cinematic interactions",
-                                      fontFamily: "AscendantSerif",
-                                      color: TColors.black,
-                                      fontSize: 10,
-                                    ),
-                                    widget: Column(
-                                      children: [
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 5.0,
-                                              ),
-                                              child: Icon(
-                                                Icons.circle,
-                                                size: 3,
-                                                color: TColors.black,
-                                              ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 5.0,
                                             ),
-                                            SizedBox(
-                                              width: 5,
+                                            child: Icon(
+                                              Icons.circle,
+                                              size: 3,
+                                              color: TColors.black,
                                             ),
-                                            Expanded(
-                                              child: Text.rich(
-                                                TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text:
-                                                          "Fully bespoke UX",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Expanded(
+                                            child: TText(
+                                              text:
+                                                  "Luxury copywriting included",
+                                              fontFamily: "AscendantSerif",
+                                              color: TColors.black,
+                                              fontSize: 10,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 5.0,
+                                            ),
+                                            child: Icon(
+                                              Icons.circle,
+                                              size: 3,
+                                              color: TColors.black,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Expanded(
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "Concierge",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
                                                     ),
-                                                    TextSpan(
-                                                      text: "/",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "-",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
                                                     ),
-                                                    TextSpan(
-                                                      text: "UX flow",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "style collaboration",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
                                                     ),
-                                                  ],
-                                                ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 5.0,
-                                              ),
-                                              child: Icon(
-                                                Icons.circle,
-                                                size: 3,
-                                                color: TColors.black,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            Expanded(
-                                              child: TText(
-                                                text:
-                                                    "Luxury copywriting included",
-                                                fontFamily: "AscendantSerif",
-                                                color: TColors.black,
-                                                fontSize: 10,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 5.0,
-                                              ),
-                                              child: Icon(
-                                                Icons.circle,
-                                                size: 3,
-                                                color: TColors.black,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            Expanded(
-                                              child: Text.rich(
-                                                TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: "Concierge",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text: "-",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text:
-                                                          "style collaboration",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    days: '18',
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                  TPackage(
-                                    widget: Column(
-                                      children: [
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 5.0,
-                                              ),
-                                              child: Icon(
-                                                Icons.circle,
-                                                size: 3,
-                                                color: TColors.black,
-                                              ),
+                                  days: '18',
+                                ),
+                                TPackage(
+                                  onTap: () {
+                                    debugPrint("PACKAGE 5 TAPPED");
+                                  },
+                                  widget: Column(
+                                    children: [
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 5.0,
                                             ),
-                                            SizedBox(
-                                              width: 5,
+                                            child: Icon(
+                                              Icons.circle,
+                                              size: 3,
+                                              color: TColors.black,
                                             ),
-                                            Expanded(
-                                              child: Text.rich(
-                                                TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: "E",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Expanded(
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "E",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
                                                     ),
-                                                    TextSpan(
-                                                      text: "-",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "-",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
                                                     ),
-                                                    TextSpan(
-                                                      text:
-                                                          "commerce or booking systems",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
+                                                  ),
+                                                  TextSpan(
+                                                    text:
+                                                        "commerce or booking systems",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
                                                     ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 5.0,
-                                              ),
-                                              child: Icon(
-                                                Icons.circle,
-                                                size: 3,
-                                                color: TColors.black,
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                            SizedBox(
-                                              width: 5,
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 5.0,
                                             ),
-                                            Expanded(
-                                              child: Text.rich(
-                                                TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text:
-                                                          "Advanced strategy, copy, design",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
+                                            child: Icon(
+                                              Icons.circle,
+                                              size: 3,
+                                              color: TColors.black,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Expanded(
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text:
+                                                        "Advanced strategy, copy, design",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
                                                     ),
-                                                    TextSpan(
-                                                      text: " & ",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: " & ",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
                                                     ),
-                                                    TextSpan(
-                                                      text: "launch",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "launch",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
                                                     ),
-                                                  ],
-                                                ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 10,
-                                        ),
-                                        Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 5.0,
-                                              ),
-                                              child: Icon(
-                                                Icons.circle,
-                                                size: 3,
-                                                color: TColors.black,
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      Row(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(
+                                              top: 5.0,
+                                            ),
+                                            child: Icon(
+                                              Icons.circle,
+                                              size: 3,
+                                              color: TColors.black,
+                                            ),
+                                          ),
+                                          SizedBox(
+                                            width: 5,
+                                          ),
+                                          Expanded(
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: "Web",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: " & ",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "mobile apps,",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: " full",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "-",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily: "Inter",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: "stack experience",
+                                                    style: TextStyle(
+                                                      overflow:
+                                                          TextOverflow.clip,
+                                                      fontSize: 10,
+                                                      fontFamily:
+                                                          "AscendantSerif",
+                                                      color: TColors.black,
+                                                    ),
+                                                  ),
+                                                ],
                                               ),
                                             ),
-                                            SizedBox(
-                                              width: 5,
-                                            ),
-                                            Expanded(
-                                              child: Text.rich(
-                                                TextSpan(
-                                                  children: [
-                                                    TextSpan(
-                                                      text: "Web",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text: " & ",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text: "mobile apps,",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text: " full",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text: "-",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily: "Inter",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                    TextSpan(
-                                                      text:
-                                                          "stack experience",
-                                                      style: TextStyle(
-                                                        overflow:
-                                                            TextOverflow.clip,
-                                                        fontSize: 10,
-                                                        fontFamily:
-                                                            "AscendantSerif",
-                                                        color: TColors.black,
-                                                      ),
-                                                    ),
-                                                  ],
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    description:
-                                        'An elite brand ecosystem, completely handcrafted.',
-                                    package: 'The Legacy Edition',
-                                    price: '10,000',
-                                    details1: TText(
-                                      text:
-                                          "Brand film or storytelling visuals",
-                                      fontFamily: "AscendantSerif",
-                                      color: TColors.black,
-                                      fontSize: 10,
-                                    ),
-                                    stack: Row(
-                                      children: [
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 12,
-                                          width: 12,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 12,
-                                          width: 12,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 12,
-                                          width: 12,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 12,
-                                          width: 12,
-                                          color: TColors.orange,
-                                        ),
-                                        SizedBox(
-                                          width: 5,
-                                        ),
-                                        Image.asset(
-                                          "assets/icons/crown.png",
-                                          fit: BoxFit.contain,
-                                          height: 12,
-                                          width: 12,
-                                          color: TColors.orange,
-                                        ),
-                                      ],
-                                    ),
-                                    details2: TText(
-                                      text: "Ongoing digital care concierge",
-                                      fontFamily: "AscendantSerif",
-                                      color: TColors.black,
-                                      fontSize: 10,
-                                    ),
-                                    days: '25',
+                                          ),
+                                        ],
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
+                                  description:
+                                      'An elite brand ecosystem, completely handcrafted.',
+                                  package: 'The Legacy Edition',
+                                  price: '10,000',
+                                  details1: TText(
+                                    text: "Brand film or storytelling visuals",
+                                    fontFamily: "AscendantSerif",
+                                    color: TColors.black,
+                                    fontSize: 10,
+                                  ),
+                                  stack: Row(
+                                    children: [
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 12,
+                                        width: 12,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 12,
+                                        width: 12,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 12,
+                                        width: 12,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 12,
+                                        width: 12,
+                                        color: TColors.orange,
+                                      ),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Image.asset(
+                                        "assets/icons/crown.png",
+                                        fit: BoxFit.contain,
+                                        height: 12,
+                                        width: 12,
+                                        color: TColors.orange,
+                                      ),
+                                    ],
+                                  ),
+                                  details2: TText(
+                                    text: "Ongoing digital care concierge",
+                                    fontFamily: "AscendantSerif",
+                                    color: TColors.black,
+                                    fontSize: 10,
+                                  ),
+                                  days: '25',
+                                ),
+                              ],
                             ),
                           ],
                         ),
@@ -1003,7 +1000,6 @@ class TPackage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           width: 150,
@@ -1089,9 +1085,6 @@ class TPackage extends StatelessWidget {
             ],
           ),
         ),
-        // SizedBox(
-        //   height: 10,
-        // ),
         Container(
           color: TColors.white,
           width: 150,

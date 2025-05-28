@@ -25,7 +25,7 @@ class TDesktopTestimonial extends StatelessWidget {
       {
         "url":
             "assets/images/free-linkedin-ai-profile-picture-generator@3898895-6f9a6031-5f70-4244-90e6-3bce4fdb3f6e.webp",
-        "package": "The Prestige Suite",
+        "package": "The Signature Build",
         "price": "5,000",
         "brand": "Liora Fine Jewellery",
         "name": "Clara DuBois",
@@ -34,7 +34,7 @@ class TDesktopTestimonial extends StatelessWidget {
       },
       {
         "url": "assets/images/MainPhoto_cropped.jpg",
-        "package": "The Legacy",
+        "package": "The Legacy Edition",
         "price": "10,000",
         "brand": "Voss Private Estates",
         "name": "Daniel Voss",
@@ -161,7 +161,7 @@ class TDesktopTestimonial extends StatelessWidget {
                               height: 30,
                             ),
                             TText(
-                              text: "What Visionaries Say About Benjamin",
+                              text: "What Visionaries Say About Shalom",
                               letterSpacing: 2,
                               fontWeight: FontWeight.bold,
                               fontSize: 20,

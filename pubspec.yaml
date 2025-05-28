@@ -92,6 +92,9 @@ flutter:
     - family: Betty
       fonts:
         - asset: assets/font/Belly Betty.ttf
+    - family: Picasso
+      fonts:
+        - asset: assets/font/Aglio Picasso.otf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

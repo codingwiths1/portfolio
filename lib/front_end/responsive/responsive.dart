@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/contact/contact.dart';
+import 'package:portfolio/front_end/responsive/desktop/screens/packages/packages.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/portfolio/portfolio.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/testimonial/testimonial.dart';
 import 'package:portfolio/front_end/responsive/mobile/screens/home/home.dart';
@@ -15,7 +16,7 @@ class TResponsive extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth >= 1200) {
-        return TDesktopTestimonial();
+        return TDesktopPackages();
       } else if (constraints.maxWidth > 700) {
         return TTabletHome();
       } else if (constraints.maxWidth > 300) {
