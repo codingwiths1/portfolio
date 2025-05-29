@@ -1,12 +1,28 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/about/t_about.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/home/home.dart';
 import 'package:portfolio/front_end/utils/helper/color.dart';
 import 'package:portfolio/front_end/utils/widgets/constraints.dart';
 
-class TDesktopAbout extends StatelessWidget {
+class TDesktopAbout extends StatefulWidget {
   const TDesktopAbout({super.key});
+
+  @override
+  State<TDesktopAbout> createState() => _TDesktopAboutState();
+}
+
+class _TDesktopAboutState extends State<TDesktopAbout> {
+  @override
+  void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) => log(
+        GoRouterState.of(context).uri.toString(),
+        name: "GOROUTER LOCATION"));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -1,38 +1,18 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/utils/helper/color.dart';
 
+import '../../../../route/route.dart';
 import '../../../../theme/theme.dart';
 import '../../../../utils/widgets/constraints.dart';
 
-class TDesktopHome extends StatefulWidget {
+class TDesktopHome extends StatelessWidget {
   const TDesktopHome({super.key});
 
-  @override
-  State<TDesktopHome> createState() => _TDesktopHomeState();
-}
-
-class _TDesktopHomeState extends State<TDesktopHome>
-    with TickerProviderStateMixin {
-  late List<AnimationController> controllers;
-  @override
-  void initState() {
-    controllers = List.generate(
-        4,
-        (_) => AnimationController(
-              vsync: this,
-            ));
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    for (var controller in controllers) {
-      controller.dispose();
-    }
-    super.dispose();
-  }
-
+  // late List<AnimationController> controllers;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,7 +99,10 @@ class _TDesktopHomeState extends State<TDesktopHome>
                         height: 20,
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          context.go(TRoutes.about);
+                          TRoutes.location(context, TRoutes.about);
+                        },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.all(
                             10,
@@ -188,85 +171,89 @@ class TNav extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/home.png",
-                    color: TColors.white,
-                    height: 20,
-                    width: 20,
-                  ),
+                TIcon(
+                  url: "assets/icons/home.png",
+                  route: TRoutes.home,
+                  index: 0,
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/user.png",
-                    height: 20,
-                    width: 20,
-                  ),
+                TIcon(
+                  url: "assets/icons/user.png",
+                  route: TRoutes.about,
+                  index: 1,
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/suitcase.png",
-                    height: 20,
-                    width: 20,
-                  ),
+                TIcon(
+                  url: "assets/icons/suitcase.png",
+                  route: TRoutes.portfolio,
+                  index: 2,
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/pie-chart.png",
-                    height: 20,
-                    width: 20,
-                  ),
+                TIcon(
+                  url: "assets/icons/rating.png",
+                  route: TRoutes.testimonials,
+                  index: 3,
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/rating.png",
-                    height: 20,
-                    width: 20,
-                  ),
+                TIcon(
+                  url: "assets/icons/vip.png",
+                  route: TRoutes.packages,
+                  index: 4,
                 ),
                 SizedBox(
                   height: 20,
                 ),
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/vip.png",
-                    height: 20,
-                    width: 20,
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Image.asset(
-                    "assets/icons/paper-plane.png",
-                    height: 20,
-                    width: 20,
-                  ),
+                TIcon(
+                  url: "assets/icons/paper-plane.png",
+                  route: TRoutes.contact,
+                  index: 5,
                 ),
               ],
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class TIcon extends StatelessWidget {
+  const TIcon({
+    super.key,
+    required this.url,
+    required this.route,
+    required this.index,
+  });
+  final String url;
+  final String route;
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        // ctl.changeCurrentIndex(index);
+        // log("${ctl.currentIndex.value}");
+        context.go(route);
+        // ctl.changeNavColor(
+        //   GoRouterState.of(context).uri.toString(),
+        // );
+      },
+      child: Image.asset(
+        url,
+        color: GoRouterState.of(context).uri.toString() == route
+            ? TColors.white
+            : TColors.black,
+        height: 20,
+        width: 20,
       ),
     );
   }

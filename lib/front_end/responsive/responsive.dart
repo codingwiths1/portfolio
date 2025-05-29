@@ -10,13 +10,13 @@ import 'desktop/screens/about/about.dart';
 import 'desktop/screens/home/home.dart';
 
 class TResponsive extends StatelessWidget {
-  const TResponsive({super.key});
-
+  const TResponsive({super.key, required this.desktop});
+  final Widget desktop;
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       if (constraints.maxWidth >= 1200) {
-        return TDesktopPackages();
+        return desktop;
       } else if (constraints.maxWidth > 700) {
         return TTabletHome();
       } else if (constraints.maxWidth > 300) {
