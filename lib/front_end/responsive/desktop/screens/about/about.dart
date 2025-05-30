@@ -456,7 +456,6 @@ class _TLeftNavTextState extends State<TLeftNavText>
     with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
-    log("NavBar");
     super.build(context);
     return Drawer(
       backgroundColor: TColors.orange,
@@ -530,7 +529,7 @@ class _TLeftNavTextState extends State<TLeftNavText>
   bool get wantKeepAlive => true;
 }
 
-class TNavText extends StatelessWidget {
+class TNavText extends StatefulWidget {
   const TNavText({
     super.key,
     required this.text,
@@ -538,11 +537,19 @@ class TNavText extends StatelessWidget {
   });
   final String text;
   final String route;
+
+  @override
+  State<TNavText> createState() => _TNavTextState();
+}
+
+class _TNavTextState extends State<TNavText>
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return InkWell(
       onTap: () {
-        context.go(route);
+        context.go(widget.route);
       },
       child: Padding(
         padding: const EdgeInsets.only(
@@ -550,10 +557,10 @@ class TNavText extends StatelessWidget {
         ),
         child: TText(
           fontSize: 12,
-          text: text,
+          text: widget.text,
           letterSpacing: 4,
           fontFamily: "Picasso",
-          color: GoRouterState.of(context).uri.toString() == route
+          color: GoRouterState.of(context).uri.toString() == widget.route
               ? TColors.white
               : TColors.black,
           fontWeight: FontWeight.bold,
@@ -561,6 +568,10 @@ class TNavText extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 }
 
 class TLittleDots extends StatelessWidget {

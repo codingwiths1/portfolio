@@ -1,13 +1,23 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:go_router/go_router.dart';
-import 'package:portfolio/front_end/responsive/responsive.dart';
-import 'package:portfolio/front_end/route/route.dart';
+import 'dart:ui_web';
 
-import 'front_end/theme/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:portfolio/firebase_options.dart';
+import 'package:portfolio/front_end/route/route.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
-  /// CONTROLLERS
+  /// INITIALIZE WIDGETS
+  WidgetsFlutterBinding.ensureInitialized();
+
+  /// FIREBASE
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  /// URL STRATEGY
+  setPathUrlStrategy();
+
+  /// RUN APP
   runApp(const MyApp());
 }
 

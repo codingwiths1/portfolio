@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,7 +6,6 @@ import 'package:portfolio/front_end/utils/helper/color.dart';
 
 import '../../../../route/route.dart';
 import '../../../../theme/theme.dart';
-import '../../../../utils/widgets/constraints.dart';
 import '../../../desktop/screens/home/home.dart';
 
 class TMobileHome extends StatelessWidget {
