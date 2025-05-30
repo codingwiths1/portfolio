@@ -12,11 +12,13 @@ import '../responsive/mobile/screens/about/about.dart';
 import '../responsive/mobile/screens/contact/contact.dart';
 import '../responsive/mobile/screens/home/home.dart';
 import '../responsive/mobile/screens/packages/packages.dart';
+import '../responsive/mobile/screens/portfolio/portfolio.dart';
 import '../responsive/responsive.dart';
 import '../responsive/tablet/screens/about/about.dart';
 import '../responsive/tablet/screens/contact/contact.dart';
 import '../responsive/tablet/screens/home/home.dart';
 import '../responsive/tablet/screens/packages/packages.dart';
+import '../responsive/tablet/screens/portfolio/portfolio.dart';
 
 class TRoutes {
   static String home = "/welcome";
@@ -141,8 +143,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopPortfolio(),
-          tablet: SizedBox(),
-          mobile: SizedBox(),
+          tablet: TTabletPortfolio(),
+          mobile: TMobilePortfolio(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
