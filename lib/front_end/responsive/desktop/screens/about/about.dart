@@ -8,22 +8,12 @@ import 'package:portfolio/front_end/responsive/desktop/screens/home/home.dart';
 import 'package:portfolio/front_end/utils/helper/color.dart';
 import 'package:portfolio/front_end/utils/widgets/constraints.dart';
 
-class TDesktopAbout extends StatefulWidget {
+import '../../../../route/route.dart';
+
+class TDesktopAbout extends StatelessWidget {
   const TDesktopAbout({super.key});
 
   @override
-  State<TDesktopAbout> createState() => _TDesktopAboutState();
-}
-
-class _TDesktopAboutState extends State<TDesktopAbout> {
-  @override
-  void initState() {
-    WidgetsBinding.instance.addPostFrameCallback((_) => log(
-        GoRouterState.of(context).uri.toString(),
-        name: "GOROUTER LOCATION"));
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,70 +21,7 @@ class _TDesktopAboutState extends State<TDesktopAbout> {
         child: Row(
           children: [
             Expanded(
-              child: Drawer(
-                backgroundColor: TColors.orange,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
-                        fit: BoxFit.cover,
-                        width: double.maxFinite,
-                        height: 370,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 60,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.circle,
-                              color: TColors.white,
-                              size: 8,
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'HOME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'ABOUT ME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'RESUME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'PORTFOLIO',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'TESTIMONIALS',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'OFFERS',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'CONTACT',
-                            ),
-                            TLittleDots(),
-                            Icon(
-                              Icons.circle,
-                              color: TColors.white,
-                              size: 8,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              child: TLeftNavText(),
             ),
             Expanded(
               flex: 3,
@@ -124,7 +51,8 @@ class _TDesktopAboutState extends State<TDesktopAbout> {
                               ),
                               child: Center(
                                 child: TText(
-                                  text: "ABOUT ME",
+                                  text: "MEET THE CREATOR",
+                                  fontFamily: "Picasso",
                                   letterSpacing: 4,
                                   fontSize: 60,
                                   fontWeight: FontWeight.bold,
@@ -515,24 +443,121 @@ class _TDesktopAboutState extends State<TDesktopAbout> {
   }
 }
 
+class TLeftNavText extends StatefulWidget {
+  const TLeftNavText({
+    super.key,
+  });
+
+  @override
+  State<TLeftNavText> createState() => _TLeftNavTextState();
+}
+
+class _TLeftNavTextState extends State<TLeftNavText>
+    with AutomaticKeepAliveClientMixin {
+  @override
+  Widget build(BuildContext context) {
+    log("NavBar");
+    super.build(context);
+    return Drawer(
+      backgroundColor: TColors.orange,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
+              fit: BoxFit.cover,
+              width: double.maxFinite,
+              height: 370,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 60,
+              ),
+              child: Column(
+                children: [
+                  Icon(
+                    Icons.circle,
+                    color: TColors.black,
+                    size: 8,
+                  ),
+                  TLittleDots(),
+                  TNavText(
+                    text: 'HOME',
+                    route: TRoutes.home,
+                  ),
+                  TLittleDots(),
+                  TNavText(
+                    text: 'ABOUT ME',
+                    route: TRoutes.about,
+                  ),
+                  TLittleDots(),
+                  TNavText(
+                    text: 'PORTFOLIO',
+                    route: TRoutes.portfolio,
+                  ),
+                  TLittleDots(),
+                  TNavText(
+                    text: 'TESTIMONIALS',
+                    route: TRoutes.testimonials,
+                  ),
+                  TLittleDots(),
+                  TNavText(
+                    text: 'OFFERS',
+                    route: TRoutes.packages,
+                  ),
+                  TLittleDots(),
+                  TNavText(
+                    text: 'CONTACT',
+                    route: TRoutes.contact,
+                  ),
+                  TLittleDots(),
+                  Icon(
+                    Icons.circle,
+                    color: TColors.black,
+                    size: 8,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  @override
+  bool get wantKeepAlive => true;
+}
+
 class TNavText extends StatelessWidget {
   const TNavText({
     super.key,
     required this.text,
+    required this.route,
   });
   final String text;
+  final String route;
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(
-        top: 10,
-      ),
-      child: TText(
-        fontSize: 12,
-        text: text,
-        letterSpacing: 2,
-        color: TColors.white,
-        fontWeight: FontWeight.bold,
+    return InkWell(
+      onTap: () {
+        context.go(route);
+      },
+      child: Padding(
+        padding: const EdgeInsets.only(
+          top: 10,
+        ),
+        child: TText(
+          fontSize: 12,
+          text: text,
+          letterSpacing: 4,
+          fontFamily: "Picasso",
+          color: GoRouterState.of(context).uri.toString() == route
+              ? TColors.white
+              : TColors.black,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }
@@ -551,10 +576,10 @@ class TLittleDots extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(
             5,
-            (i) => Container(
+            (_) => Container(
                   width: 2,
                   height: 2,
-                  color: TColors.white,
+                  color: TColors.black,
                 )),
       ),
     );

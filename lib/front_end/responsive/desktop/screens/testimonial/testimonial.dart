@@ -56,70 +56,7 @@ class TDesktopTestimonial extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Drawer(
-                backgroundColor: TColors.orange,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
-                        fit: BoxFit.cover,
-                        width: double.maxFinite,
-                        height: 370,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 60,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.circle,
-                              color: TColors.white,
-                              size: 8,
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'HOME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'ABOUT ME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'RESUME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'PORTFOLIO',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'TESTIMONIALS',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'OFFERS',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'CONTACT',
-                            ),
-                            TLittleDots(),
-                            Icon(
-                              Icons.circle,
-                              color: TColors.white,
-                              size: 8,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              child: TLeftNavText(),
             ),
             Expanded(
               flex: 3,
@@ -149,9 +86,9 @@ class TDesktopTestimonial extends StatelessWidget {
                               ),
                               child: Center(
                                 child: TText(
-                                  text: "TESTIMONIALS",
-                                  letterSpacing: 4,
-                                  fontSize: 50,
+                                  text: "WORDS FROM THE PRIVILEGED",
+                                  letterSpacing: 4,fontFamily: "Picasso",
+                                  fontSize: 40,
                                   fontWeight: FontWeight.bold,
                                   color: TColors.white,
                                 ),
@@ -175,6 +112,7 @@ class TDesktopTestimonial extends StatelessWidget {
                                   "Trusted by elite clients across fashion, tech, luxury, and lifestyle, here’s how I helped shape their digital legacy.",
                               fontWeight: FontWeight.w100,
                               fontSize: 14,
+                              letterSpacing: 2,
                               fontFamily: "AscendantSerif",
                             ),
                             SizedBox(

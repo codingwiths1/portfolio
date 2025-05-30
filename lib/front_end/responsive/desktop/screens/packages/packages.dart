@@ -14,7 +14,9 @@ class TDesktopPackages extends StatelessWidget {
       body: TConstraints(
         child: Row(
           children: [
-            TLeftNav(),
+            Expanded(
+              child: TLeftNavText(),
+            ),
             Expanded(
               flex: 3,
               child: Stack(
@@ -44,8 +46,9 @@ class TDesktopPackages extends StatelessWidget {
                               child: Center(
                                 child: TText(
                                   text: "PRESTIGE PACKAGES",
+                                  fontFamily: "Picasso",
                                   letterSpacing: 4,
-                                  fontSize: 40,
+                                  fontSize: 45,
                                   fontWeight: FontWeight.bold,
                                   color: TColors.white,
                                 ),
@@ -900,79 +903,6 @@ class TDesktopPackages extends StatelessWidget {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class TLeftNav extends StatelessWidget {
-  const TLeftNav({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Drawer(
-        backgroundColor: TColors.orange,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Image.asset(
-                "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
-                fit: BoxFit.cover,
-                width: double.maxFinite,
-                height: 370,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 60,
-                ),
-                child: Column(
-                  children: [
-                    Icon(
-                      Icons.circle,
-                      color: TColors.white,
-                      size: 8,
-                    ),
-                    TLittleDots(),
-                    TNavText(
-                      text: 'HOME',
-                    ),
-                    TLittleDots(),
-                    TNavText(
-                      text: 'ABOUT ME',
-                    ),
-
-                    TLittleDots(),
-                    TNavText(
-                      text: 'PORTFOLIO',
-                    ),
-                    TLittleDots(),
-                    TNavText(
-                      text: 'TESTIMONIALS',
-                    ),
-                    TLittleDots(),
-                    TNavText(
-                      text: 'OFFERS',
-                    ),
-                    TLittleDots(),
-                    TNavText(
-                      text: 'CONTACT',
-                    ),
-                    TLittleDots(),
-                    Icon(
-                      Icons.circle,
-                      color: TColors.white,
-                      size: 8,
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
         ),
       ),
     );

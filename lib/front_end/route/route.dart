@@ -1,4 +1,3 @@
-import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -9,8 +8,11 @@ import 'package:portfolio/front_end/responsive/desktop/screens/packages/packages
 import 'package:portfolio/front_end/responsive/desktop/screens/portfolio/portfolio.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/testimonial/testimonial.dart';
 
+import '../responsive/mobile/screens/about/about.dart';
+import '../responsive/mobile/screens/home/home.dart';
 import '../responsive/responsive.dart';
-import '../utils/helper/color.dart';
+import '../responsive/tablet/screens/about/about.dart';
+import '../responsive/tablet/screens/home/home.dart';
 
 class TRoutes {
   static String home = "/welcome";
@@ -19,11 +21,6 @@ class TRoutes {
   static String packages = "/prestige-suites";
   static String portfolio = "/signature-works";
   static String testimonials = "/client-reverence";
-  // static String home = "/home";
-  // static String home = "/home";
-  // static String home = "/home";
-  // static String home = "/home";
-  // static String home = "/home";
 
   static List<RouteBase> routes = [
     GoRoute(
@@ -36,6 +33,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopHome(),
+          tablet: TTabletHome(),
+          mobile: TMobileHome(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -60,6 +59,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopAbout(),
+          tablet: TTabletAbout(),
+          mobile: TMobileAbout(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -84,6 +85,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopContact(),
+          tablet: SizedBox(),
+          mobile: SizedBox(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -108,6 +111,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopPackages(),
+          tablet: SizedBox(),
+          mobile: SizedBox(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -132,6 +137,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopPortfolio(),
+          tablet: SizedBox(),
+          mobile: SizedBox(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -156,6 +163,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopTestimonial(),
+          tablet: SizedBox(),
+          mobile: SizedBox(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -175,12 +184,6 @@ class TRoutes {
       ),
     ),
   ];
-
-  static location(BuildContext context, String targetLocation) {
-    String currentLocation = GoRouterState.of(context).uri.toString();
-
-    return currentLocation == targetLocation ? Colors.black : Colors.white;
-  }
 
 // static leftCurrentColor(String location) {
   //   switch (location) {

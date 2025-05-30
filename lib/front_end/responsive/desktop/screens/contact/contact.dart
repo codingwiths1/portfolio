@@ -15,70 +15,7 @@ class TDesktopContact extends StatelessWidget {
           child: Row(
         children: [
           Expanded(
-            child: Drawer(
-              backgroundColor: TColors.orange,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-              child: SingleChildScrollView(
-                child: Column(
-                  children: [
-                    Image.asset(
-                      "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
-                      fit: BoxFit.cover,
-                      width: double.maxFinite,
-                      height: 370,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 60,
-                      ),
-                      child: Column(
-                        children: [
-                          Icon(
-                            Icons.circle,
-                            color: TColors.white,
-                            size: 8,
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'HOME',
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'ABOUT ME',
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'RESUME',
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'PORTFOLIO',
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'TESTIMONIALS',
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'OFFERS',
-                          ),
-                          TLittleDots(),
-                          TNavText(
-                            text: 'CONTACT',
-                          ),
-                          TLittleDots(),
-                          Icon(
-                            Icons.circle,
-                            color: TColors.white,
-                            size: 8,
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
+            child: TLeftNavText(),
           ),
           Expanded(
             flex: 3,
@@ -105,9 +42,10 @@ class TDesktopContact extends StatelessWidget {
                           ),
                           child: Center(
                             child: TText(
-                              text: "CONTACT",
+                              text: "YOUR INVITATION",
                               letterSpacing: 4,
-                              fontSize: 60,
+                              fontFamily: "Picasso",
+                              fontSize: 50,
                               fontWeight: FontWeight.bold,
                               color: TColors.white,
                             ),
@@ -116,57 +54,21 @@ class TDesktopContact extends StatelessWidget {
                         SizedBox(
                           height: 30,
                         ),
-                        Text.rich(
-                          TextSpan(
-                            children: [
-                              TextSpan(
-                                text: "Let",
-                                style: TextStyle(
-                                  letterSpacing: 2,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 20,
-                                  fontFamily: "AscendantSerif",
-                                ),
-                              ),
-                              TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: "’",
-                                    style: TextStyle(
-                                      letterSpacing: 2,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      fontFamily: "Inter",
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              TextSpan(
-                                children: [
-                                  TextSpan(
-                                    text: "s Create Something Timeless",
-                                    style: TextStyle(
-                                      letterSpacing: 2,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      fontFamily: "AscendantSerif",
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                        TText(
+                          text: "Let’s Create Something Timeless",letterSpacing: 4,
+                          fontFamily: "Picasso",
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         TText(
-                          fontStyle: FontStyle.italic,
+                          fontFamily: "Picasso",
                           text:
-                              "Whether it’s a bespoke digital experience or a visionary product launch, I welcome meaningful partnerships with those who value design, detail, and distinction.",
+                              "Every iconic brand begins with a conversation. If you're ready to craft something extraordinary, I invite you to connect. Discretion, dedication, and detail await.",
                           fontWeight: FontWeight.w100,
-                          fontSize: 14,
-                          fontFamily: "AscendantSerif",
+                          letterSpacing: 2,
                         ),
                         SizedBox(
                           height: 120,
@@ -188,7 +90,9 @@ class TDesktopContact extends StatelessWidget {
                                   ),
                                   TText(
                                     text: "www.portfolio.com",
-                                    fontFamily: "AscendantSerif",
+                                    letterSpacing: 2,
+                                    fontFamily: "Picasso",
+                                    fontSize: 16,
                                   )
                                 ],
                               ),
@@ -208,30 +112,12 @@ class TDesktopContact extends StatelessWidget {
                                   SizedBox(
                                     width: 10,
                                   ),
-                                  Text.rich(
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: "craftedbybenjamin",
-                                          style: TextStyle(
-                                            fontFamily: "AscendantSerif",
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: "@",
-                                          style: TextStyle(
-                                            fontFamily: "Inter",
-                                          ),
-                                        ),
-                                        TextSpan(
-                                          text: "gmail.com",
-                                          style: TextStyle(
-                                            fontFamily: "AscendantSerif",
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
+                                  TText(
+                                    text: "shalomluxestudio@gmail.com",
+                                    letterSpacing: 2,
+                                    fontFamily: "Picasso",
+                                    fontSize: 16,
+                                  )
                                 ],
                               ),
                             ),

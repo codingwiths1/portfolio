@@ -46,7 +46,7 @@ class TDesktopHome extends StatelessWidget {
                           SizedBox(
                             width: 20,
                           ),
-                          TName(),
+                          TDeskName(),
                         ],
                       ),
                       Container(
@@ -67,7 +67,7 @@ class TDesktopHome extends StatelessWidget {
                       TText(
                         text: "Crafting Digital Experiences for the Elite",
                         letterSpacing: 2,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w600,   fontFamily: "Picasso",
                         fontSize: 18,
                       ),
                       SizedBox(
@@ -101,7 +101,6 @@ class TDesktopHome extends StatelessWidget {
                       ElevatedButton(
                         onPressed: () {
                           context.go(TRoutes.about);
-                          TRoutes.location(context, TRoutes.about);
                         },
                         style: ElevatedButton.styleFrom(
                           padding: EdgeInsets.all(
@@ -259,8 +258,8 @@ class TIcon extends StatelessWidget {
   }
 }
 
-class TName extends StatelessWidget {
-  const TName({
+class TDeskName extends StatelessWidget {
+  const TDeskName({
     super.key,
   });
 

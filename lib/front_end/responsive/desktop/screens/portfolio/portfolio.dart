@@ -93,70 +93,7 @@ class TDesktopPortfolio extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              child: Drawer(
-                backgroundColor: TColors.orange,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.zero),
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Image.asset(
-                        "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
-                        fit: BoxFit.cover,
-                        width: double.maxFinite,
-                        height: 370,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                          vertical: 60,
-                        ),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.circle,
-                              color: TColors.white,
-                              size: 8,
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'HOME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'ABOUT ME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'RESUME',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'PORTFOLIO',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'TESTIMONIALS',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'OFFERS',
-                            ),
-                            TLittleDots(),
-                            TNavText(
-                              text: 'CONTACT',
-                            ),
-                            TLittleDots(),
-                            Icon(
-                              Icons.circle,
-                              color: TColors.white,
-                              size: 8,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              child: TLeftNavText(),
             ),
             Expanded(
               flex: 3,
@@ -186,38 +123,36 @@ class TDesktopPortfolio extends StatelessWidget {
                               ),
                               child: Center(
                                 child: TText(
-                                  text: "OUR WORK",
-                                  letterSpacing: 4,
+                                  text: "THE ATELIER",
+                                  letterSpacing: 6,
                                   fontSize: 60,
+                                  fontFamily: "Picasso",
                                   fontWeight: FontWeight.bold,
                                   color: TColors.white,
                                 ),
                               ),
                             ),
                             SizedBox(
-                              height: 75,
+                              height: 15,
                             ),
-                            Container(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 20,
-                              ),
-                              color: TColors.white,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  TText(
-                                    color: Colors.black87,
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  child: TText(
+                                    color: TColors.white,
                                     fontWeight: FontWeight.w100,
                                     fontSize: 16,
+                                    letterSpacing: 4,
                                     text:
-                                        "A Curated Selection of Digital Builds Crafted For Ambitious Brands.",
-                                    fontFamily: "AscendantSerif",
+                                        "A curated selection of refined digital experiences crafted for visionary brands. Each creation is a fusion of innovation, elegance, and timeless digital craftsmanship.",
+                                    fontFamily: "Picasso",
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
                             SizedBox(
-                              height: 30,
+                              height: 50,
                             ),
                             MasonryGridView.builder(
                               crossAxisSpacing: 20,
