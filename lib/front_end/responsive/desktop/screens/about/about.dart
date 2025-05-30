@@ -425,7 +425,7 @@ class TDesktopAbout extends StatelessWidget {
                               ],
                             ),
                             SizedBox(
-                              height: 70,
+                              height: 30,
                             ),
                           ],
                         ),

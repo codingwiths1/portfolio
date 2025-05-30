@@ -9,10 +9,14 @@ import 'package:portfolio/front_end/responsive/desktop/screens/portfolio/portfol
 import 'package:portfolio/front_end/responsive/desktop/screens/testimonial/testimonial.dart';
 
 import '../responsive/mobile/screens/about/about.dart';
+import '../responsive/mobile/screens/contact/contact.dart';
 import '../responsive/mobile/screens/home/home.dart';
+import '../responsive/mobile/screens/packages/packages.dart';
 import '../responsive/responsive.dart';
 import '../responsive/tablet/screens/about/about.dart';
+import '../responsive/tablet/screens/contact/contact.dart';
 import '../responsive/tablet/screens/home/home.dart';
+import '../responsive/tablet/screens/packages/packages.dart';
 
 class TRoutes {
   static String home = "/welcome";
@@ -85,8 +89,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopContact(),
-          tablet: SizedBox(),
-          mobile: SizedBox(),
+          tablet: TTabletContact(),
+          mobile: TMobileContact(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -111,8 +115,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopPackages(),
-          tablet: SizedBox(),
-          mobile: SizedBox(),
+          tablet: TTabletPackages(),
+          mobile: TMobilePackages(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(

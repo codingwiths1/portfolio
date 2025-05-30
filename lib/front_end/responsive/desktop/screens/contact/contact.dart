@@ -55,7 +55,8 @@ class TDesktopContact extends StatelessWidget {
                           height: 30,
                         ),
                         TText(
-                          text: "Let’s Create Something Timeless",letterSpacing: 4,
+                          text: "Let’s Create Something Timeless",
+                          letterSpacing: 4,
                           fontFamily: "Picasso",
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -74,57 +75,81 @@ class TDesktopContact extends StatelessWidget {
                           height: 120,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/icons/monitor.png",
-                                    color: TColors.white,
-                                    height: 100,
-                                    width: 100,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  TText(
-                                    text: "www.portfolio.com",
-                                    letterSpacing: 2,
-                                    fontFamily: "Picasso",
-                                    fontSize: 16,
-                                  )
-                                ],
+                              child: TField(
+                                text: "FIRST NAME",
                               ),
                             ),
                             SizedBox(
-                              width: 50,
+                              width: 25,
                             ),
                             Expanded(
-                              child: Row(
-                                children: [
-                                  Image.asset(
-                                    "assets/icons/mail.png",
-                                    color: TColors.white,
-                                    height: 100,
-                                    width: 100,
-                                  ),
-                                  SizedBox(
-                                    width: 10,
-                                  ),
-                                  TText(
-                                    text: "shalomluxestudio@gmail.com",
-                                    letterSpacing: 2,
-                                    fontFamily: "Picasso",
-                                    fontSize: 16,
-                                  )
-                                ],
+                              child: TField(
+                                text: "LAST NAME",
                               ),
                             ),
                           ],
                         ),
                         SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: TField(text: "EMAIL"),
+                            ),
+                            SizedBox(
+                              width: 25,
+                            ),
+                            Expanded(
+                              child: TField(
+                                text: "SUBJECT",
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        TField(
+                          text: "MESSAGE",
                           height: 150,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            SizedBox(
+                              height: 25,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: TColors.orange,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      0,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: 40,
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: TText(
+                                  text: "SEND",
+                                  fontFamily: "Picasso",
+                                  color: TColors.white,
+                                  letterSpacing: 2,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 30,
                         )
                       ],
                     ),
@@ -136,6 +161,40 @@ class TDesktopContact extends StatelessWidget {
           ),
         ],
       )),
+    );
+  }
+}
+
+class TField extends StatelessWidget {
+  const TField({
+    super.key,
+    required this.text,
+    this.height = 30.0,
+  });
+  final String text;
+  final double height;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        TText(
+          text: text,
+          fontFamily: "Picasso",
+          letterSpacing: 2,
+          fontWeight: FontWeight.bold,
+          fontSize: 16,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: height,
+          decoration: BoxDecoration(
+            border: Border.all(width: 1, color: TColors.white),
+          ),
+        ),
+      ],
     );
   }
 }

@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/utils/helper/color.dart';
 
+import '../../../../../back_end/function/function.dart';
 import '../../../../route/route.dart';
 import '../../../../theme/theme.dart';
 import '../../../../utils/widgets/constraints.dart';
@@ -67,7 +68,8 @@ class TDesktopHome extends StatelessWidget {
                       TText(
                         text: "Crafting Digital Experiences for the Elite",
                         letterSpacing: 2,
-                        fontWeight: FontWeight.w600,   fontFamily: "Picasso",
+                        fontWeight: FontWeight.w600,
+                        fontFamily: "Picasso",
                         fontSize: 18,
                       ),
                       SizedBox(
@@ -159,7 +161,8 @@ class TNav extends StatelessWidget {
       child: Align(
         alignment: Alignment.centerRight,
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+          padding: EdgeInsets.symmetric(
+              horizontal: TFunction.isTablet(context) ? 5 : 10, vertical: 30),
           decoration: BoxDecoration(
             color: TColors.orange,
             borderRadius: BorderRadius.circular(
@@ -328,7 +331,7 @@ class TText extends StatelessWidget {
         fontFamilyFallback: ["Picasso"],
         fontFamily: fontFamily,
         color: color,
-        fontSize: fontSize,
+        fontSize: TFunction.isTablet(context) ? fontSize * 0.9 : fontSize,
         fontWeight: fontWeight,
         letterSpacing: letterSpacing,
       ),
