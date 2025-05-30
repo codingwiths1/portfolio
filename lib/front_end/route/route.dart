@@ -13,12 +13,14 @@ import '../responsive/mobile/screens/contact/contact.dart';
 import '../responsive/mobile/screens/home/home.dart';
 import '../responsive/mobile/screens/packages/packages.dart';
 import '../responsive/mobile/screens/portfolio/portfolio.dart';
+import '../responsive/mobile/screens/testimonials/testimonials.dart';
 import '../responsive/responsive.dart';
 import '../responsive/tablet/screens/about/about.dart';
 import '../responsive/tablet/screens/contact/contact.dart';
 import '../responsive/tablet/screens/home/home.dart';
 import '../responsive/tablet/screens/packages/packages.dart';
 import '../responsive/tablet/screens/portfolio/portfolio.dart';
+import '../responsive/tablet/screens/testimonials/testimonials.dart';
 
 class TRoutes {
   static String home = "/welcome";
@@ -169,8 +171,8 @@ class TRoutes {
         key: state.pageKey,
         child: TResponsive(
           desktop: TDesktopTestimonial(),
-          tablet: SizedBox(),
-          mobile: SizedBox(),
+          tablet: TTabletTestimonials(),
+          mobile: TMobileTestimonials(),
         ),
         transitionsBuilder: (context, animation, secondaryAnimation, child) {
           var tween = Tween<Offset>(
@@ -191,22 +193,4 @@ class TRoutes {
     ),
   ];
 
-// static leftCurrentColor(String location) {
-  //   switch (location) {
-  //     case '/':
-  //       return TColors.blue;
-  //     case "/welcome":
-  //       return TColors.blue;
-  //     case '/the-artisan':
-  //       return TColors.blue;
-  //     case '/private-access':
-  //       return TColors.blue;
-  //     case '/prestige-suites':
-  //       return TColors.blue;
-  //     case '/signature-works':
-  //       return TColors.blue;
-  //     case '/client-reverence':
-  //       return TColors.blue;
-  //   }
-  // }
 }
