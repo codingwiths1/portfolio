@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
@@ -153,8 +152,8 @@ class TDesktopHome extends StatelessWidget {
                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg',
                     height: double.maxFinite,
                     width: double.maxFinite,
-                    loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress == null) {
+                    frameBuilder: (context, child, frame, _) {
+                      if (frame != null) {
                         return child;
                       } else {
                         return Container(
@@ -288,8 +287,8 @@ class TIcon extends StatelessWidget {
             size: 20,
           ),
           url,
-          loadingBuilder: (context, child, loadingProgress) {
-            if (loadingProgress == null) {
+          frameBuilder: (context, child, frame, _) {
+            if (frame != null) {
               return child;
             } else {
               return SpinKitChasingDots(

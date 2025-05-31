@@ -39,8 +39,8 @@ class TMobileHome extends StatelessWidget {
                       ),
                     ),
                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg',
-                    loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress == null) {
+                    frameBuilder: (context, child, frame,_) {
+                      if (frame != null) {
                         return child;
                       } else {
                         return Container(

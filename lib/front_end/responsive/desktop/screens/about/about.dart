@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
@@ -162,9 +161,8 @@ class TDesktopAbout extends StatelessWidget {
                                       ),
                                     ),
                                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
-                                    loadingBuilder:
-                                        (context, child, loadingProgress) {
-                                      if (loadingProgress == null) {
+                                    frameBuilder: (context, child, frame, _) {
+                                      if (frame != null) {
                                         return child;
                                       } else {
                                         return Container(
@@ -241,11 +239,9 @@ class TDesktopAbout extends StatelessWidget {
                                                       height: 50,
                                                       width: 50,
                                                       color: Colors.white,
-                                                      loadingBuilder: (context,
-                                                          child,
-                                                          loadingProgress) {
-                                                        if (loadingProgress ==
-                                                            null) {
+                                                      frameBuilder: (context,
+                                                          child, frame, _) {
+                                                        if (frame != null) {
                                                           return child;
                                                         } else {
                                                           return SizedBox(
@@ -340,11 +336,9 @@ class TDesktopAbout extends StatelessWidget {
                                                       height: 50,
                                                       width: 50,
                                                       color: Colors.white,
-                                                      loadingBuilder: (context,
-                                                          child,
-                                                          loadingProgress) {
-                                                        if (loadingProgress ==
-                                                            null) {
+                                                      frameBuilder: (context,
+                                                          child, frame, _) {
+                                                        if (frame != null) {
                                                           return child;
                                                         } else {
                                                           return SizedBox(
@@ -439,11 +433,9 @@ class TDesktopAbout extends StatelessWidget {
                                                       height: 50,
                                                       width: 50,
                                                       color: Colors.white,
-                                                      loadingBuilder: (context,
-                                                          child,
-                                                          loadingProgress) {
-                                                        if (loadingProgress ==
-                                                            null) {
+                                                      frameBuilder: (context,
+                                                          child, frame, _) {
+                                                        if (frame != null) {
                                                           return child;
                                                         } else {
                                                           return SizedBox(
@@ -538,11 +530,9 @@ class TDesktopAbout extends StatelessWidget {
                                                       height: 50,
                                                       width: 50,
                                                       color: Colors.white,
-                                                      loadingBuilder: (context,
-                                                          child,
-                                                          loadingProgress) {
-                                                        if (loadingProgress ==
-                                                            null) {
+                                                      frameBuilder: (context,
+                                                          child, frame, _) {
+                                                        if (frame != null) {
                                                           return child;
                                                         } else {
                                                           return SizedBox(
@@ -657,8 +647,8 @@ class _TLeftNavTextState extends State<TLeftNavText>
                   ),
                 ),
               ),
-              loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress == null) {
+              frameBuilder: (context, child, frame, _) {
+                if (frame != null) {
                   return child;
                 } else {
                   return Container(
@@ -781,7 +771,6 @@ class _TNavTextState extends State<TNavText>
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }
 

@@ -177,7 +177,6 @@ class TTabletPortfolio extends StatelessWidget {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      log("Tapped");
                                       tapped[index] = !tapped[index];
                                     },
                                     child: Image.network(
@@ -200,9 +199,9 @@ class TTabletPortfolio extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      loadingBuilder:
-                                          (context, child, loadingProgress) {
-                                        if (loadingProgress == null) {
+                                      frameBuilder: (context, child, frame,_) {
+
+                                        if (frame != null) {
                                           WidgetsBinding.instance
                                               .addPostFrameCallback((_) =>
                                                   TFunction.showing.value =

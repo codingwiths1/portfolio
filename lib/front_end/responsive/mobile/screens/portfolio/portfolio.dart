@@ -197,9 +197,9 @@ class TMobilePortfolio extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      loadingBuilder:
-                                          (context, child, loadingProgress) {
-                                        if (loadingProgress == null) {
+                                      frameBuilder:
+                                          (context, child, frame,_) {
+                                        if (frame != null) {
                                           WidgetsBinding.instance
                                               .addPostFrameCallback((_) =>
                                                   TFunction.showing.value =

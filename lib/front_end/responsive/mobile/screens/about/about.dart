@@ -149,8 +149,8 @@ class TMobileAbout extends StatelessWidget {
                               ),
                             ),
                             'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
-                            loadingBuilder: (context, child, loadingProgress) {
-                              if (loadingProgress == null) {
+                            frameBuilder: (context, child, frame, _) {
+                              if (frame != null) {
                                 return child;
                               } else {
                                 return Container(
@@ -222,9 +222,8 @@ class TMobileAbout extends StatelessWidget {
                                       height: 50,
                                       width: 50,
                                       color: Colors.white,
-                                      loadingBuilder:
-                                          (context, child, loadingProgress) {
-                                        if (loadingProgress == null) {
+                                      frameBuilder: (context, child, frame, _) {
+                                        if (frame != null) {
                                           return child;
                                         } else {
                                           return SizedBox(
@@ -310,9 +309,8 @@ class TMobileAbout extends StatelessWidget {
                                       height: 50,
                                       width: 50,
                                       color: Colors.white,
-                                      loadingBuilder:
-                                          (context, child, loadingProgress) {
-                                        if (loadingProgress == null) {
+                                      frameBuilder: (context, child, frame, _) {
+                                        if (frame != null) {
                                           return child;
                                         } else {
                                           return SizedBox(
@@ -381,25 +379,25 @@ class TMobileAbout extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Image.network( errorBuilder:
-                                        (context, error, stackTrace) =>
-                                        SizedBox(
-                                          height: 50,
-                                          width: 50,
-                                          child: Center(
-                                            child: Icon(
-                                              Icons.error_outline_rounded,
-                                              color: TColors.white,
-                                            ),
+                                    Image.network(
+                                      errorBuilder:
+                                          (context, error, stackTrace) =>
+                                              SizedBox(
+                                        height: 50,
+                                        width: 50,
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.error_outline_rounded,
+                                            color: TColors.white,
                                           ),
                                         ),
+                                      ),
                                       'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632812/wwm259ktee7g3kxvm1td.png',
                                       height: 50,
                                       width: 50,
                                       color: Colors.white,
-                                      loadingBuilder:
-                                          (context, child, loadingProgress) {
-                                        if (loadingProgress == null) {
+                                      frameBuilder: (context, child, frame, _) {
+                                        if (frame != null) {
                                           return child;
                                         } else {
                                           return SizedBox(
@@ -469,25 +467,25 @@ class TMobileAbout extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Image.network( errorBuilder:
-                                        (context, error, stackTrace) =>
-                                        SizedBox(
-                                          height: 50,
-                                          width: 50,
-                                          child: Center(
-                                            child: Icon(
-                                              Icons.error_outline_rounded,
-                                              color: TColors.white,
-                                            ),
+                                    Image.network(
+                                      errorBuilder:
+                                          (context, error, stackTrace) =>
+                                              SizedBox(
+                                        height: 50,
+                                        width: 50,
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.error_outline_rounded,
+                                            color: TColors.white,
                                           ),
                                         ),
+                                      ),
                                       'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632807/kecaudethuhddbklhigo.png',
                                       height: 50,
                                       width: 50,
                                       color: Colors.white,
-                                      loadingBuilder:
-                                          (context, child, loadingProgress) {
-                                        if (loadingProgress == null) {
+                                      frameBuilder: (context, child, frame, _) {
+                                        if (frame != null) {
                                           return child;
                                         } else {
                                           return SizedBox(

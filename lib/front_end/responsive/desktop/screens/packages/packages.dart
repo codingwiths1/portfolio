@@ -820,8 +820,9 @@ class TPackage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        loadingBuilder: (context, child, loadingProgress) {
-                          if (loadingProgress == null) {
+                        frameBuilder: (context, child, frame,_) {
+
+                          if (frame != null) {
                             return child;
                           } else {
                             return SizedBox(
