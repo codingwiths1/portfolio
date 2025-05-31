@@ -644,8 +644,39 @@ class _TLeftNavTextState extends State<TLeftNavText>
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset(
-              "assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg",
+            Image.network(
+              errorBuilder: (context, error, stackTrace) => Container(
+                height: 370,
+                color: TColors.black,
+                padding: EdgeInsets.all(
+                  50,
+                ),
+                child: Center(
+                  child: Icon(
+                    Icons.error_outline_rounded,
+                    color: TColors.white,
+                  ),
+                ),
+              ),
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress != null) {
+                  return child;
+                } else {
+                  return Container(
+                    height: 370,
+                    color: TColors.black,
+                    padding: EdgeInsets.all(
+                      50,
+                    ),
+                    child: Center(
+                      child: SpinKitChasingDots(
+                        color: TColors.white,
+                      ),
+                    ),
+                  );
+                }
+              },
+              "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg",
               fit: BoxFit.cover,
               width: double.maxFinite,
               height: 370,

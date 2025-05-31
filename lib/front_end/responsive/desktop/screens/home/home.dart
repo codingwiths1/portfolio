@@ -157,7 +157,7 @@ class TDesktopHome extends StatelessWidget {
                     height: double.maxFinite,
                     width: double.maxFinite,
                     loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress == null) {
+                      if (loadingProgress != null) {
                         return child;
                       } else {
                         return Container(

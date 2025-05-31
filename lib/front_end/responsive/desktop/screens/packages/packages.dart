@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import '../../../../utils/helper/color.dart';
 import '../../../../utils/widgets/constraints.dart';
@@ -954,29 +955,49 @@ class TPackage extends StatelessWidget {
                 children: [
                   Stack(
                     children: [
-                      Container(
+                      Image.network(
+                        errorBuilder: (context, error, stackTrace) => SizedBox(
+                          height: 150,
+                          width: double.maxFinite,
+                          child: Center(
+                            child: Icon(
+                              Icons.error_outline_rounded,
+                              color: TColors.white,
+                            ),
+                          ),
+                        ),
+                        loadingBuilder: (context, child, loadingProgress) {
+                          if (loadingProgress != null) {
+                            return child;
+                          } else {
+                            return SizedBox(
+                              height: 150,
+                              width: double.maxFinite,
+                              child: Center(
+                                child: SpinKitChasingDots(
+                                  size: 25,
+                                  color: TColors.white,
+                                ),
+                              ),
+                            );
+                          }
+                        },
+                        "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748660954/d5wxsuqws72oe5netnap.png",
                         height: 150,
-                        color: Colors.white,
+                        width: double.maxFinite,
                       ),
                       Align(
                         alignment: Alignment.center,
                         child: Container(
                           height: 150,
                           width: 150,
-                          color: TColors.black87,
+                          color: Color(0x64000000),
                         ),
                       ),
                       Positioned(
                         top: 3,
                         right: 3,
                         child: stack,
-                        // Image.asset(
-                        //   "assets/icons/crown.png",
-                        //   fit: BoxFit.contain,
-                        //   height: 20,
-                        //   width: 20,
-                        //   color: TColors.orange,
-                        // ),
                       ),
                     ],
                   ),
