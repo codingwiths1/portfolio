@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -7,7 +6,6 @@ import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/utils/helper/color.dart';
 
 import '../../../../../back_end/function/function.dart';
-import '../../../../../main.dart';
 import '../../../../route/route.dart';
 import '../../../../theme/theme.dart';
 import '../../../../utils/widgets/constraints.dart';
@@ -294,7 +292,6 @@ class TIcon extends StatelessWidget {
             if (loadingProgress != null) {
               return child;
             } else {
-
               return SpinKitChasingDots(
                 size: 20,
                 color: TColors.white,
