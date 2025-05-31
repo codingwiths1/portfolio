@@ -134,20 +134,13 @@ class TTabletPackages extends StatelessWidget {
                               ],
                             ),
                           ),
-                          stack: Image.asset(
-                            "assets/icons/crown.png",
-                            fit: BoxFit.contain,
-                            height: 20,
-                            width: 20,
-                            color: TColors.orange,
-                          ),
                           details2: TText(
                             text: "Premium contact form integration",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
                             fontSize: 10,
                           ),
-                          days: '5',
+                          days: '5', length: 1,
                         ),
                         TPackage(
                           onTap: () {
@@ -191,34 +184,13 @@ class TTabletPackages extends StatelessWidget {
                             color: TColors.black,
                             fontSize: 10,
                           ),
-                          stack: Row(
-                            children: [
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 18,
-                                width: 18,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 18,
-                                width: 18,
-                                color: TColors.orange,
-                              ),
-                            ],
-                          ),
                           details2: TText(
                             text: "Premium mobile experience",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
                             fontSize: 10,
                           ),
-                          days: '10',
+                          days: '10', length: 2,
                         ),
                         TPackage(
                           onTap: () {
@@ -235,37 +207,6 @@ class TTabletPackages extends StatelessWidget {
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
                             fontSize: 10,
-                          ),
-                          stack: Row(
-                            children: [
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 16,
-                                width: 16,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 16,
-                                width: 16,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 16,
-                                width: 16,
-                                color: TColors.orange,
-                              ),
-                            ],
                           ),
                           details2: Text.rich(
                             TextSpan(
@@ -326,7 +267,7 @@ class TTabletPackages extends StatelessWidget {
                               ),
                             ],
                           ),
-                          days: '15',
+                          days: '15', length: 3,
                         ),
                       ],
                     ),
@@ -377,47 +318,6 @@ class TTabletPackages extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
-                          stack: Row(
-                            children: [
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 14,
-                                width: 14,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 14,
-                                width: 14,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 14,
-                                width: 14,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 14,
-                                width: 14,
-                                color: TColors.orange,
-                              ),
-                            ],
                           ),
                           details2: TText(
                             text: "Cinematic interactions",
@@ -567,7 +467,7 @@ class TTabletPackages extends StatelessWidget {
                               ),
                             ],
                           ),
-                          days: '18',
+                          days: '18', length: 4,
                         ),
                         TPackage(
                           onTap: () {
@@ -780,64 +680,13 @@ class TTabletPackages extends StatelessWidget {
                             color: TColors.black,
                             fontSize: 10,
                           ),
-                          stack: Row(
-                            children: [
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 12,
-                                width: 12,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 12,
-                                width: 12,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 12,
-                                width: 12,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 12,
-                                width: 12,
-                                color: TColors.orange,
-                              ),
-                              SizedBox(
-                                width: 5,
-                              ),
-                              Image.asset(
-                                "assets/icons/crown.png",
-                                fit: BoxFit.contain,
-                                height: 12,
-                                width: 12,
-                                color: TColors.orange,
-                              ),
-                            ],
-                          ),
                           details2: TText(
                             text: "Ongoing digital care concierge",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
                             fontSize: 10,
                           ),
-                          days: '25',
+                          days: '25', length: 5,
                         ),
                       ],
                     ),

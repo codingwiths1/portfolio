@@ -145,13 +145,7 @@ class TDesktopPackages extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  stack: Image.asset(
-                                    "assets/icons/crown.png",
-                                    fit: BoxFit.contain,
-                                    height: 20,
-                                    width: 20,
-                                    color: TColors.orange,
-                                  ),
+                                  length: 1,
                                   details2: TText(
                                     text: "Premium contact form integration",
                                     fontFamily: "AscendantSerif",
@@ -204,27 +198,7 @@ class TDesktopPackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 18,
-                                        width: 18,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 18,
-                                        width: 18,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
-                                  ),
+                                  length: 2,
                                   details2: TText(
                                     text: "Premium mobile experience",
                                     fontFamily: "AscendantSerif",
@@ -250,37 +224,7 @@ class TDesktopPackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 16,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 16,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 16,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
-                                  ),
+                                  length: 3,
                                   details2: Text.rich(
                                     TextSpan(
                                       children: [
@@ -394,47 +338,7 @@ class TDesktopPackages extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
-                                  ),
+                                  length: 4,
                                   details2: TText(
                                     text: "Cinematic interactions",
                                     fontFamily: "AscendantSerif",
@@ -833,57 +737,7 @@ class TDesktopPackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
-                                  ),
+                                  length: 5,
                                   details2: TText(
                                     text: "Ongoing digital care concierge",
                                     fontFamily: "AscendantSerif",
@@ -918,7 +772,7 @@ class TPackage extends StatelessWidget {
     required this.price,
     this.onTap,
     required this.details1,
-    required this.stack,
+    required this.length,
     required this.details2,
     this.widget = const SizedBox(),
     required this.days,
@@ -932,7 +786,7 @@ class TPackage extends StatelessWidget {
   final Widget details1;
   final Widget details2;
 
-  final Widget stack;
+  final int length;
   final Widget widget;
 
   @override
@@ -995,10 +849,22 @@ class TPackage extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 3,
-                        right: 3,
-                        child: stack,
-                      ),
+                          top: 3,
+                          right: 3,
+                          child: Row(
+                            children: List.generate(
+                              length,
+                              (_) => Image.network(
+                                errorBuilder: (context, error, stackTrace) =>
+                                    SizedBox(),
+                                "src",
+                                fit: BoxFit.contain,
+                                height: 20,
+                                width: 20,
+                                color: TColors.orange,
+                              ),
+                            ),
+                          )),
                     ],
                   ),
                   SizedBox(

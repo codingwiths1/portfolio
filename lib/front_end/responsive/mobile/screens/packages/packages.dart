@@ -143,13 +143,7 @@ class TMobilePackages extends StatelessWidget {
                                       ],
                                     ),
                                   ),
-                                  stack: Image.asset(
-                                    "assets/icons/crown.png",
-                                    fit: BoxFit.contain,
-                                    height: 20,
-                                    width: 20,
-                                    color: TColors.orange,
-                                  ),
+                                  length: 1,
                                   details2: TText(
                                     text: "Premium contact form integration",
                                     fontFamily: "AscendantSerif",
@@ -208,34 +202,13 @@ class TMobilePackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 18,
-                                        width: 18,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 18,
-                                        width: 18,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
-                                  ),
                                   details2: TText(
                                     text: "Premium mobile experience",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '10',
+                                  days: '10', length: 2,
                                 ),
                               ),
                               Padding(
@@ -259,37 +232,6 @@ class TMobilePackages extends StatelessWidget {
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                     fontSize: 10,
-                                  ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 16,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 16,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 16,
-                                        width: 16,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
                                   ),
                                   details2: Text.rich(
                                     TextSpan(
@@ -351,7 +293,7 @@ class TMobilePackages extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  days: '15',
+                                  days: '15', length: 3,
                                 ),
                               ),
                               Padding(
@@ -400,47 +342,6 @@ class TMobilePackages extends StatelessWidget {
                                         ),
                                       ],
                                     ),
-                                  ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 14,
-                                        width: 14,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
                                   ),
                                   details2: TText(
                                     text: "Cinematic interactions",
@@ -604,7 +505,7 @@ class TMobilePackages extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  days: '18',
+                                  days: '18', length: 4,
                                 ),
                               ),
                               Padding(
@@ -846,64 +747,13 @@ class TMobilePackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  stack: Row(
-                                    children: [
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                      SizedBox(
-                                        width: 5,
-                                      ),
-                                      Image.asset(
-                                        "assets/icons/crown.png",
-                                        fit: BoxFit.contain,
-                                        height: 12,
-                                        width: 12,
-                                        color: TColors.orange,
-                                      ),
-                                    ],
-                                  ),
                                   details2: TText(
                                     text: "Ongoing digital care concierge",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '25',
+                                  days: '25', length: 5,
                                 ),
                               ),
                             ],
