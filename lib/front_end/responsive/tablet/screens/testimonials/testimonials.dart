@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../../../../utils/helper/color.dart';
@@ -12,7 +13,7 @@ class TTabletTestimonials extends StatelessWidget {
     List<Map> details = [
       {
         "url":
-            "assets/images/662c092880a6d18c31995dfd_66236531e8288ee0657ae7a7_Business%20Professional.webp",
+            "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632498/fyorb6dytjwsix8q75rd.webp",
         "package": "The Elite Experience",
         "price": "2,500",
         "brand": "NOIR Audio",
@@ -22,7 +23,7 @@ class TTabletTestimonials extends StatelessWidget {
       },
       {
         "url":
-            "assets/images/free-linkedin-ai-profile-picture-generator@3898895-6f9a6031-5f70-4244-90e6-3bce4fdb3f6e.webp",
+            "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/xva3cmimnxxwllh2jzw4.webp",
         "package": "The Signature Build",
         "price": "5,000",
         "brand": "Liora Fine Jewellery",
@@ -31,7 +32,8 @@ class TTabletTestimonials extends StatelessWidget {
             "Shalom didn’t just build us a website — he built an experience. Every scroll, every transition, every pixel reflects the elegance of our brand. It exceeded expectations in every sense. Our clients now say the digital experience mirrors the luxury of our pieces."
       },
       {
-        "url": "assets/images/MainPhoto_cropped.jpg",
+        "url":
+            "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/crfcuezqt4urnsall9ga.jpg",
         "package": "The Legacy Edition",
         "price": "10,000",
         "brand": "Voss Private Estates",
@@ -40,7 +42,8 @@ class TTabletTestimonials extends StatelessWidget {
             "From the moment we connected, Shalom understood the essence of luxury. His eye for clean design and mobile responsiveness helped us attract high-net-worth clients with ease, and I’d gladly do it again. It felt like working with a digital architect, not just a developer."
       },
       {
-        "url": "assets/images/women-AI-Profile-Picture.jpg",
+        "url":
+            "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632508/fvu7gnklsa3nghsggvrc.jpg",
         "package": "The Elite Experience",
         "price": "2,500",
         "brand": "VELVET84",
@@ -132,11 +135,51 @@ class TTabletTestimonials extends StatelessWidget {
                                 children: [
                                   Column(
                                     children: [
-                                      Image.asset(
-                                        details[index]["url"],
-                                        fit: BoxFit.cover,
+                                      Image.network(
                                         height: 100,
                                         width: 100,
+                                        errorBuilder:
+                                            (context, error, stackTrace) =>
+                                                Container(
+                                          height: 100,
+                                          width: 100,
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              width: 0.3,
+                                              color: TColors.white,
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: Icon(
+                                              Icons.error_outline_rounded,
+                                              color: Colors.white,
+                                            ),
+                                          ),
+                                        ),
+                                        loadingBuilder:
+                                            (context, child, loadingProgress) {
+                                          if (loadingProgress != null) {
+                                            return child;
+                                          } else {
+                                            return Container(
+                                              height: 100,
+                                              width: 100,
+                                              decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  width: 0.3,
+                                                  color: TColors.white,
+                                                ),
+                                              ),
+                                              child: Center(
+                                                child: SpinKitChasingDots(
+                                                  color: TColors.white,
+                                                ),
+                                              ),
+                                            );
+                                          }
+                                        },
+                                        details[index]["url"],
+                                        fit: BoxFit.cover,
                                       ),
                                       SizedBox(
                                         height: 10,

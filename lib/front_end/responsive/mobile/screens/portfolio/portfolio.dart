@@ -182,10 +182,18 @@ class TMobilePortfolio extends StatelessWidget {
                                           (context, error, stackTrace) =>
                                               AspectRatio(
                                         aspectRatio: 1,
-                                        child: Center(
-                                          child: Icon(
-                                            Icons.error_outline_rounded,
-                                            color: Colors.white,
+                                        child: Container(
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              width: 0.3,
+                                              color: TColors.white,
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: Icon(
+                                              Icons.error_outline_rounded,
+                                              color: Colors.white,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -201,9 +209,18 @@ class TMobilePortfolio extends StatelessWidget {
                                         } else {
                                           return AspectRatio(
                                             aspectRatio: 1,
-                                            child: Center(
-                                              child: SpinKitChasingDots(
-                                                color: TColors.white,
+                                            child: Container(
+                                              decoration: BoxDecoration(
+                                                border: Border.all(
+                                                  width: 0.3,
+                                                  color: TColors.white,
+                                                ),
+                                              ),
+                                              child: Center(
+                                                child: SpinKitChasingDots(
+                                                  size: 25,
+                                                  color: TColors.white,
+                                                ),
                                               ),
                                             ),
                                           );
