@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/about/t_about.dart';
@@ -143,8 +144,31 @@ class TDesktopAbout extends StatelessWidget {
                               children: [
                                 Expanded(
                                   flex: 2,
-                                  child: Image.asset(
-                                    "assets/images/Add a heading.png",
+                                  child: Image.network(
+                                    'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
+                                    loadingBuilder:
+                                        (context, child, loadingProgress) {
+                                      if (loadingProgress == null) {
+                                        return child;
+                                      } else {
+                                        return Container(
+                                          padding: EdgeInsets.all(
+                                            50,
+                                          ),
+                                          decoration: BoxDecoration(
+                                            border: Border.all(
+                                              width: 0.3,
+                                              color: TColors.white,
+                                            ),
+                                          ),
+                                          child: Center(
+                                            child: SpinKitChasingDots(
+                                              color: TColors.white,
+                                            ),
+                                          ),
+                                        );
+                                      }
+                                    },
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -182,12 +206,33 @@ class TDesktopAbout extends StatelessWidget {
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   children: [
-                                                    Image.asset(
-                                                      "assets/icons/code.png",
-                                                      color: TColors.white,
+                                                    Image.network(
+                                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632798/og0gvfilqdxbeg2nvvzh.png',
                                                       height: 50,
                                                       width: 50,
-                                                      fit: BoxFit.contain,
+                                                      color: Colors.white,
+                                                      loadingBuilder: (context,
+                                                          child,
+                                                          loadingProgress) {
+                                                        if (loadingProgress ==
+                                                            null) {
+                                                          return child;
+                                                        } else {
+                                                          return SizedBox(
+                                                            height: 50,
+                                                            width: 50,
+                                                            child: Center(
+                                                              child:
+                                                                  SpinKitChasingDots(
+                                                                size: 30,
+                                                                color: TColors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                          );
+                                                        }
+                                                      },
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     SizedBox(
                                                       width: 10,
@@ -246,12 +291,33 @@ class TDesktopAbout extends StatelessWidget {
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   children: [
-                                                    Image.asset(
-                                                      "assets/icons/immersive.png",
-                                                      color: TColors.white,
+                                                    Image.network(
+                                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632803/yvcwt3yxbt4aeli2lrs5.png',
                                                       height: 50,
                                                       width: 50,
-                                                      fit: BoxFit.contain,
+                                                      color: Colors.white,
+                                                      loadingBuilder: (context,
+                                                          child,
+                                                          loadingProgress) {
+                                                        if (loadingProgress ==
+                                                            null) {
+                                                          return child;
+                                                        } else {
+                                                          return SizedBox(
+                                                            height: 50,
+                                                            width: 50,
+                                                            child: Center(
+                                                              child:
+                                                                  SpinKitChasingDots(
+                                                                size: 30,
+                                                                color: TColors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                          );
+                                                        }
+                                                      },
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     SizedBox(
                                                       width: 10,
@@ -310,12 +376,33 @@ class TDesktopAbout extends StatelessWidget {
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   children: [
-                                                    Image.asset(
-                                                      "assets/icons/website.png",
-                                                      color: TColors.white,
+                                                    Image.network(
+                                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632812/wwm259ktee7g3kxvm1td.png',
                                                       height: 50,
                                                       width: 50,
-                                                      fit: BoxFit.contain,
+                                                      color: Colors.white,
+                                                      loadingBuilder: (context,
+                                                          child,
+                                                          loadingProgress) {
+                                                        if (loadingProgress ==
+                                                            null) {
+                                                          return child;
+                                                        } else {
+                                                          return SizedBox(
+                                                            height: 50,
+                                                            width: 50,
+                                                            child: Center(
+                                                              child:
+                                                                  SpinKitChasingDots(
+                                                                size: 30,
+                                                                color: TColors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                          );
+                                                        }
+                                                      },
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     SizedBox(
                                                       width: 10,
@@ -374,12 +461,33 @@ class TDesktopAbout extends StatelessWidget {
                                                   mainAxisSize:
                                                       MainAxisSize.min,
                                                   children: [
-                                                    Image.asset(
-                                                      "assets/icons/speech-bubble.png",
-                                                      color: TColors.white,
+                                                    Image.network(
+                                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632807/kecaudethuhddbklhigo.png',
                                                       height: 50,
                                                       width: 50,
-                                                      fit: BoxFit.contain,
+                                                      color: Colors.white,
+                                                      loadingBuilder: (context,
+                                                          child,
+                                                          loadingProgress) {
+                                                        if (loadingProgress ==
+                                                            null) {
+                                                          return child;
+                                                        } else {
+                                                          return SizedBox(
+                                                            height: 50,
+                                                            width: 50,
+                                                            child: Center(
+                                                              child:
+                                                                  SpinKitChasingDots(
+                                                                size: 30,
+                                                                color: TColors
+                                                                    .white,
+                                                              ),
+                                                            ),
+                                                          );
+                                                        }
+                                                      },
+                                                      fit: BoxFit.cover,
                                                     ),
                                                     SizedBox(
                                                       width: 10,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 
 import '../../../../utils/helper/color.dart';
@@ -39,7 +40,7 @@ class TMobileAbout extends StatelessWidget {
                           text: "MEET THE CREATOR",
                           fontFamily: "Picasso",
                           letterSpacing: 4,
-                          fontSize: 35,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
                         ),
@@ -128,8 +129,30 @@ class TMobileAbout extends StatelessWidget {
                       children: [
                         Expanded(
                           flex: 2,
-                          child: Image.asset(
-                            "assets/images/Add a heading.png",
+                          child: Image.network(
+                            'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
+                            loadingBuilder: (context, child, loadingProgress) {
+                              if (loadingProgress == null) {
+                                return child;
+                              } else {
+                                return Container(
+                                  padding: EdgeInsets.all(
+                                    50,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      width: 0.3,
+                                      color: TColors.white,
+                                    ),
+                                  ),
+                                  child: Center(
+                                    child: SpinKitChasingDots(
+                                      color: TColors.white,
+                                    ),
+                                  ),
+                                );
+                              }
+                            },
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -164,12 +187,29 @@ class TMobileAbout extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Image.asset(
-                                      "assets/icons/code.png",
-                                      color: TColors.white,
+                                    Image.network(
+                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632798/og0gvfilqdxbeg2nvvzh.png',
                                       height: 50,
                                       width: 50,
-                                      fit: BoxFit.contain,
+                                      color: Colors.white,
+                                      loadingBuilder:
+                                          (context, child, loadingProgress) {
+                                        if (loadingProgress == null) {
+                                          return child;
+                                        } else {
+                                          return SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: Center(
+                                              child: SpinKitChasingDots(
+                                                size: 30,
+                                                color: TColors.white,
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      fit: BoxFit.cover,
                                     ),
                                     SizedBox(
                                       width: 10,
@@ -223,12 +263,29 @@ class TMobileAbout extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Image.asset(
-                                      "assets/icons/immersive.png",
-                                      color: TColors.white,
+                                    Image.network(
+                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632803/yvcwt3yxbt4aeli2lrs5.png',
                                       height: 50,
                                       width: 50,
-                                      fit: BoxFit.contain,
+                                      color: Colors.white,
+                                      loadingBuilder:
+                                          (context, child, loadingProgress) {
+                                        if (loadingProgress == null) {
+                                          return child;
+                                        } else {
+                                          return SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: Center(
+                                              child: SpinKitChasingDots(
+                                                size: 30,
+                                                color: TColors.white,
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      fit: BoxFit.cover,
                                     ),
                                     SizedBox(
                                       width: 10,
@@ -282,12 +339,29 @@ class TMobileAbout extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Image.asset(
-                                      "assets/icons/website.png",
-                                      color: TColors.white,
+                                    Image.network(
+                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632812/wwm259ktee7g3kxvm1td.png',
                                       height: 50,
                                       width: 50,
-                                      fit: BoxFit.contain,
+                                      color: Colors.white,
+                                      loadingBuilder:
+                                          (context, child, loadingProgress) {
+                                        if (loadingProgress == null) {
+                                          return child;
+                                        } else {
+                                          return SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: Center(
+                                              child: SpinKitChasingDots(
+                                                size: 30,
+                                                color: TColors.white,
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      fit: BoxFit.cover,
                                     ),
                                     SizedBox(
                                       width: 10,
@@ -342,12 +416,29 @@ class TMobileAbout extends StatelessWidget {
                                 child: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    Image.asset(
-                                      "assets/icons/speech-bubble.png",
-                                      color: TColors.white,
+                                    Image.network(
+                                      'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632807/kecaudethuhddbklhigo.png',
                                       height: 50,
                                       width: 50,
-                                      fit: BoxFit.contain,
+                                      color: Colors.white,
+                                      loadingBuilder:
+                                          (context, child, loadingProgress) {
+                                        if (loadingProgress == null) {
+                                          return child;
+                                        } else {
+                                          return SizedBox(
+                                            height: 50,
+                                            width: 50,
+                                            child: Center(
+                                              child: SpinKitChasingDots(
+                                                size: 30,
+                                                color: TColors.white,
+                                              ),
+                                            ),
+                                          );
+                                        }
+                                      },
+                                      fit: BoxFit.cover,
                                     ),
                                     SizedBox(
                                       width: 10,

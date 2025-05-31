@@ -1,10 +1,14 @@
+import 'dart:developer';
+import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/utils/helper/color.dart';
 
 import '../../../../../back_end/function/function.dart';
+import '../../../../../main.dart';
 import '../../../../route/route.dart';
 import '../../../../theme/theme.dart';
 import '../../../../utils/widgets/constraints.dart';
@@ -129,10 +133,29 @@ class TDesktopHome extends StatelessWidget {
             Expanded(
               child: Stack(
                 children: [
-                  Image.asset(
+                  Image.network(
+                    'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg',
                     height: double.maxFinite,
                     width: double.maxFinite,
-                    'assets/images/WhatsApp Image 2025-05-24 at 11.23.53 AM.jpeg',
+                    loadingBuilder: (context, child, loadingProgress) {
+                      if (loadingProgress == null) {
+                        return child;
+                      } else {
+                        return Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 0.3,
+                              color: TColors.white,
+                            ),
+                          ),
+                          child: Center(
+                            child: SpinKitChasingDots(
+                              color: TColors.white,
+                            ),
+                          ),
+                        );
+                      }
+                    },
                     fit: BoxFit.cover,
                   ),
                   TNav()
