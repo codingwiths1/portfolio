@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -810,16 +812,28 @@ class TPackage extends StatelessWidget {
                   Stack(
                     children: [
                       Image.network(
-                        errorBuilder: (context, error, stackTrace) => SizedBox(
-                          height: 150,
-                          width: double.maxFinite,
-                          child: Center(
-                            child: Icon(
-                              Icons.error_outline_rounded,
-                              color: TColors.white,
+                        errorBuilder: (context, error, stackTrace) {
+                          return SizedBox(
+                            height: 150,
+                            width: double.maxFinite,
+                            child: Center(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Icons.error_outline_rounded,
+                                    color: TColors.white,
+                                  ),
+                                  TText(
+                                    text: "UNABLE TO LOAD IMAGE",
+                                    fontSize: 6,
+                                    color: TColors.white,
+                                  )
+                                ],
+                              ),
                             ),
-                          ),
-                        ),
+                          );
+                        },
                         frameBuilder: (context, child, frame, _) {
                           if (frame != null) {
                             return child;
@@ -849,7 +863,8 @@ class TPackage extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 3,right: 0,
+                        top: 3,
+                        right: 0,
                         child: Row(
                           children: List.generate(
                             length,

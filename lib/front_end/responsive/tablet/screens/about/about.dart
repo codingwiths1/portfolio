@@ -34,9 +34,19 @@ class TTabletAbout extends StatelessWidget {
                         height: 50,
                         width: 50,
                         child: Center(
-                          child: Icon(
-                            Icons.error_outline_rounded,
-                            color: TColors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.error_outline_rounded,
+                                color: TColors.white,
+                              ),
+                              TText(
+                                text: "UNABLE TO LOAD IMAGE",
+                                fontSize: 6,
+                                color: TColors.white,
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -117,10 +127,20 @@ class TTabletAbout extends StatelessWidget {
                       errorBuilder: (context, error, stackTrace) => SizedBox(
                         height: 50,
                         width: 50,
-                        child: Center(
-                          child: Icon(
-                            Icons.error_outline_rounded,
-                            color: TColors.white,
+                        child:  Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.error_outline_rounded,
+                                color: TColors.white,
+                              ),
+                              TText(
+                                text: "UNABLE TO LOAD IMAGE",
+                                fontSize: 6,
+                                color: TColors.white,
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -201,10 +221,20 @@ class TTabletAbout extends StatelessWidget {
                       errorBuilder: (context, error, stackTrace) => SizedBox(
                         height: 50,
                         width: 50,
-                        child: Center(
-                          child: Icon(
-                            Icons.error_outline_rounded,
-                            color: TColors.white,
+                        child:  Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.error_outline_rounded,
+                                color: TColors.white,
+                              ),
+                              TText(
+                                text: "UNABLE TO LOAD IMAGE",
+                                fontSize: 6,
+                                color: TColors.white,
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -286,9 +316,19 @@ class TTabletAbout extends StatelessWidget {
                         height: 50,
                         width: 50,
                         child: Center(
-                          child: Icon(
-                            Icons.error_outline_rounded,
-                            color: TColors.white,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.error_outline_rounded,
+                                color: TColors.white,
+                              ),
+                              TText(
+                                text: "UNABLE TO LOAD IMAGE",
+                                fontSize: 6,
+                                color: TColors.white,
+                              )
+                            ],
                           ),
                         ),
                       ),
@@ -484,9 +524,19 @@ class TTabletAbout extends StatelessWidget {
                                   ),
                                 ),
                                 child: Center(
-                                  child: Icon(
-                                    Icons.error_outline_rounded,
-                                    color: TColors.white,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.error_outline_rounded,
+                                        color: TColors.white,
+                                      ),
+                                      TText(
+                                        text: "UNABLE TO LOAD IMAGE",
+                                        fontSize: 6,
+                                        color: TColors.white,
+                                      )
+                                    ],
                                   ),
                                 ),
                               ),

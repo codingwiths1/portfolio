@@ -204,10 +204,20 @@ class TDesktopPortfolio extends StatelessWidget {
                                                     color: TColors.white,
                                                   ),
                                                 ),
-                                                child: Center(
-                                                  child: Icon(
-                                                    Icons.error_outline_rounded,
-                                                    color: Colors.white,
+                                                child:  Center(
+                                                  child: Column(
+                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                    children: [
+                                                      Icon(
+                                                        Icons.error_outline_rounded,
+                                                        color: TColors.white,
+                                                      ),
+                                                      TText(
+                                                        text: "UNABLE TO LOAD IMAGE",
+                                                        fontSize: 6,
+                                                        color: TColors.white,
+                                                      )
+                                                    ],
                                                   ),
                                                 ),
                                               ),

@@ -33,9 +33,21 @@ class TMobileHome extends StatelessWidget {
                           color: TColors.white,
                         ),
                       ),
-                      child: Icon(
-                        Icons.error_outline_rounded,
-                        color: TColors.white,
+                      child:  Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.error_outline_rounded,
+                              color: TColors.white,
+                            ),
+                            TText(
+                              text: "UNABLE TO LOAD IMAGE",
+                              fontSize: 6,
+                              color: TColors.white,
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg',
