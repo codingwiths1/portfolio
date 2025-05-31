@@ -46,7 +46,7 @@ class TTabletAbout extends StatelessWidget {
                       width: 50,
                       color: Colors.white,
                       loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress != null) {
+                        if (loadingProgress == null) {
                           return child;
                         } else {
                           return SizedBox(
@@ -131,7 +131,7 @@ class TTabletAbout extends StatelessWidget {
                       width: 50,
                       color: Colors.white,
                       loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress != null) {
+                        if (loadingProgress == null) {
                           return child;
                         } else {
                           return SizedBox(
@@ -216,7 +216,7 @@ class TTabletAbout extends StatelessWidget {
                       width: 50,
                       color: Colors.white,
                       loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress != null) {
+                        if (loadingProgress == null) {
                           return child;
                         } else {
                           return SizedBox(
@@ -301,7 +301,7 @@ class TTabletAbout extends StatelessWidget {
                       width: 50,
                       color: Colors.white,
                       loadingBuilder: (context, child, loadingProgress) {
-                        if (loadingProgress != null) {
+                        if (loadingProgress == null) {
                           return child;
                         } else {
                           return SizedBox(
@@ -497,7 +497,7 @@ class TTabletAbout extends StatelessWidget {
                               'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
                               loadingBuilder:
                                   (context, child, loadingProgress) {
-                                if (loadingProgress != null) {
+                                if (loadingProgress == null) {
                                   return child;
                                 } else {
                                   return Container(

@@ -150,7 +150,7 @@ class TMobileAbout extends StatelessWidget {
                             ),
                             'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
                             loadingBuilder: (context, child, loadingProgress) {
-                              if (loadingProgress != null) {
+                              if (loadingProgress == null) {
                                 return child;
                               } else {
                                 return Container(
@@ -224,7 +224,7 @@ class TMobileAbout extends StatelessWidget {
                                       color: Colors.white,
                                       loadingBuilder:
                                           (context, child, loadingProgress) {
-                                        if (loadingProgress != null) {
+                                        if (loadingProgress == null) {
                                           return child;
                                         } else {
                                           return SizedBox(
@@ -312,7 +312,7 @@ class TMobileAbout extends StatelessWidget {
                                       color: Colors.white,
                                       loadingBuilder:
                                           (context, child, loadingProgress) {
-                                        if (loadingProgress != null) {
+                                        if (loadingProgress == null) {
                                           return child;
                                         } else {
                                           return SizedBox(
@@ -399,7 +399,7 @@ class TMobileAbout extends StatelessWidget {
                                       color: Colors.white,
                                       loadingBuilder:
                                           (context, child, loadingProgress) {
-                                        if (loadingProgress != null) {
+                                        if (loadingProgress == null) {
                                           return child;
                                         } else {
                                           return SizedBox(
@@ -487,7 +487,7 @@ class TMobileAbout extends StatelessWidget {
                                       color: Colors.white,
                                       loadingBuilder:
                                           (context, child, loadingProgress) {
-                                        if (loadingProgress != null) {
+                                        if (loadingProgress == null) {
                                           return child;
                                         } else {
                                           return SizedBox(

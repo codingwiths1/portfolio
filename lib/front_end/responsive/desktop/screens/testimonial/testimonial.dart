@@ -167,7 +167,7 @@ class TDesktopTestimonial extends StatelessWidget {
                                             ),
                                             loadingBuilder: (context, child,
                                                 loadingProgress) {
-                                              if (loadingProgress != null) {
+                                              if (loadingProgress == null) {
                                                 return child;
                                               } else {
                                                 return Container(

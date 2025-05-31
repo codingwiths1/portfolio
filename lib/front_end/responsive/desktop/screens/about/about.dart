@@ -164,7 +164,7 @@ class TDesktopAbout extends StatelessWidget {
                                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
                                     loadingBuilder:
                                         (context, child, loadingProgress) {
-                                      if (loadingProgress != null) {
+                                      if (loadingProgress == null) {
                                         return child;
                                       } else {
                                         return Container(
@@ -244,7 +244,7 @@ class TDesktopAbout extends StatelessWidget {
                                                       loadingBuilder: (context,
                                                           child,
                                                           loadingProgress) {
-                                                        if (loadingProgress !=
+                                                        if (loadingProgress ==
                                                             null) {
                                                           return child;
                                                         } else {
@@ -343,7 +343,7 @@ class TDesktopAbout extends StatelessWidget {
                                                       loadingBuilder: (context,
                                                           child,
                                                           loadingProgress) {
-                                                        if (loadingProgress !=
+                                                        if (loadingProgress ==
                                                             null) {
                                                           return child;
                                                         } else {
@@ -442,7 +442,7 @@ class TDesktopAbout extends StatelessWidget {
                                                       loadingBuilder: (context,
                                                           child,
                                                           loadingProgress) {
-                                                        if (loadingProgress !=
+                                                        if (loadingProgress ==
                                                             null) {
                                                           return child;
                                                         } else {
@@ -541,7 +541,7 @@ class TDesktopAbout extends StatelessWidget {
                                                       loadingBuilder: (context,
                                                           child,
                                                           loadingProgress) {
-                                                        if (loadingProgress !=
+                                                        if (loadingProgress ==
                                                             null) {
                                                           return child;
                                                         } else {
@@ -658,7 +658,7 @@ class _TLeftNavTextState extends State<TLeftNavText>
                 ),
               ),
               loadingBuilder: (context, child, loadingProgress) {
-                if (loadingProgress != null) {
+                if (loadingProgress == null) {
                   return child;
                 } else {
                   return Container(

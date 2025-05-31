@@ -202,7 +202,7 @@ class TTabletPortfolio extends StatelessWidget {
                                       ),
                                       loadingBuilder:
                                           (context, child, loadingProgress) {
-                                        if (loadingProgress != null) {
+                                        if (loadingProgress == null) {
                                           WidgetsBinding.instance
                                               .addPostFrameCallback((_) =>
                                                   TFunction.showing.value =

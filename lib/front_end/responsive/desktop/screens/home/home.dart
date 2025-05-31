@@ -154,7 +154,7 @@ class TDesktopHome extends StatelessWidget {
                     height: double.maxFinite,
                     width: double.maxFinite,
                     loadingBuilder: (context, child, loadingProgress) {
-                      if (loadingProgress != null) {
+                      if (loadingProgress == null) {
                         return child;
                       } else {
                         return Container(
@@ -289,7 +289,7 @@ class TIcon extends StatelessWidget {
           ),
           url,
           loadingBuilder: (context, child, loadingProgress) {
-            if (loadingProgress != null) {
+            if (loadingProgress == null) {
               return child;
             } else {
               return SpinKitChasingDots(
