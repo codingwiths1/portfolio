@@ -820,8 +820,7 @@ class TPackage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        frameBuilder: (context, child, frame,_) {
-
+                        frameBuilder: (context, child, frame, _) {
                           if (frame != null) {
                             return child;
                           } else {
@@ -850,22 +849,25 @@ class TPackage extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                          top: 3,
-                          right: 3,
-                          child: Row(
-                            children: List.generate(
-                              length,
-                              (_) => Image.network(
+                        top: 3,right: 0,
+                        child: Row(
+                          children: List.generate(
+                            length,
+                            (_) => Padding(
+                              padding: const EdgeInsets.only(right: 5.0),
+                              child: Image.network(
                                 errorBuilder: (context, error, stackTrace) =>
                                     SizedBox(),
-                                "src",
+                                "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632799/thmfmj1zf3yg6zq5quny.png",
                                 fit: BoxFit.contain,
-                                height: 20,
-                                width: 20,
+                                height: 20 - (length - 1),
+                                width: 20 - (length - 1),
                                 color: TColors.orange,
                               ),
                             ),
-                          )),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   SizedBox(
