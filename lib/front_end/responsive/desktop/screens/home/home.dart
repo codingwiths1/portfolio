@@ -1,5 +1,4 @@
 import 'dart:developer';
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -215,49 +214,49 @@ class TNav extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 TIcon(
-                  url: "assets/icons/home.png",
+                  url:
+                      "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632802/wrpmshw11tjyac5zew7a.png",
                   route: TRoutes.home,
-                  index: 0,
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TIcon(
-                  url: "assets/icons/user.png",
+                  url:
+                      "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632809/dokamwuzampi3inkvnwg.png",
                   route: TRoutes.about,
-                  index: 1,
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TIcon(
-                  url: "assets/icons/suitcase.png",
+                  url:
+                      "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632808/leb5fgagwhwg93eeq602.png",
                   route: TRoutes.portfolio,
-                  index: 2,
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TIcon(
-                  url: "assets/icons/rating.png",
+                  url:
+                      "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632805/ucie71qy4t0gq6ubjfxu.png",
                   route: TRoutes.testimonials,
-                  index: 3,
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TIcon(
-                  url: "assets/icons/vip.png",
+                  url:
+                      "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632811/casbraeh2aqrpcpg82po.png",
                   route: TRoutes.packages,
-                  index: 4,
                 ),
                 SizedBox(
                   height: 20,
                 ),
                 TIcon(
-                  url: "assets/icons/paper-plane.png",
+                  url:
+                      "https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632803/so06xkmo3xvdekqpohkk.png",
                   route: TRoutes.contact,
-                  index: 5,
                 ),
               ],
             ),
@@ -273,30 +272,41 @@ class TIcon extends StatelessWidget {
     super.key,
     required this.url,
     required this.route,
-    required this.index,
   });
   final String url;
   final String route;
-  final int index;
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        // ctl.changeCurrentIndex(index);
-        // log("${ctl.currentIndex.value}");
-        context.go(route);
-        // ctl.changeNavColor(
-        //   GoRouterState.of(context).uri.toString(),
-        // );
-      },
-      child: Image.asset(
-        url,
-        color: GoRouterState.of(context).uri.toString() == route
-            ? TColors.white
-            : TColors.black,
-        height: 20,
-        width: 20,
+    return IntrinsicWidth(
+      child: InkWell(
+        onTap: () {
+          context.go(route);
+        },
+        child: Image.network(
+          errorBuilder: (context, error, stackTrace) => Icon(
+            Icons.error_outline_rounded,
+            color: Colors.white,
+            size: 20,
+          ),
+          url,
+          loadingBuilder: (context, child, loadingProgress) {
+            if (loadingProgress != null) {
+              return child;
+            } else {
+
+              return SpinKitChasingDots(
+                size: 20,
+                color: TColors.white,
+              );
+            }
+          },
+          color: GoRouterState.of(context).uri.toString() == route
+              ? TColors.white
+              : TColors.black,
+          height: 20,
+          width: 20,
+        ),
       ),
     );
   }

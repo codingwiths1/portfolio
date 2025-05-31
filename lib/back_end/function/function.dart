@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 class TFunction {
   static RxBool showing = false.obs;
+  static RxBool isLoaded = false.obs;
+
   static bool isTablet(BuildContext context) {
     return MediaQuery.of(context).size.width > 700 &&
         MediaQuery.of(context).size.width < 1200;
