@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class TFunction {
-  static RxBool loading = true.obs;
+  static RxBool showing = false.obs;
   static bool isTablet(BuildContext context) {
     return MediaQuery.of(context).size.width > 700 &&
         MediaQuery.of(context).size.width < 1200;
