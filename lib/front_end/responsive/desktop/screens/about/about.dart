@@ -145,6 +145,23 @@ class TDesktopAbout extends StatelessWidget {
                                 Expanded(
                                   flex: 2,
                                   child: Image.network(
+                                    errorBuilder:
+                                        (context, error, stackTrace) =>
+                                            Container(
+                                      padding: EdgeInsets.all(
+                                        50,
+                                      ),
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          width: 0.3,
+                                          color: TColors.white,
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        Icons.error_outline_rounded,
+                                        color: Colors.white,
+                                      ),
+                                    ),
                                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748638671/siyu7indd0smpd6uprik.png',
                                     loadingBuilder:
                                         (context, child, loadingProgress) {
@@ -207,6 +224,20 @@ class TDesktopAbout extends StatelessWidget {
                                                       MainAxisSize.min,
                                                   children: [
                                                     Image.network(
+                                                      errorBuilder: (context,
+                                                              error,
+                                                              stackTrace) =>
+                                                          SizedBox(
+                                                        height: 50,
+                                                        width: 50,
+                                                        child: Center(
+                                                          child: Icon(
+                                                            Icons
+                                                                .error_outline_rounded,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                      ),
                                                       'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632798/og0gvfilqdxbeg2nvvzh.png',
                                                       height: 50,
                                                       width: 50,
@@ -292,6 +323,20 @@ class TDesktopAbout extends StatelessWidget {
                                                       MainAxisSize.min,
                                                   children: [
                                                     Image.network(
+                                                      errorBuilder: (context,
+                                                              error,
+                                                              stackTrace) =>
+                                                          SizedBox(
+                                                        height: 50,
+                                                        width: 50,
+                                                        child: Center(
+                                                          child: Icon(
+                                                            Icons
+                                                                .error_outline_rounded,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                      ),
                                                       'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632803/yvcwt3yxbt4aeli2lrs5.png',
                                                       height: 50,
                                                       width: 50,
@@ -377,6 +422,20 @@ class TDesktopAbout extends StatelessWidget {
                                                       MainAxisSize.min,
                                                   children: [
                                                     Image.network(
+                                                      errorBuilder: (context,
+                                                              error,
+                                                              stackTrace) =>
+                                                          SizedBox(
+                                                        height: 50,
+                                                        width: 50,
+                                                        child: Center(
+                                                          child: Icon(
+                                                            Icons
+                                                                .error_outline_rounded,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                      ),
                                                       'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632812/wwm259ktee7g3kxvm1td.png',
                                                       height: 50,
                                                       width: 50,
@@ -462,6 +521,20 @@ class TDesktopAbout extends StatelessWidget {
                                                       MainAxisSize.min,
                                                   children: [
                                                     Image.network(
+                                                      errorBuilder: (context,
+                                                              error,
+                                                              stackTrace) =>
+                                                          SizedBox(
+                                                        height: 50,
+                                                        width: 50,
+                                                        child: Center(
+                                                          child: Icon(
+                                                            Icons
+                                                                .error_outline_rounded,
+                                                            color: Colors.white,
+                                                          ),
+                                                        ),
+                                                      ),
                                                       'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632807/kecaudethuhddbklhigo.png',
                                                       height: 50,
                                                       width: 50,

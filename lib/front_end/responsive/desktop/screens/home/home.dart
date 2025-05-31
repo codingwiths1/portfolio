@@ -134,6 +134,25 @@ class TDesktopHome extends StatelessWidget {
               child: Stack(
                 children: [
                   Image.network(
+                    errorBuilder: (context, error, stackTrace) => Center(
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 0.3,
+                              color: TColors.white,
+                            ),
+                          ),
+                          child: Center(
+                            child: Icon(
+                              Icons.error_outline_rounded,
+                              color: TColors.white,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg',
                     height: double.maxFinite,
                     width: double.maxFinite,

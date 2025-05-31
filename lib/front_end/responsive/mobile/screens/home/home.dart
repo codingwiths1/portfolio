@@ -26,6 +26,18 @@ class TMobileHome extends StatelessWidget {
                 AspectRatio(
                   aspectRatio: 1,
                   child: Image.network(
+                    errorBuilder: (context, error, stackTrace) => Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 0.3,
+                          color: TColors.white,
+                        ),
+                      ),
+                      child: Icon(
+                        Icons.error_outline_rounded,
+                        color: TColors.white,
+                      ),
+                    ),
                     'https://res.cloudinary.com/dsqc1pitc/image/upload/v1748632507/ly3rftmxxalda51qmopg.jpg',
                     loadingBuilder: (context, child, loadingProgress) {
                       if (loadingProgress == null) {
