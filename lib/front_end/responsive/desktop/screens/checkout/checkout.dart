@@ -9,13 +9,12 @@ import '../contact/contact.dart';
 import '../home/home.dart';
 
 class TDesktopCheckout extends StatelessWidget {
-  const TDesktopCheckout({super.key});
+  const TDesktopCheckout({super.key, this.package = "", this.description = ""});
+  final String package;
+  final String description;
 
   @override
   Widget build(BuildContext context) {
-    log("THIS IS DATETIME ${DateTime.now().add(
-      Duration(days: 5),
-    )}");
     return Scaffold(
       body: TConstraints(
         child: Row(
@@ -115,7 +114,7 @@ class TDesktopCheckout extends StatelessWidget {
                                               ),
                                             ),
                                             TextSpan(
-                                              text: " The Signature Build",
+                                              text: " $package",
                                               style: TextStyle(
                                                 fontSize: 25,
                                                 fontWeight: FontWeight.w100,
@@ -134,8 +133,7 @@ class TDesktopCheckout extends StatelessWidget {
                                         children: [
                                           Expanded(
                                             child: TText(
-                                              text:
-                                                  "A full-width custom UI/UX, luxury copywriting, and concierge-style collaboration.",
+                                              text: description,
                                               fontWeight: FontWeight.w100,
                                               fontFamily: "Picasso",
                                               letterSpacing: 2,

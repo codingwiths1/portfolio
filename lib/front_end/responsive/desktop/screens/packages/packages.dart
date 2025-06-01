@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:go_router/go_router.dart';
@@ -88,7 +87,6 @@ class TDesktopPackages extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 TPackage(
-
                                   package: 'The Foundation Build',
                                   description:
                                       'For emerging brands that desire elegance from day one.',
@@ -154,7 +152,6 @@ class TDesktopPackages extends StatelessWidget {
                                   days: '5',
                                 ),
                                 TPackage(
-
                                   package: 'The Prestige Suite',
                                   description:
                                       'Polished presence for growing visionaries.',
@@ -203,7 +200,6 @@ class TDesktopPackages extends StatelessWidget {
                                   days: '10',
                                 ),
                                 TPackage(
-
                                   package: ' The Elite Experience',
                                   description:
                                       'A bespoke digital statement for established brands.',
@@ -288,7 +284,6 @@ class TDesktopPackages extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 TPackage(
-
                                   package: 'The Signature Build',
                                   description:
                                       'Tailored for industry leaders and timeless brands.',
@@ -493,7 +488,6 @@ class TDesktopPackages extends StatelessWidget {
                                   days: '18',
                                 ),
                                 TPackage(
-
                                   widget: Column(
                                     children: [
                                       Row(
@@ -1030,7 +1024,8 @@ class TPackage extends StatelessWidget {
                 height: 20,
                 child: ElevatedButton(
                   onPressed: () {
-                 context.go(TRoutes.checkout);
+                    context.go(
+                        "${TRoutes.checkout}/${Uri.encodeComponent(package)}/${Uri.encodeComponent(description)}");
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

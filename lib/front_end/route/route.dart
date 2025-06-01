@@ -33,11 +33,10 @@ class TRoutes {
   static String testimonials = "/client-reverence";
   static String checkout = "/reserve-your-experience";
 
-
   static List<RouteBase> routes = [
     GoRoute(
       path: "/",
-      redirect: (context, state) => checkout,
+      redirect: (context, state) => home,
     ),
     GoRoute(
       path: home,
@@ -196,32 +195,38 @@ class TRoutes {
       ),
     ),
     GoRoute(
-      path: checkout,
-      pageBuilder: (context, state) => CustomTransitionPage(
-        key: state.pageKey,
-        child: TResponsive(
-          desktop: TDesktopCheckout(),
-          tablet: TTabletCheckout(),
-          mobile: TMobileCheckout(),
-        ),
-        transitionsBuilder: (context, animation, secondaryAnimation, child) {
-          var tween = Tween<Offset>(
-            begin: Offset(1, 0),
-            end: Offset.zero,
-          ).animate(
-            CurvedAnimation(
-              parent: animation,
-              curve: Curves.easeIn,
+        path: "$checkout/:package/:description",
+        pageBuilder: (context, state) {
+          final package = state.pathParameters["package"]!;
+          final description = state.pathParameters["description"]!;
+
+          return CustomTransitionPage(
+            key: state.pageKey,
+            child: TResponsive(
+              desktop: TDesktopCheckout(
+                package: package,
+                description: description,
+              ),
+              tablet: TTabletCheckout(),
+              mobile: TMobileCheckout(),
             ),
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              var tween = Tween<Offset>(
+                begin: Offset(1, 0),
+                end: Offset.zero,
+              ).animate(
+                CurvedAnimation(
+                  parent: animation,
+                  curve: Curves.easeIn,
+                ),
+              );
+              return SlideTransition(
+                position: tween,
+                child: child,
+              );
+            },
           );
-          return SlideTransition(
-            position: tween,
-            child: child,
-          );
-        },
-      ),
-    ),
-
+        }),
   ];
-
 }

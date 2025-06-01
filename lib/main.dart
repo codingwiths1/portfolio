@@ -9,7 +9,6 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
 
-
   /// URL STRATEGY
   setPathUrlStrategy();
 
