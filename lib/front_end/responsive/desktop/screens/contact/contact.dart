@@ -183,7 +183,7 @@ class TField extends StatelessWidget {
           fontFamily: "Picasso",
           letterSpacing: 2,
           fontWeight: FontWeight.bold,
-          fontSize: 16,
+          fontSize: 14,
         ),
         SizedBox(
           height: 10,

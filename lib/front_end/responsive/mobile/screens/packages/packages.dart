@@ -83,11 +83,7 @@ class TMobilePackages extends StatelessWidget {
                                   right: 30,
                                 ),
                                 child: TPackage(
-                                  onTap: () {
-                                    debugPrint(
-                                      "PACKAGE 1 TAPPED",
-                                    );
-                                  },
+
                                   package: 'The Foundation Build',
                                   description:
                                       'For emerging brands that desire elegance from day one.',
@@ -159,11 +155,7 @@ class TMobilePackages extends StatelessWidget {
                                   right: 30,
                                 ),
                                 child: TPackage(
-                                  onTap: () {
-                                    debugPrint(
-                                      "PACKAGE 2 TAPPED",
-                                    );
-                                  },
+
                                   package: 'The Prestige Suite',
                                   description:
                                       'Polished presence for growing visionaries.',
@@ -217,11 +209,7 @@ class TMobilePackages extends StatelessWidget {
                                   right: 30,
                                 ),
                                 child: TPackage(
-                                  onTap: () {
-                                    debugPrint(
-                                      "PACKAGE 3 TAPPED",
-                                    );
-                                  },
+
                                   package: ' The Elite Experience',
                                   description:
                                       'A bespoke digital statement for established brands.',
@@ -302,9 +290,7 @@ class TMobilePackages extends StatelessWidget {
                                   right: 30,
                                 ),
                                 child: TPackage(
-                                  onTap: () {
-                                    debugPrint("PACKAGE 4 TAPPED");
-                                  },
+
                                   package: 'The Signature Build',
                                   description:
                                       'Tailored for industry leaders and timeless brands.',
@@ -514,9 +500,7 @@ class TMobilePackages extends StatelessWidget {
                                   right: 30,
                                 ),
                                 child: TPackage(
-                                  onTap: () {
-                                    debugPrint("PACKAGE 5 TAPPED");
-                                  },
+
                                   widget: Column(
                                     children: [
                                       Row(

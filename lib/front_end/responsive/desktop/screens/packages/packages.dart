@@ -1,7 +1,8 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:go_router/go_router.dart';
+import 'package:portfolio/front_end/route/route.dart';
 
 import '../../../../utils/helper/color.dart';
 import '../../../../utils/widgets/constraints.dart';
@@ -87,11 +88,7 @@ class TDesktopPackages extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 TPackage(
-                                  onTap: () {
-                                    debugPrint(
-                                      "PACKAGE 1 TAPPED",
-                                    );
-                                  },
+
                                   package: 'The Foundation Build',
                                   description:
                                       'For emerging brands that desire elegance from day one.',
@@ -157,11 +154,7 @@ class TDesktopPackages extends StatelessWidget {
                                   days: '5',
                                 ),
                                 TPackage(
-                                  onTap: () {
-                                    debugPrint(
-                                      "PACKAGE 2 TAPPED",
-                                    );
-                                  },
+
                                   package: 'The Prestige Suite',
                                   description:
                                       'Polished presence for growing visionaries.',
@@ -210,11 +203,7 @@ class TDesktopPackages extends StatelessWidget {
                                   days: '10',
                                 ),
                                 TPackage(
-                                  onTap: () {
-                                    debugPrint(
-                                      "PACKAGE 3 TAPPED",
-                                    );
-                                  },
+
                                   package: ' The Elite Experience',
                                   description:
                                       'A bespoke digital statement for established brands.',
@@ -299,9 +288,7 @@ class TDesktopPackages extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 TPackage(
-                                  onTap: () {
-                                    debugPrint("PACKAGE 4 TAPPED");
-                                  },
+
                                   package: 'The Signature Build',
                                   description:
                                       'Tailored for industry leaders and timeless brands.',
@@ -506,9 +493,7 @@ class TDesktopPackages extends StatelessWidget {
                                   days: '18',
                                 ),
                                 TPackage(
-                                  onTap: () {
-                                    debugPrint("PACKAGE 5 TAPPED");
-                                  },
+
                                   widget: Column(
                                     children: [
                                       Row(
@@ -772,7 +757,6 @@ class TPackage extends StatelessWidget {
     required this.package,
     required this.description,
     required this.price,
-    this.onTap,
     required this.details1,
     required this.length,
     required this.details2,
@@ -784,7 +768,6 @@ class TPackage extends StatelessWidget {
   final String price;
   final String days;
 
-  final void Function()? onTap;
   final Widget details1;
   final Widget details2;
 
@@ -1047,7 +1030,7 @@ class TPackage extends StatelessWidget {
                 height: 20,
                 child: ElevatedButton(
                   onPressed: () {
-                    onTap!();
+                 context.go(TRoutes.checkout);
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

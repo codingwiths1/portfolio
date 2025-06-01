@@ -7,8 +7,9 @@ import 'package:portfolio/front_end/responsive/desktop/screens/home/home.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/packages/packages.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/portfolio/portfolio.dart';
 import 'package:portfolio/front_end/responsive/desktop/screens/testimonial/testimonial.dart';
-
+import '../responsive/desktop/screens/checkout/checkout.dart';
 import '../responsive/mobile/screens/about/about.dart';
+import '../responsive/mobile/screens/checkout/checkout.dart';
 import '../responsive/mobile/screens/contact/contact.dart';
 import '../responsive/mobile/screens/home/home.dart';
 import '../responsive/mobile/screens/packages/packages.dart';
@@ -16,6 +17,7 @@ import '../responsive/mobile/screens/portfolio/portfolio.dart';
 import '../responsive/mobile/screens/testimonials/testimonials.dart';
 import '../responsive/responsive.dart';
 import '../responsive/tablet/screens/about/about.dart';
+import '../responsive/tablet/screens/checkout/checkout.dart';
 import '../responsive/tablet/screens/contact/contact.dart';
 import '../responsive/tablet/screens/home/home.dart';
 import '../responsive/tablet/screens/packages/packages.dart';
@@ -29,11 +31,13 @@ class TRoutes {
   static String packages = "/prestige-suites";
   static String portfolio = "/signature-works";
   static String testimonials = "/client-reverence";
+  static String checkout = "/reserve-your-experience";
+
 
   static List<RouteBase> routes = [
     GoRoute(
       path: "/",
-      redirect: (context, state) => home,
+      redirect: (context, state) => checkout,
     ),
     GoRoute(
       path: home,
@@ -191,6 +195,33 @@ class TRoutes {
         },
       ),
     ),
+    GoRoute(
+      path: checkout,
+      pageBuilder: (context, state) => CustomTransitionPage(
+        key: state.pageKey,
+        child: TResponsive(
+          desktop: TDesktopCheckout(),
+          tablet: TTabletCheckout(),
+          mobile: TMobileCheckout(),
+        ),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          var tween = Tween<Offset>(
+            begin: Offset(1, 0),
+            end: Offset.zero,
+          ).animate(
+            CurvedAnimation(
+              parent: animation,
+              curve: Curves.easeIn,
+            ),
+          );
+          return SlideTransition(
+            position: tween,
+            child: child,
+          );
+        },
+      ),
+    ),
+
   ];
 
 }
