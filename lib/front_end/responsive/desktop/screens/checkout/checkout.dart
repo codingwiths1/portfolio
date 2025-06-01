@@ -9,9 +9,14 @@ import '../contact/contact.dart';
 import '../home/home.dart';
 
 class TDesktopCheckout extends StatelessWidget {
-  const TDesktopCheckout({super.key, this.package = "", this.description = ""});
+  const TDesktopCheckout(
+      {super.key,
+      required this.package,
+      required this.description,
+      required this.price});
   final String package;
   final String description;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -164,6 +169,23 @@ class TDesktopCheckout extends StatelessWidget {
                                           fontWeight: FontWeight.w100,
                                           fontSize: 12,
                                         ),
+                                      ),
+                                      SizedBox(height: 10,),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.end,
+                                        children: [
+                                          TText(
+                                            text: "£$price",
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0xffa0864a),
+                                            fontFamily: "Inter",
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height: 20,
                                       ),
                                       Divider(
                                         color: TColors.white,

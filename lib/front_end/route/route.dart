@@ -195,10 +195,11 @@ class TRoutes {
       ),
     ),
     GoRoute(
-        path: "$checkout/:package/:description",
+        path: "$checkout/:package/:description/:price",
         pageBuilder: (context, state) {
           final package = state.pathParameters["package"]!;
           final description = state.pathParameters["description"]!;
+          final price = state.pathParameters["price"]!;
 
           return CustomTransitionPage(
             key: state.pageKey,
@@ -206,9 +207,18 @@ class TRoutes {
               desktop: TDesktopCheckout(
                 package: package,
                 description: description,
+                price: price,
               ),
-              tablet: TTabletCheckout(),
-              mobile: TMobileCheckout(),
+              tablet: TTabletCheckout(
+                package: package,
+                price: price,
+                description: description,
+              ),
+              mobile: TMobileCheckout(
+                package: package,
+                description: description,
+                price: price,
+              ),
             ),
             transitionsBuilder:
                 (context, animation, secondaryAnimation, child) {

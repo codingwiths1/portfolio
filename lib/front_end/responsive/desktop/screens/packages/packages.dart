@@ -1025,7 +1025,7 @@ class TPackage extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: () {
                     context.go(
-                        "${TRoutes.checkout}/${Uri.encodeComponent(package)}/${Uri.encodeComponent(description)}");
+                        "${TRoutes.checkout}/${Uri.encodeComponent(package)}/${Uri.encodeComponent(description)}/${Uri.encodeComponent(price)}");
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

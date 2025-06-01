@@ -5,7 +5,14 @@ import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
 
 class TMobileCheckout extends StatelessWidget {
-  const TMobileCheckout({super.key});
+  const TMobileCheckout(
+      {super.key,
+      required this.package,
+      required this.description,
+      required this.price});
+  final String package;
+  final String description;
+  final String price;
 
   @override
   Widget build(BuildContext context) {
@@ -98,7 +105,7 @@ class TMobileCheckout extends StatelessWidget {
                                         ),
                                       ),
                                       TextSpan(
-                                        text: " The Signature Build",
+                                        text: " $package",
                                         style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.w100,
@@ -117,8 +124,7 @@ class TMobileCheckout extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: TText(
-                                        text:
-                                            "A full-width custom UI/UX, luxury copywriting, and concierge-style collaboration.",
+                                        text: description,
                                         fontWeight: FontWeight.w100,
                                         fontFamily: "Picasso",
                                         letterSpacing: 2,
@@ -149,6 +155,24 @@ class TMobileCheckout extends StatelessWidget {
                                     fontWeight: FontWeight.w100,
                                     fontSize: 12,
                                   ),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    TText(
+                                      text: "£$price",
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xffa0864a),
+                                      fontFamily: "Inter",
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 20,
                                 ),
                                 Divider(
                                   color: TColors.white,
