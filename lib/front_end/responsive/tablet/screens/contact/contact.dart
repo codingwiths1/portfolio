@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../back_end/function/function.dart';
 import '../../../../utils/helper/color.dart';
 import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
@@ -70,6 +71,7 @@ class TTabletContact extends StatelessWidget {
                       Expanded(
                         child: TField(
                           text: "FIRST NAME",
+                          controller: TFunction.firstName,
                         ),
                       ),
                       SizedBox(
@@ -78,6 +80,7 @@ class TTabletContact extends StatelessWidget {
                       Expanded(
                         child: TField(
                           text: "LAST NAME",
+                          controller: TFunction.lastName,
                         ),
                       ),
                     ],
@@ -88,7 +91,10 @@ class TTabletContact extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: TField(text: "EMAIL"),
+                        child: TField(
+                          text: "EMAIL",
+                          controller: TFunction.email,
+                        ),
                       ),
                       SizedBox(
                         width: 25,
@@ -96,6 +102,7 @@ class TTabletContact extends StatelessWidget {
                       Expanded(
                         child: TField(
                           text: "SUBJECT",
+                          controller: TFunction.subject,
                         ),
                       ),
                     ],
@@ -106,6 +113,7 @@ class TTabletContact extends StatelessWidget {
                   TField(
                     text: "MESSAGE",
                     height: 150,
+                    controller: TFunction.message,
                   ),
                   SizedBox(
                     height: 10,
@@ -138,7 +146,8 @@ class TTabletContact extends StatelessWidget {
                         ),
                       ),
                     ],
-                  ), SizedBox(
+                  ),
+                  SizedBox(
                     height: 100,
                   ),
                   Row(
@@ -174,7 +183,7 @@ class TTabletContact extends StatelessWidget {
                                   padding: EdgeInsets.zero,
                                   elevation: 0,
                                   tapTargetSize:
-                                  MaterialTapTargetSize.shrinkWrap,
+                                      MaterialTapTargetSize.shrinkWrap,
                                 ),
                                 child: TText(
                                   text: "shalomluxestudio@gmail.com",

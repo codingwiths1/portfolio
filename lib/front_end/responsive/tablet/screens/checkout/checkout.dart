@@ -196,32 +196,32 @@ class TTabletCheckout extends StatelessWidget {
                                 height: 35,
                               ),
                               TField(
-                                text: "FIRST NAME",
+                                text: "FIRST NAME", controller: TFunction.firstName,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
-                                text: "LAST NAME",
+                                text: "LAST NAME", controller: TFunction.lastName,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
-                                text: "SUBJECT",
+                                text: "SUBJECT", controller: TFunction.subject,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
-                                text: "EMAIL",
+                                text: "EMAIL", controller: TFunction.email,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
                                 text: "MESSAGE",
-                                height: 150,
+                                height: 150, controller: TFunction.message,
                               ),
                               SizedBox(
                                 height: 100,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../back_end/function/function.dart';
 import '../../../../utils/helper/color.dart';
 import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
@@ -66,32 +67,32 @@ class TMobileContact extends StatelessWidget {
                     height: 120,
                   ),
                   TField(
-                    text: "FIRST NAME",
+                    text: "FIRST NAME", controller: TFunction.firstName,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
-                    text: "LAST NAME",
+                    text: "LAST NAME", controller: TFunction.lastName,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
-                    text: "EMAIL",
+                    text: "EMAIL", controller: TFunction.email,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
-                    text: "SUBJECT",
+                    text: "SUBJECT", controller: TFunction.subject,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
                     text: "MESSAGE",
-                    height: 150,
+                    height: 150, controller: TFunction.message,
                   ),
                   SizedBox(
                     height: 10,

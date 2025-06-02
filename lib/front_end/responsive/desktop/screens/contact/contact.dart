@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/back_end/function/function.dart';
 import 'package:portfolio/front_end/utils/widgets/constraints.dart';
 
 import '../../../../utils/helper/color.dart';
@@ -78,7 +79,7 @@ class TDesktopContact extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TField(
-                                text: "FIRST NAME",
+                                text: "FIRST NAME", controller: TFunction.firstName,
                               ),
                             ),
                             SizedBox(
@@ -86,7 +87,7 @@ class TDesktopContact extends StatelessWidget {
                             ),
                             Expanded(
                               child: TField(
-                                text: "LAST NAME",
+                                text: "LAST NAME", controller: TFunction.lastName,
                               ),
                             ),
                           ],
@@ -97,14 +98,14 @@ class TDesktopContact extends StatelessWidget {
                         Row(
                           children: [
                             Expanded(
-                              child: TField(text: "EMAIL"),
+                              child: TField(text: "EMAIL", controller: TFunction.email,),
                             ),
                             SizedBox(
                               width: 25,
                             ),
                             Expanded(
                               child: TField(
-                                text: "SUBJECT",
+                                text: "SUBJECT", controller: TFunction.subject,
                               ),
                             ),
                           ],
@@ -114,7 +115,7 @@ class TDesktopContact extends StatelessWidget {
                         ),
                         TField(
                           text: "MESSAGE",
-                          height: 150,
+                          height: 150, controller: TFunction.message,
                         ),
                         SizedBox(
                           height: 10,
@@ -218,10 +219,11 @@ class TField extends StatelessWidget {
   const TField({
     super.key,
     required this.text,
-    this.height = 30.0,
+    this.height = 30.0, required this.controller,
   });
   final String text;
   final double height;
+  final TextEditingController controller;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -240,7 +242,7 @@ class TField extends StatelessWidget {
         SizedBox(
           height: height,
           child: ClipRRect(
-            child: TextField(
+            child: TextField(controller: controller,
               textAlignVertical: height > 30
                   ? TextAlignVertical.top
                   : TextAlignVertical.center,
