@@ -40,7 +40,7 @@ class TMobileAbout extends StatelessWidget {
                           text: "MEET THE CREATOR",
                           fontFamily: "Picasso",
                           letterSpacing: 4,
-                          fontSize: 30,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
                         ),

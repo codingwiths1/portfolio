@@ -38,7 +38,7 @@ class TTabletPackages extends StatelessWidget {
                           text: "PRESTIGE PACKAGES",
                           fontFamily: "Picasso",
                           letterSpacing: 4,
-                          fontSize: 40,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
                         ),

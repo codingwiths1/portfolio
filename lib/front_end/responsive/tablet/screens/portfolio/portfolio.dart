@@ -129,7 +129,7 @@ class TTabletPortfolio extends StatelessWidget {
                         child: TText(
                           text: "THE ATELIER",
                           letterSpacing: 6,
-                          fontSize: 60,
+                          fontSize: 30,
                           fontFamily: "Picasso",
                           fontWeight: FontWeight.bold,
                           color: TColors.white,

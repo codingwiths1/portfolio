@@ -38,7 +38,7 @@ class TMobilePackages extends StatelessWidget {
                           text: "PRESTIGE PACKAGES",
                           fontFamily: "Picasso",
                           letterSpacing: 4,
-                          fontSize: 35,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
                         ),

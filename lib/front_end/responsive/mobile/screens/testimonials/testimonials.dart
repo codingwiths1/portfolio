@@ -83,7 +83,7 @@ class TMobileTestimonials extends StatelessWidget {
                           text: "WORDS FROM THE PRIVILEGED",
                           letterSpacing: 4,
                           fontFamily: "Picasso",
-                          fontSize: 30,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
                         ),

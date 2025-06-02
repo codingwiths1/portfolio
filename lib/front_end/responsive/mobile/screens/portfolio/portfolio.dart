@@ -128,7 +128,7 @@ class TMobilePortfolio extends StatelessWidget {
                         child: TText(
                           text: "THE ATELIER",
                           letterSpacing: 6,
-                          fontSize: 35,
+                          fontSize: 20,
                           fontFamily: "Picasso",
                           fontWeight: FontWeight.bold,
                           color: TColors.white,

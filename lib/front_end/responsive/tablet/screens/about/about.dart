@@ -423,7 +423,7 @@ class TTabletAbout extends StatelessWidget {
                             text: "MEET THE CREATOR",
                             fontFamily: "Picasso",
                             letterSpacing: 4,
-                            fontSize: 50,
+                            fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: TColors.white,
                           ),

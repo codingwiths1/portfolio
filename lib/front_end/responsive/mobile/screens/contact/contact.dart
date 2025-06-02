@@ -37,7 +37,7 @@ class TMobileContact extends StatelessWidget {
                         text: "YOUR INVITATION",
                         letterSpacing: 4,
                         fontFamily: "Picasso",
-                        fontSize: 25,
+                        fontSize: 20,
                         fontWeight: FontWeight.bold,
                         color: TColors.white,
                       ),

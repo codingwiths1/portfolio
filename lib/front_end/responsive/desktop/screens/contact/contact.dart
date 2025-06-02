@@ -79,7 +79,8 @@ class TDesktopContact extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TField(
-                                text: "FIRST NAME", controller: TFunction.firstName,
+                                text: "FIRST NAME",
+                                controller: TFunction.firstName,
                               ),
                             ),
                             SizedBox(
@@ -87,7 +88,8 @@ class TDesktopContact extends StatelessWidget {
                             ),
                             Expanded(
                               child: TField(
-                                text: "LAST NAME", controller: TFunction.lastName,
+                                text: "LAST NAME",
+                                controller: TFunction.lastName,
                               ),
                             ),
                           ],
@@ -98,14 +100,18 @@ class TDesktopContact extends StatelessWidget {
                         Row(
                           children: [
                             Expanded(
-                              child: TField(text: "EMAIL", controller: TFunction.email,),
+                              child: TField(
+                                text: "EMAIL",
+                                controller: TFunction.email,
+                              ),
                             ),
                             SizedBox(
                               width: 25,
                             ),
                             Expanded(
                               child: TField(
-                                text: "SUBJECT", controller: TFunction.subject,
+                                text: "SUBJECT",
+                                controller: TFunction.subject,
                               ),
                             ),
                           ],
@@ -115,7 +121,8 @@ class TDesktopContact extends StatelessWidget {
                         ),
                         TField(
                           text: "MESSAGE",
-                          height: 150, controller: TFunction.message,
+                          height: 150,
+                          controller: TFunction.message,
                         ),
                         SizedBox(
                           height: 10,
@@ -219,11 +226,14 @@ class TField extends StatelessWidget {
   const TField({
     super.key,
     required this.text,
-    this.height = 30.0, required this.controller,
+    this.height = 30.0,
+    required this.controller,
+    this.validator,
   });
   final String text;
   final double height;
   final TextEditingController controller;
+  final FormFieldValidator? validator;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -242,7 +252,9 @@ class TField extends StatelessWidget {
         SizedBox(
           height: height,
           child: ClipRRect(
-            child: TextField(controller: controller,
+            child: TextFormField(
+              controller: controller,
+              validator: validator,
               textAlignVertical: height > 30
                   ? TextAlignVertical.top
                   : TextAlignVertical.center,

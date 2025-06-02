@@ -37,7 +37,7 @@ class TTabletContact extends StatelessWidget {
                         text: "YOUR INVITATION",
                         letterSpacing: 4,
                         fontFamily: "Picasso",
-                        fontSize: 40,
+                        fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: TColors.white,
                       ),
