@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../../back_end/function/function.dart';
 import '../../../../route/route.dart';
@@ -19,6 +20,8 @@ class TTabletCheckout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final now = DateTime.now();
+    final format = DateFormat("dd-MM-yyyy").format(now);
     return Scaffold(
       body: Stack(
         children: [
@@ -152,7 +155,7 @@ class TTabletCheckout extends StatelessWidget {
                                 padding:
                                     const EdgeInsets.only(left: 20, bottom: 20),
                                 child: TText(
-                                  text: "2025-5-12",
+                                  text: format,
                                   letterSpacing: 2,
                                   fontFamily: "Picasso",
                                   fontWeight: FontWeight.w100,
@@ -196,32 +199,37 @@ class TTabletCheckout extends StatelessWidget {
                                 height: 35,
                               ),
                               TField(
-                                text: "FIRST NAME", controller: TFunction.firstName,
+                                text: "FIRST NAME",
+                                controller: TFunction.firstName,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
-                                text: "LAST NAME", controller: TFunction.lastName,
+                                text: "LAST NAME",
+                                controller: TFunction.lastName,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
-                                text: "SUBJECT", controller: TFunction.subject,
+                                text: "SUBJECT",
+                                controller: TFunction.subject,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
-                                text: "EMAIL", controller: TFunction.email,
+                                text: "EMAIL",
+                                controller: TFunction.email,
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               TField(
                                 text: "MESSAGE",
-                                height: 150, controller: TFunction.message,
+                                height: 150,
+                                controller: TFunction.message,
                               ),
                               SizedBox(
                                 height: 100,

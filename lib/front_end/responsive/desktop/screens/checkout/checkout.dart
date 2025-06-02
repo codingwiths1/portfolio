@@ -2,6 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../../back_end/function/function.dart';
 import '../../../../route/route.dart';
@@ -24,6 +25,8 @@ class TDesktopCheckout extends StatelessWidget {
   @override
   @override
   Widget build(BuildContext context) {
+    final now = DateTime.now();
+    final format = DateFormat("dd-MM-yyyy").format(now);
     return Scaffold(
       body: TConstraints(
         child: Row(
@@ -167,7 +170,7 @@ class TDesktopCheckout extends StatelessWidget {
                                         padding: const EdgeInsets.only(
                                             left: 20, bottom: 20),
                                         child: TText(
-                                          text: "2025-5-12",
+                                          text: format,
                                           letterSpacing: 2,
                                           fontFamily: "Picasso",
                                           fontWeight: FontWeight.w100,
