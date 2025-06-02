@@ -149,7 +149,7 @@ class TDesktopPackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '5',
+                                  days: 5,
                                 ),
                                 TPackage(
                                   package: 'The Prestige Suite',
@@ -197,7 +197,7 @@ class TDesktopPackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '10',
+                                  days: 10,
                                 ),
                                 TPackage(
                                   package: ' The Elite Experience',
@@ -272,7 +272,7 @@ class TDesktopPackages extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  days: '15',
+                                  days: 15,
                                 ),
                               ],
                             ),
@@ -485,7 +485,7 @@ class TDesktopPackages extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  days: '18',
+                                  days: 18,
                                 ),
                                 TPackage(
                                   widget: Column(
@@ -725,7 +725,7 @@ class TDesktopPackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '25',
+                                  days: 25,
                                 ),
                               ],
                             ),
@@ -760,7 +760,7 @@ class TPackage extends StatelessWidget {
   final String package;
   final String description;
   final String price;
-  final String days;
+  final int days;
 
   final Widget details1;
   final Widget details2;
@@ -985,7 +985,7 @@ class TPackage extends StatelessWidget {
                       TextSpan(
                         children: [
                           TextSpan(
-                            text: days,
+                            text: (days + 5).toString(),
                             style: TextStyle(
                               overflow: TextOverflow.clip,
                               fontSize: 10,

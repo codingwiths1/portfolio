@@ -146,7 +146,7 @@ class TMobilePackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '5',
+                                  days: 5,
                                 ),
                               ),
                               Padding(
@@ -200,7 +200,7 @@ class TMobilePackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '10', length: 2,
+                                  days: 10, length: 2,
                                 ),
                               ),
                               Padding(
@@ -281,7 +281,7 @@ class TMobilePackages extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  days: '15', length: 3,
+                                  days: 15, length: 3,
                                 ),
                               ),
                               Padding(
@@ -491,7 +491,7 @@ class TMobilePackages extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  days: '18', length: 4,
+                                  days: 18, length: 4,
                                 ),
                               ),
                               Padding(
@@ -737,7 +737,7 @@ class TMobilePackages extends StatelessWidget {
                                     color: TColors.black,
                                     fontSize: 10,
                                   ),
-                                  days: '25', length: 5,
+                                  days: 25, length: 5,
                                 ),
                               ),
                             ],
