@@ -397,6 +397,8 @@ class TMobileCheckout extends StatelessWidget {
                                                                   ),
                                                                 ),
                                                                 onPressed: () {
+                                                                  Navigator.pop(
+                                                                      context);
                                                                   showDialog(
                                                                     context:
                                                                         context,
