@@ -1,5 +1,7 @@
+import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../back_end/function/function.dart';
@@ -9,7 +11,7 @@ import '../about/about.dart';
 import '../contact/contact.dart';
 import '../home/home.dart';
 
-class TDesktopCheckout extends StatelessWidget {
+class TDesktopCheckout extends StatefulWidget {
   const TDesktopCheckout(
       {super.key,
       required this.package,
@@ -20,10 +22,43 @@ class TDesktopCheckout extends StatelessWidget {
   final String price;
 
   @override
+  State<TDesktopCheckout> createState() => _TDesktopCheckoutState();
+}
+
+class _TDesktopCheckoutState extends State<TDesktopCheckout> {
+  @override
+  void dispose() {
+    TFunction.firstName.clear();
+    TFunction.lastName.clear();
+    TFunction.email.clear();
+    TFunction.subject.clear();
+    TFunction.message.clear();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final now = DateTime.now();
     final format = DateFormat("dd-MM-yyyy").format(now);
-    final TextEditingController subject = TextEditingController(text: package);
+    final TextEditingController subject =
+        TextEditingController(text: widget.package);
+
+    validate() {
+      var firstName = TFunction.firstName.text.trim();
+      if (firstName.isEmpty) {
+        TFunction.fieldValidation(
+            context, "first name", "First Name can't be empty");
+      } else if (TFunction.lastName.text.trim().isEmpty) {
+        TFunction.fieldValidation(
+            context, "last name", "Last Name can't be empty");
+      } else if (TFunction.email.text.trim().isEmpty) {
+        TFunction.fieldValidation(context, "email", "Email can't be empty");
+      } else {
+        TFunction.confirmEmail(context);
+      }
+    }
+
     return Scaffold(
       body: TConstraints(
         child: Row(
@@ -123,7 +158,7 @@ class TDesktopCheckout extends StatelessWidget {
                                               ),
                                             ),
                                             TextSpan(
-                                              text: " $package",
+                                              text: " ${widget.package}",
                                               style: TextStyle(
                                                 fontSize: 25,
                                                 fontWeight: FontWeight.w100,
@@ -142,7 +177,7 @@ class TDesktopCheckout extends StatelessWidget {
                                         children: [
                                           Expanded(
                                             child: TText(
-                                              text: description,
+                                              text: widget.description,
                                               fontWeight: FontWeight.w100,
                                               fontFamily: "Picasso",
                                               letterSpacing: 2,
@@ -182,7 +217,7 @@ class TDesktopCheckout extends StatelessWidget {
                                             MainAxisAlignment.end,
                                         children: [
                                           TText(
-                                            text: "£$price",
+                                            text: "£${widget.price}",
                                             fontSize: 16,
                                             fontWeight: FontWeight.bold,
                                             color: Color(0xffa0864a),
@@ -211,44 +246,38 @@ class TDesktopCheckout extends StatelessWidget {
                                       SizedBox(
                                         height: 35,
                                       ),
-                                      Form(
-                                        child: Column(
-                                          children: [
-                                            TField(
-                                              text: "FIRST NAME",
-                                              controller: TFunction.firstName,
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            TField(
-                                              text: "LAST NAME",
-                                              controller: TFunction.lastName,
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            TField(
-                                              text: "SUBJECT",
-                                              controller: subject,
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            TField(
-                                              text: "EMAIL",
-                                              controller: TFunction.email,
-                                            ),
-                                            SizedBox(
-                                              height: 10,
-                                            ),
-                                            TField(
-                                              text: "MESSAGE",
-                                              height: 150,
-                                              controller: TFunction.message,
-                                            ),
-                                          ],
-                                        ),
+                                      TField(
+                                        text: "FIRST NAME",
+                                        controller: TFunction.firstName,
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TField(
+                                        text: "LAST NAME",
+                                        controller: TFunction.lastName,
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TField(
+                                        text: "SUBJECT",
+                                        controller: subject,
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TField(
+                                        text: "EMAIL",
+                                        controller: TFunction.email,
+                                      ),
+                                      SizedBox(
+                                        height: 10,
+                                      ),
+                                      TField(
+                                        text: "MESSAGE",
+                                        height: 150,
+                                        controller: TFunction.message,
                                       ),
                                       SizedBox(
                                         height: 100,
@@ -267,8 +296,7 @@ class TDesktopCheckout extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-                                            onPressed: () =>
-                                                TFunction.confirmEmail(context),
+                                            onPressed: validate,
                                             child: TText(
                                               fontSize: 16,
                                               text: "BOOK AN APPOINTMENT",

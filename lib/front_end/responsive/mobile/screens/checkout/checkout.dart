@@ -7,7 +7,7 @@ import '../../../../utils/helper/color.dart';
 import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
 
-class TMobileCheckout extends StatelessWidget {
+class TMobileCheckout extends StatefulWidget {
   const TMobileCheckout(
       {super.key,
       required this.package,
@@ -18,10 +18,42 @@ class TMobileCheckout extends StatelessWidget {
   final String price;
 
   @override
+  State<TMobileCheckout> createState() => _TMobileCheckoutState();
+}
+
+class _TMobileCheckoutState extends State<TMobileCheckout> {
+  @override
+  void dispose() {
+    TFunction.firstName.clear();
+    TFunction.lastName.clear();
+    TFunction.email.clear();
+    TFunction.subject.clear();
+    TFunction.message.clear();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final now = DateTime.now();
     final format = DateFormat("dd-MM-yyyy").format(now);
-    final TextEditingController subject = TextEditingController(text: package);
+    final TextEditingController subject = TextEditingController(text: widget.package);
+
+    validate() {
+      var firstName = TFunction.firstName.text.trim();
+      if (firstName.isEmpty) {
+        TFunction.fieldValidation(
+            context, "first name", "First Name can't be empty");
+      } else if (TFunction.lastName.text.trim().isEmpty) {
+        TFunction.fieldValidation(
+            context, "last name", "Last Name can't be empty");
+      } else if (TFunction.email.text.trim().isEmpty) {
+        TFunction.fieldValidation(context, "email", "Email can't be empty");
+      } else {
+        TFunction.confirmEmail(context);
+      }
+    }
+
 
     return Scaffold(
       body: Stack(
@@ -112,7 +144,7 @@ class TMobileCheckout extends StatelessWidget {
                                         ),
                                       ),
                                       TextSpan(
-                                        text: " $package",
+                                        text: " ${widget.package}",
                                         style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.w100,
@@ -131,7 +163,7 @@ class TMobileCheckout extends StatelessWidget {
                                   children: [
                                     Expanded(
                                       child: TText(
-                                        text: description,
+                                        text: widget.description,
                                         fontWeight: FontWeight.w100,
                                         fontFamily: "Picasso",
                                         letterSpacing: 2,
@@ -170,7 +202,7 @@ class TMobileCheckout extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     TText(
-                                      text: "£$price",
+                                      text: "£${widget.price}",
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       color: Color(0xffa0864a),
@@ -254,8 +286,7 @@ class TMobileCheckout extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      onPressed: () =>
-                                          TFunction.confirmEmail(context),
+                                      onPressed:validate,
                                       child: TText(
                                         fontSize: 16,
                                         text: "BOOK AN APPOINTMENT",

@@ -22,9 +22,67 @@ class TFunction {
   static TextEditingController firstName = TextEditingController();
   static TextEditingController lastName = TextEditingController();
   static TextEditingController email = TextEditingController();
-  static TextEditingController subject =
-      TextEditingController();
+  static TextEditingController subject = TextEditingController();
   static TextEditingController message = TextEditingController();
+
+  static fieldValidation(BuildContext context, String text,String message) {
+    showDialog(
+      context: context,
+      builder: (context) => Dialog(
+        backgroundColor: TColors.black,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            0,
+          ),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(
+                20,
+              ),
+              margin: EdgeInsets.all(
+                20,
+              ),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 0.5,
+                  color: Colors.white,
+                ),
+              ),
+              width: 400,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Center(
+                    child: TText(
+                      text: "INVALID ${text.toUpperCase()}!",
+                      fontSize: 20,
+                      fontFamily: "Betty",
+                      letterSpacing: 4,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Center(
+                    child: TText(
+                      text: message,
+                      fontWeight: FontWeight.w100,
+                      letterSpacing: 2,
+                      fontFamily: "Picasso",
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 
   static confirmEmail(BuildContext context) {
     showDialog(

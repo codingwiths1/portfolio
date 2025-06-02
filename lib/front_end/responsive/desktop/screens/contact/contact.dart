@@ -228,12 +228,10 @@ class TField extends StatelessWidget {
     required this.text,
     this.height = 30.0,
     required this.controller,
-    this.validator,
   });
   final String text;
   final double height;
   final TextEditingController controller;
-  final FormFieldValidator? validator;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -252,9 +250,8 @@ class TField extends StatelessWidget {
         SizedBox(
           height: height,
           child: ClipRRect(
-            child: TextFormField(
+            child: TextField(
               controller: controller,
-              validator: validator,
               textAlignVertical: height > 30
                   ? TextAlignVertical.top
                   : TextAlignVertical.center,

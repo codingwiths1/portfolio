@@ -6,7 +6,7 @@ import '../../../../utils/helper/color.dart';
 import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
 
-class TTabletCheckout extends StatelessWidget {
+class TTabletCheckout extends StatefulWidget {
   const TTabletCheckout(
       {super.key,
       required this.package,
@@ -17,10 +17,42 @@ class TTabletCheckout extends StatelessWidget {
   final String price;
 
   @override
+  State<TTabletCheckout> createState() => _TTabletCheckoutState();
+}
+
+class _TTabletCheckoutState extends State<TTabletCheckout> {
+  @override
+  void dispose() {
+    TFunction.firstName.clear();
+    TFunction.lastName.clear();
+    TFunction.email.clear();
+    TFunction.subject.clear();
+    TFunction.message.clear();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final now = DateTime.now();
     final format = DateFormat("dd-MM-yyyy").format(now);
-    final TextEditingController subject = TextEditingController(text: package);
+    final TextEditingController subject = TextEditingController(text: widget.package);
+
+    validate() {
+      var firstName = TFunction.firstName.text.trim();
+      if (firstName.isEmpty) {
+        TFunction.fieldValidation(
+            context, "first name", "First Name can't be empty");
+      } else if (TFunction.lastName.text.trim().isEmpty) {
+        TFunction.fieldValidation(
+            context, "last name", "Last Name can't be empty");
+      } else if (TFunction.email.text.trim().isEmpty) {
+        TFunction.fieldValidation(context, "email", "Email can't be empty");
+      } else {
+        TFunction.confirmEmail(context);
+      }
+    }
+
 
     return Scaffold(
       body: Stack(
@@ -111,7 +143,7 @@ class TTabletCheckout extends StatelessWidget {
                                       ),
                                     ),
                                     TextSpan(
-                                      text: " $package",
+                                      text: " ${widget.package}",
                                       style: TextStyle(
                                         fontSize: 25,
                                         fontWeight: FontWeight.w100,
@@ -130,7 +162,7 @@ class TTabletCheckout extends StatelessWidget {
                                 children: [
                                   Expanded(
                                     child: TText(
-                                      text: package,
+                                      text: widget.package,
                                       fontWeight: FontWeight.w100,
                                       fontFamily: "Picasso",
                                       letterSpacing: 2,
@@ -169,7 +201,7 @@ class TTabletCheckout extends StatelessWidget {
                                 mainAxisAlignment: MainAxisAlignment.end,
                                 children: [
                                   TText(
-                                    text: "£$price",
+                                    text: "£${widget.price}",
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xffa0864a),
@@ -253,8 +285,7 @@ class TTabletCheckout extends StatelessWidget {
                                         ),
                                       ),
                                     ),
-                                    onPressed: () =>
-                                        TFunction.confirmEmail(context),
+                                    onPressed: validate,
                                     child: TText(
                                       fontSize: 16,
                                       text: "BOOK AN APPOINTMENT",
