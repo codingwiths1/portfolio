@@ -16,7 +16,7 @@ class TMobileContact extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 vertical: 40,
-                horizontal: 80,
+                horizontal: 40,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -124,6 +124,61 @@ class TMobileContact extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 100,
+                  ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        TText(
+                          text: "Prefer direct contact?",
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: "Picasso",
+                          letterSpacing: 4,
+                        ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Flexible(
+                              child: TText(
+                                text: "Reach out at: ",
+                                fontSize: 14,
+                                fontWeight: FontWeight.w100,
+                                fontFamily: "Picasso",
+                                letterSpacing: 2,
+                              ),
+                            ),
+                            Flexible(
+                              child: TextButton(
+                                onPressed: () {},
+                                style: TextButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      0,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.zero,
+                                  elevation: 0,
+                                  tapTargetSize:
+                                      MaterialTapTargetSize.shrinkWrap,
+                                ),
+                                child: TText(
+                                  text: "shalomluxestudio@gmail.com",
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w100,
+                                  fontFamily: "Picasso",
+                                  letterSpacing: 0,
+                                ),
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: 30,

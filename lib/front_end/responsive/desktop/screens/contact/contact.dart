@@ -149,7 +149,56 @@ class TDesktopContact extends StatelessWidget {
                           ],
                         ),
                         SizedBox(
-                          height: 30,
+                          height: 100,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                TText(
+                                  text: "Prefer direct contact?",
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: "Picasso",
+                                  letterSpacing: 4,
+                                ),
+                                Row(
+                                  children: [
+                                    TText(
+                                      text: "Reach out at: ",
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w100,
+                                      fontFamily: "Picasso",
+                                      letterSpacing: 2,
+                                    ),
+                                    TextButton(
+                                      onPressed: () {},
+                                      style: TextButton.styleFrom(
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(
+                                            0,
+                                          ),
+                                        ),
+                                        padding: EdgeInsets.zero,
+                                        elevation: 0,
+                                        tapTargetSize:
+                                            MaterialTapTargetSize.shrinkWrap,
+                                      ),
+                                      child: TText(
+                                        text: "shalomluxestudio@gmail.com",
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w100,
+                                        fontFamily: "Picasso",
+                                        letterSpacing: 0,
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ],
                         )
                       ],
                     ),
@@ -188,12 +237,48 @@ class TField extends StatelessWidget {
         SizedBox(
           height: 10,
         ),
-        Container(
+        SizedBox(
           height: height,
-          decoration: BoxDecoration(
-            border: Border.all(width: 1, color: TColors.white),
+          child: ClipRRect(
+            child: TextField(
+              textAlignVertical: height > 30
+                  ? TextAlignVertical.top
+                  : TextAlignVertical.center,
+              expands: height > 30 ? true : false,
+              maxLines: height > 30 ? null : 1,
+              style: TextStyle(
+                  fontWeight: FontWeight.w100,
+                  fontSize: 14,
+                  fontFamily: "Picasso"),
+              decoration: InputDecoration(
+                contentPadding: EdgeInsets.only(
+                  left: 20,
+                  right: 10,
+                  top: 10,
+                  bottom: 5,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(
+                    0,
+                  ),
+                  borderSide: BorderSide(
+                    color: TColors.white,
+                    width: 1,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(
+                    0,
+                  ),
+                  borderSide: BorderSide(
+                    color: TColors.white,
+                    width: 1,
+                  ),
+                ),
+              ),
+            ),
           ),
-        ),
+        )
       ],
     );
   }

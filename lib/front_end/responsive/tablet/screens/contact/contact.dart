@@ -138,6 +138,57 @@ class TTabletContact extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ), SizedBox(
+                    height: 100,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          TText(
+                            text: "Prefer direct contact?",
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: "Picasso",
+                            letterSpacing: 4,
+                          ),
+                          Row(
+                            children: [
+                              TText(
+                                text: "Reach out at: ",
+                                fontSize: 14,
+                                fontWeight: FontWeight.w100,
+                                fontFamily: "Picasso",
+                                letterSpacing: 2,
+                              ),
+                              TextButton(
+                                onPressed: () {},
+                                style: TextButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(
+                                      0,
+                                    ),
+                                  ),
+                                  padding: EdgeInsets.zero,
+                                  elevation: 0,
+                                  tapTargetSize:
+                                  MaterialTapTargetSize.shrinkWrap,
+                                ),
+                                child: TText(
+                                  text: "shalomluxestudio@gmail.com",
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w100,
+                                  fontFamily: "Picasso",
+                                  letterSpacing: 0,
+                                ),
+                              )
+                            ],
+                          )
+                        ],
+                      ),
+                    ],
                   ),
                   SizedBox(
                     height: 30,
