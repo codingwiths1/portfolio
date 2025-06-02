@@ -5,11 +5,40 @@ import '../../../../utils/helper/color.dart';
 import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
 
-class TMobileContact extends StatelessWidget {
+class TMobileContact extends StatefulWidget {
   const TMobileContact({super.key});
 
   @override
+  State<TMobileContact> createState() => _TMobileContactState();
+}
+
+class _TMobileContactState extends State<TMobileContact> {
+  @override
+  void dispose() {
+    TFunction.firstName.clear();
+    TFunction.lastName.clear();
+    TFunction.email.clear();
+    TFunction.subject.clear();
+    TFunction.message.clear();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    validate() {
+      var firstName = TFunction.firstName.text.trim();
+      if (firstName.isEmpty) {
+        TFunction.fieldValidation(
+            context, "first name", "First Name can't be empty");
+      } else if (TFunction.lastName.text.trim().isEmpty) {
+        TFunction.fieldValidation(
+            context, "last name", "Last Name can't be empty");
+      } else if (TFunction.email.text.trim().isEmpty) {
+        TFunction.fieldValidation(context, "email", "Email can't be empty");
+      } else {}
+    }
+
     return Scaffold(
       body: Stack(
         children: [
@@ -67,32 +96,37 @@ class TMobileContact extends StatelessWidget {
                     height: 120,
                   ),
                   TField(
-                    text: "FIRST NAME", controller: TFunction.firstName,
+                    text: "FIRST NAME",
+                    controller: TFunction.firstName,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
-                    text: "LAST NAME", controller: TFunction.lastName,
+                    text: "LAST NAME",
+                    controller: TFunction.lastName,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
-                    text: "EMAIL", controller: TFunction.email,
+                    text: "EMAIL",
+                    controller: TFunction.email,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
-                    text: "SUBJECT", controller: TFunction.subject,
+                    text: "SUBJECT",
+                    controller: TFunction.subject,
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   TField(
                     text: "MESSAGE",
-                    height: 150, controller: TFunction.message,
+                    height: 150,
+                    controller: TFunction.message,
                   ),
                   SizedBox(
                     height: 10,
@@ -114,7 +148,7 @@ class TMobileContact extends StatelessWidget {
                               horizontal: 40,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: validate,
                           child: TText(
                             text: "SEND",
                             fontFamily: "Picasso",

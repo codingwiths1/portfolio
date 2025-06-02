@@ -5,11 +5,39 @@ import '../../../../utils/helper/color.dart';
 import '../../../desktop/screens/contact/contact.dart';
 import '../../../desktop/screens/home/home.dart';
 
-class TTabletContact extends StatelessWidget {
+class TTabletContact extends StatefulWidget {
   const TTabletContact({super.key});
 
   @override
+  State<TTabletContact> createState() => _TTabletContactState();
+}
+
+class _TTabletContactState extends State<TTabletContact> {
+  @override
+  void dispose() {
+    TFunction.firstName.clear();
+    TFunction.lastName.clear();
+    TFunction.email.clear();
+    TFunction.subject.clear();
+    TFunction.message.clear();
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    validate() {
+      var firstName = TFunction.firstName.text.trim();
+      if (firstName.isEmpty) {
+        TFunction.fieldValidation(
+            context, "first name", "First Name can't be empty");
+      } else if (TFunction.lastName.text.trim().isEmpty) {
+        TFunction.fieldValidation(
+            context, "last name", "Last Name can't be empty");
+      } else if (TFunction.email.text.trim().isEmpty) {
+        TFunction.fieldValidation(context, "email", "Email can't be empty");
+      } else {}
+    }
     return Scaffold(
       body: Stack(
         children: [
@@ -135,7 +163,7 @@ class TTabletContact extends StatelessWidget {
                               horizontal: 40,
                             ),
                           ),
-                          onPressed: () {},
+                          onPressed: validate,
                           child: TText(
                             text: "SEND",
                             fontFamily: "Picasso",
