@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -37,10 +36,11 @@ class _TMobileCheckoutState extends State<TMobileCheckout> {
   Widget build(BuildContext context) {
     final now = DateTime.now();
     final format = DateFormat("dd-MM-yyyy").format(now);
-    final TextEditingController subject = TextEditingController(text: widget.package);
+    final TextEditingController subject =
+        TextEditingController(text: widget.package);
     final TextEditingController message = TextEditingController(
         text:
-        "Hello Shalom, I’m interested in the ${widget.package}. I believe it aligns perfectly with the level of elegance and precision I’m seeking. Kindly guide me through the next steps.");
+            "Hello Shalom, I’m interested in the ${widget.package}. I believe it aligns perfectly with the level of elegance and precision I’m seeking. Kindly guide me through the next steps.");
 
     validate() {
       var firstName = TFunction.firstName.text.trim();
@@ -53,10 +53,10 @@ class _TMobileCheckoutState extends State<TMobileCheckout> {
       } else if (TFunction.email.text.trim().isEmpty) {
         TFunction.fieldValidation(context, "email", "Email can't be empty");
       } else {
-        // TFunction.confirmEmail(context);
+        TFunction.confirmEmail(context,
+            subject: subject.text.trim(), message: message.text.trim());
       }
     }
-
 
     return Scaffold(
       body: Stack(
@@ -283,7 +283,7 @@ class _TMobileCheckoutState extends State<TMobileCheckout> {
                                           ),
                                         ),
                                       ),
-                                      onPressed:validate,
+                                      onPressed: validate,
                                       child: TText(
                                         fontSize: 16,
                                         text: "BOOK AN APPOINTMENT",

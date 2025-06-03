@@ -11,9 +11,11 @@ import '../../front_end/route/route.dart';
 import '../../front_end/utils/helper/color.dart';
 import 'package:http/http.dart' as http;
 
+import '../../main.dart';
+
 class TFunction {
   static RxBool showing = false.obs;
-  static RxBool isLoaded = false.obs;
+  static bool isLoaded = false;
   static bool isTablet(BuildContext context) {
     return MediaQuery.of(context).size.width > 700 &&
         MediaQuery.of(context).size.width < 1200;
@@ -253,7 +255,10 @@ class TFunction {
 
   static sendEmail(BuildContext context, String subject, String message) async {
     try {
-      isLoaded.value = true;
+      isLoaded = true;
+      if (isLoaded) {
+        loader(nav.currentContext!);
+      }
       final url = Uri.parse("https://api.emailjs.com/api/v1.0/email/send");
 
       var request = await http.post(
@@ -276,13 +281,19 @@ class TFunction {
 
       if (request.statusCode == 200) {
         log("THIS IS THE RESPONSE ${request.body}");
-        successMessage(context);
+        isLoaded = false;
+        if (!isLoaded) {
+          Navigator.pop(nav.currentContext!);
+        }
+        successMessage(nav.currentContext!);
       }
     } catch (e) {
       log("THIS IS THE ERROR $e");
-      errorMessage(context);
-    } finally {
-      isLoaded.value = false;
+      isLoaded = false;
+      if (!isLoaded) {
+        Navigator.pop(nav.currentContext!);
+      }
+      errorMessage(nav.currentContext!);
     }
   }
 

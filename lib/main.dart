@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:portfolio/front_end/route/route.dart';
@@ -7,7 +6,6 @@ import 'package:url_strategy/url_strategy.dart';
 void main() {
   /// INITIALIZE WIDGETS
   WidgetsFlutterBinding.ensureInitialized();
-
 
   /// URL STRATEGY
   setPathUrlStrategy();
@@ -38,8 +36,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+final GlobalKey<NavigatorState> nav = GlobalKey<NavigatorState>();
 final GoRouter _router = GoRouter(
   routes: TRoutes.routes,
+  navigatorKey: nav,
   initialLocation: "/",
 );
-
