@@ -1,9 +1,5 @@
-import 'dart:convert';
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../back_end/function/function.dart';
@@ -11,7 +7,6 @@ import '../../../../utils/helper/color.dart';
 import '../../../../utils/widgets/constraints.dart';
 import '../about/about.dart';
 import '../contact/contact.dart';
-import 'package:http/http.dart' as http;
 import '../home/home.dart';
 
 class TDesktopCheckout extends StatefulWidget {
