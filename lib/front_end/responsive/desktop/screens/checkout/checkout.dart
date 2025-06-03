@@ -43,6 +43,9 @@ class _TDesktopCheckoutState extends State<TDesktopCheckout> {
     final format = DateFormat("dd-MM-yyyy").format(now);
     final TextEditingController subject =
         TextEditingController(text: widget.package);
+    final TextEditingController message = TextEditingController(
+        text:
+            "Hello Shalom, I’m interested in the ${widget.package}. I believe it aligns perfectly with the level of elegance and precision I’m seeking. Kindly guide me through the next steps.");
 
     validate() {
       var firstName = TFunction.firstName.text.trim();
@@ -277,7 +280,7 @@ class _TDesktopCheckoutState extends State<TDesktopCheckout> {
                                       TField(
                                         text: "MESSAGE",
                                         height: 150,
-                                        controller: TFunction.message,
+                                        controller: message,
                                       ),
                                       SizedBox(
                                         height: 100,

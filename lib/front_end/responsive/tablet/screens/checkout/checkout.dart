@@ -37,6 +37,9 @@ class _TTabletCheckoutState extends State<TTabletCheckout> {
     final now = DateTime.now();
     final format = DateFormat("dd-MM-yyyy").format(now);
     final TextEditingController subject = TextEditingController(text: widget.package);
+    final TextEditingController message = TextEditingController(
+        text:
+        "Hello Shalom, I’m interested in the ${widget.package}. I believe it aligns perfectly with the level of elegance and precision I’m seeking. Kindly guide me through the next steps.");
 
     validate() {
       var firstName = TFunction.firstName.text.trim();
@@ -230,44 +233,38 @@ class _TTabletCheckoutState extends State<TTabletCheckout> {
                               SizedBox(
                                 height: 35,
                               ),
-                              Form(
-                                child: Column(
-                                  children: [
-                                    TField(
-                                      text: "FIRST NAME",
-                                      controller: TFunction.firstName,
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    TField(
-                                      text: "LAST NAME",
-                                      controller: TFunction.lastName,
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    TField(
-                                      text: "SUBJECT",
-                                      controller: subject,
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    TField(
-                                      text: "EMAIL",
-                                      controller: TFunction.email,
-                                    ),
-                                    SizedBox(
-                                      height: 10,
-                                    ),
-                                    TField(
-                                      text: "MESSAGE",
-                                      height: 150,
-                                      controller: TFunction.message,
-                                    ),
-                                  ],
-                                ),
+                              TField(
+                                text: "FIRST NAME",
+                                controller: TFunction.firstName,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TField(
+                                text: "LAST NAME",
+                                controller: TFunction.lastName,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TField(
+                                text: "SUBJECT",
+                                controller: subject,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TField(
+                                text: "EMAIL",
+                                controller: TFunction.email,
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              TField(
+                                text: "MESSAGE",
+                                height: 150,
+                                controller: message,
                               ),
                               SizedBox(
                                 height: 100,

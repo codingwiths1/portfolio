@@ -287,7 +287,7 @@ class TField extends StatelessWidget {
               maxLines: height > 30 ? null : 1,
               style: TextStyle(
                   fontWeight: FontWeight.w100,
-                  fontSize: 14,
+                  fontSize: 14,letterSpacing: 2,
                   fontFamily: "Picasso"),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(
