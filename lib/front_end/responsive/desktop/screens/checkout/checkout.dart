@@ -1,6 +1,8 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:intl/intl.dart';
 
@@ -9,6 +11,7 @@ import '../../../../utils/helper/color.dart';
 import '../../../../utils/widgets/constraints.dart';
 import '../about/about.dart';
 import '../contact/contact.dart';
+import 'package:http/http.dart' as http;
 import '../home/home.dart';
 
 class TDesktopCheckout extends StatefulWidget {
@@ -36,6 +39,203 @@ class _TDesktopCheckoutState extends State<TDesktopCheckout> {
 
     super.dispose();
   }
+  // @override
+  // void initState() {
+  //   WidgetsBinding.instance.addPostFrameCallback((_)=>showDialog(
+  //     context: context,
+  //     builder: (context) => Dialog(
+  //       backgroundColor: TColors.black,
+  //       shape: RoundedRectangleBorder(
+  //         borderRadius: BorderRadius.circular(
+  //           0,
+  //         ),
+  //       ),
+  //       child: Column(
+  //         mainAxisSize: MainAxisSize.min,
+  //         children: [
+  //           Container(
+  //             padding: const EdgeInsets.all(
+  //               20,
+  //             ),
+  //             margin: EdgeInsets.all(
+  //               20,
+  //             ),
+  //             decoration: BoxDecoration(
+  //               border: Border.all(
+  //                 width: 0.5,
+  //                 color: Colors.white,
+  //               ),
+  //             ),
+  //             width: 400,
+  //             child: Center(
+  //               child: Column(
+  //                 mainAxisAlignment:
+  //                 MainAxisAlignment.spaceBetween,
+  //                 crossAxisAlignment:
+  //                 CrossAxisAlignment.start,
+  //                 children: [
+  //                   Column(
+  //                     mainAxisSize: MainAxisSize.min,
+  //                     crossAxisAlignment:
+  //                     CrossAxisAlignment.start,
+  //                     children: [
+  //                       Center(
+  //                         child: TText(
+  //                           text:
+  //                           "THANK YOU,",
+  //                           fontSize: 20,
+  //                           fontFamily: "Betty",
+  //                           letterSpacing: 4,
+  //                         ),
+  //                       ),
+  //                       SizedBox(
+  //                         height: 30,
+  //                       ),
+  //                       TText(
+  //                         text:
+  //                         "Your message has been received — we will respond promptly.",
+  //                         fontSize: 16,
+  //                         fontWeight: FontWeight.bold,
+  //                         letterSpacing: 4,
+  //                         fontFamily: "Picasso",
+  //                       ),
+  //                       SizedBox(
+  //                         height: 30,
+  //                       ),
+  //                       TText(
+  //                         text:
+  //                         "Expect an email confirmation shortly at ",
+  //                         fontWeight: FontWeight.w100,
+  //                         letterSpacing: 4,
+  //                         fontFamily: "Picasso",
+  //                       ),
+  //                       TText(
+  //                         text: "Hi",
+  //                         fontWeight: FontWeight.bold,
+  //                         letterSpacing: 4,
+  //                         fontFamily: "Picasso",
+  //                       ),
+  //                       SizedBox(
+  //                         height: 5,
+  //                       ),
+  //                       TText(
+  //                         text:
+  //                         "We look forward to crafting excellence together.",
+  //                         fontWeight: FontWeight.w100,
+  //                         letterSpacing: 4,
+  //                         fontFamily: "Picasso",
+  //                       ),
+  //                     ],
+  //                   ),
+  //                   SizedBox(
+  //                     height: 40,
+  //                   ),
+  //                   Column(
+  //                     crossAxisAlignment:
+  //                     CrossAxisAlignment.start,
+  //                     children: [
+  //                       SizedBox(
+  //                         height: 25,
+  //                         child: ElevatedButton(
+  //                           style: ElevatedButton
+  //                               .styleFrom(
+  //                             backgroundColor:
+  //                             TColors.white,
+  //                             fixedSize: Size(
+  //                               double.maxFinite,
+  //                               0,
+  //                             ),
+  //                             tapTargetSize:
+  //                             MaterialTapTargetSize
+  //                                 .shrinkWrap,
+  //                             padding:
+  //                             EdgeInsets.zero,
+  //                             shape:
+  //                             RoundedRectangleBorder(
+  //                               borderRadius:
+  //                               BorderRadius
+  //                                   .circular(
+  //                                 0,
+  //                               ),
+  //                             ),
+  //                           ),
+  //                           onPressed: () {
+  //                             Navigator.pop(context);
+  //
+  //                           },
+  //                           child: TText(
+  //                             text:
+  //                             "VIEW PACKAGES AGAIN",
+  //                             fontSize: 12,
+  //                             color: TColors.black,
+  //                             fontWeight:
+  //                             FontWeight.bold,
+  //                             letterSpacing: 2,
+  //                             fontFamily: "Picasso",
+  //                           ),
+  //                         ),
+  //                       ),
+  //                       SizedBox(
+  //                         height: 10,
+  //                       ),
+  //                       SizedBox(
+  //                         height: 25,
+  //                         child: ElevatedButton(
+  //                           style: ElevatedButton
+  //                               .styleFrom(
+  //                             backgroundColor:
+  //                             TColors.black,
+  //                             fixedSize: Size(
+  //                               double.maxFinite,
+  //                               0,
+  //                             ),
+  //                             tapTargetSize:
+  //                             MaterialTapTargetSize
+  //                                 .shrinkWrap,
+  //                             padding:
+  //                             EdgeInsets.zero,
+  //                             shape:
+  //                             RoundedRectangleBorder(
+  //                               side: BorderSide(
+  //                                 color:
+  //                                 TColors.white,
+  //                                 width: 1,
+  //                               ),
+  //                               borderRadius:
+  //                               BorderRadius
+  //                                   .circular(
+  //                                 0,
+  //                               ),
+  //                             ),
+  //                           ),
+  //                           onPressed: () {
+  //                             Navigator.pop(context);
+  //
+  //                           },
+  //                           child: TText(
+  //                             text:
+  //                             "RETURN TO HOMEPAGE",
+  //                             fontSize: 12,
+  //                             color: TColors.white,
+  //                             fontWeight:
+  //                             FontWeight.bold,
+  //                             letterSpacing: 2,
+  //                             fontFamily: "Picasso",
+  //                           ),
+  //                         ),
+  //                       ),
+  //                     ],
+  //                   )
+  //                 ],
+  //               ),
+  //             ),
+  //           ),
+  //         ],
+  //       ),
+  //     ),
+  //   ));
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +258,8 @@ class _TDesktopCheckoutState extends State<TDesktopCheckout> {
       } else if (TFunction.email.text.trim().isEmpty) {
         TFunction.fieldValidation(context, "email", "Email can't be empty");
       } else {
-        TFunction.confirmEmail(context);
+        TFunction.confirmEmail(context,
+            subject: subject.text.trim(), message: message.text.trim());
       }
     }
 

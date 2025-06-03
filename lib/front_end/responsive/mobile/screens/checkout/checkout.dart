@@ -53,7 +53,7 @@ class _TMobileCheckoutState extends State<TMobileCheckout> {
       } else if (TFunction.email.text.trim().isEmpty) {
         TFunction.fieldValidation(context, "email", "Email can't be empty");
       } else {
-        TFunction.confirmEmail(context);
+        // TFunction.confirmEmail(context);
       }
     }
 
