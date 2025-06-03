@@ -27,6 +27,12 @@ class _TDesktopContactState extends State<TDesktopContact> {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController subject =
+        TextEditingController(text: "Proposal for a Premium Website or App");
+    final TextEditingController message = TextEditingController(
+        text:
+            "I’m seeking a tailored web or mobile experience that reflects the sophistication of my brand. I would love to explore your premium packages and understand how we can collaborate.");
+
     validate() {
       var firstName = TFunction.firstName.text.trim();
       if (firstName.isEmpty) {
@@ -37,8 +43,12 @@ class _TDesktopContactState extends State<TDesktopContact> {
             context, "last name", "Last Name can't be empty");
       } else if (TFunction.email.text.trim().isEmpty) {
         TFunction.fieldValidation(context, "email", "Email can't be empty");
-      } else {}
+      } else {
+        TFunction.confirmEmail(context,
+            subject: subject.text.trim(), message: message.text.trim());
+      }
     }
+
     return Scaffold(
       body: TConstraints(
           child: Row(
@@ -139,7 +149,7 @@ class _TDesktopContactState extends State<TDesktopContact> {
                             Expanded(
                               child: TField(
                                 text: "SUBJECT",
-                                controller: TFunction.subject,
+                                controller: subject,
                               ),
                             ),
                           ],
@@ -150,7 +160,7 @@ class _TDesktopContactState extends State<TDesktopContact> {
                         TField(
                           text: "MESSAGE",
                           height: 150,
-                          controller: TFunction.message,
+                          controller: message,
                         ),
                         SizedBox(
                           height: 10,
@@ -287,7 +297,8 @@ class TField extends StatelessWidget {
               maxLines: height > 30 ? null : 1,
               style: TextStyle(
                   fontWeight: FontWeight.w100,
-                  fontSize: 14,letterSpacing: 2,
+                  fontSize: 14,
+                  letterSpacing: 2,
                   fontFamily: "Picasso"),
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(
