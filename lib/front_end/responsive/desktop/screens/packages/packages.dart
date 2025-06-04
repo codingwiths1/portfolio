@@ -98,7 +98,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "Brand",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -107,7 +107,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: " - ",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -116,7 +116,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "inspired color palette",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -125,7 +125,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: " & ",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -134,7 +134,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "typography",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -147,7 +147,7 @@ class TDesktopPackages extends StatelessWidget {
                                     text: "Premium contact form integration",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   days: 5,
                                 ),
@@ -178,7 +178,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "Basic SEO optimization",
                                           fontFamily: "AscendantSerif",
                                           color: TColors.black,
-                                          fontSize: 10,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
@@ -188,14 +188,14 @@ class TDesktopPackages extends StatelessWidget {
                                         "Strategic layout design for conversions",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   length: 2,
                                   details2: TText(
                                     text: "Premium mobile experience",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   days: 10,
                                 ),
@@ -209,7 +209,7 @@ class TDesktopPackages extends StatelessWidget {
                                         "Product showcase or portfolio integration",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   length: 3,
                                   details2: Text.rich(
@@ -219,7 +219,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "High",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -228,7 +228,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: " - ",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -237,7 +237,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "end contact or booking flow",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -267,7 +267,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "Priority revisions",
                                           fontFamily: "AscendantSerif",
                                           color: TColors.black,
-                                          fontSize: 10,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
@@ -295,7 +295,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "Custom full",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -304,7 +304,7 @@ class TDesktopPackages extends StatelessWidget {
                                           text: "-",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -314,7 +314,7 @@ class TDesktopPackages extends StatelessWidget {
                                               "width visuals, parallax design",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -327,7 +327,7 @@ class TDesktopPackages extends StatelessWidget {
                                     text: "Cinematic interactions",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   widget: Column(
                                     children: [
@@ -357,7 +357,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -368,7 +368,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -378,7 +378,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -416,7 +416,7 @@ class TDesktopPackages extends StatelessWidget {
                                                   "Luxury copywriting included",
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                             ),
                                           ),
                                         ],
@@ -450,7 +450,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -461,7 +461,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -471,7 +471,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -516,7 +516,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -527,7 +527,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -538,7 +538,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -580,7 +580,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -591,7 +591,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -601,7 +601,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -642,7 +642,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -653,7 +653,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -663,7 +663,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -674,7 +674,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -684,7 +684,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -694,7 +694,7 @@ class TDesktopPackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -716,14 +716,14 @@ class TDesktopPackages extends StatelessWidget {
                                     text: "Brand film or storytelling visuals",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   length: 5,
                                   details2: TText(
                                     text: "Ongoing digital care concierge",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   days: 25,
                                 ),
@@ -775,7 +775,7 @@ class TPackage extends StatelessWidget {
       children: [
         Container(
           width: 150,
-          height: 300,
+          height: 350,
           padding: EdgeInsets.all(
             10,
           ),
@@ -876,7 +876,7 @@ class TPackage extends StatelessWidget {
                   ),
                   TText(
                     text: description,
-                    fontSize: 9,
+                    fontSize: 14,
                     fontWeight: FontWeight.w100,
                     fontFamily: "AscendantSerif",
                   ),
@@ -988,7 +988,7 @@ class TPackage extends StatelessWidget {
                             text: (days + 5).toString(),
                             style: TextStyle(
                               overflow: TextOverflow.clip,
-                              fontSize: 10,
+                              fontSize: 14,
                               fontFamily: "AscendantSerif",
                               color: TColors.black,
                             ),
@@ -997,7 +997,7 @@ class TPackage extends StatelessWidget {
                             text: " - ",
                             style: TextStyle(
                               overflow: TextOverflow.clip,
-                              fontSize: 10,
+                              fontSize: 14,
                               fontFamily: "Inter",
                               color: TColors.black,
                             ),
@@ -1006,7 +1006,7 @@ class TPackage extends StatelessWidget {
                             text: "days delivery",
                             style: TextStyle(
                               overflow: TextOverflow.clip,
-                              fontSize: 10,
+                              fontSize: 14,
                               fontFamily: "AscendantSerif",
                               color: TColors.black,
                             ),
@@ -1021,7 +1021,7 @@ class TPackage extends StatelessWidget {
                 height: 20,
               ),
               SizedBox(
-                height: 20,
+                height: 30,
                 child: ElevatedButton(
                   onPressed: () {
                     context.go(
@@ -1045,7 +1045,7 @@ class TPackage extends StatelessWidget {
                   child: Center(
                     child: TText(
                       text: "BOOK NOW",
-                      fontSize: 8,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: TColors.white,
                     ),

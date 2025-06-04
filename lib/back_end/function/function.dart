@@ -235,7 +235,7 @@ class TFunction {
                         },
                         child: TText(
                           text: "TRY AGAIN",
-                          fontSize: 12,
+                          fontSize: 14,
                           color: TColors.black,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 2,
@@ -409,7 +409,7 @@ class TFunction {
                             },
                             child: TText(
                               text: "VIEW PACKAGES AGAIN",
-                              fontSize: 12,
+                              fontSize: 14,
                               color: TColors.black,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
@@ -447,7 +447,7 @@ class TFunction {
                             },
                             child: TText(
                               text: "RETURN TO HOMEPAGE",
-                              fontSize: 12,
+                              fontSize: 14,
                               color: TColors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
@@ -587,7 +587,7 @@ class TFunction {
                             },
                             child: TText(
                               text: "CONFIRM",
-                              fontSize: 12,
+                              fontSize: 14,
                               color: TColors.black,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,
@@ -624,7 +624,7 @@ class TFunction {
                             },
                             child: TText(
                               text: "EDIT EMAIL",
-                              fontSize: 12,
+                              fontSize: 14,
                               color: TColors.white,
                               fontWeight: FontWeight.bold,
                               letterSpacing: 2,

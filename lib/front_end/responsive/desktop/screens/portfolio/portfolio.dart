@@ -204,16 +204,20 @@ class TDesktopPortfolio extends StatelessWidget {
                                                     color: TColors.white,
                                                   ),
                                                 ),
-                                                child:  Center(
+                                                child: Center(
                                                   child: Column(
-                                                    mainAxisAlignment: MainAxisAlignment.center,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
                                                     children: [
                                                       Icon(
-                                                        Icons.error_outline_rounded,
+                                                        Icons
+                                                            .error_outline_rounded,
                                                         color: TColors.white,
                                                       ),
                                                       TText(
-                                                        text: "UNABLE TO LOAD IMAGE",
+                                                        text:
+                                                            "UNABLE TO LOAD IMAGE",
                                                         fontSize: 6,
                                                         color: TColors.white,
                                                       )
@@ -222,8 +226,8 @@ class TDesktopPortfolio extends StatelessWidget {
                                                 ),
                                               ),
                                             ),
-                                            frameBuilder: (context, child, frame,_) {
-
+                                            frameBuilder:
+                                                (context, child, frame, _) {
                                               if (frame != null) {
                                                 return child;
                                               } else {
@@ -256,7 +260,7 @@ class TDesktopPortfolio extends StatelessWidget {
                                                   text: tGridview[index]
                                                       ["title"],
                                                   fontFamily: "AscendantSerif",
-                                                  fontSize: 12,
+                                                  fontSize: 14,
                                                   fontWeight: FontWeight.bold,
                                                 ),
                                                 SizedBox(
@@ -266,7 +270,7 @@ class TDesktopPortfolio extends StatelessWidget {
                                                   text: tGridview[index]
                                                       ["text"],
                                                   fontFamily: "AscendantSerif",
-                                                  fontSize: 8,
+                                                  fontSize: 14,
                                                   fontWeight: FontWeight.w100,
                                                 ),
                                                 SizedBox(

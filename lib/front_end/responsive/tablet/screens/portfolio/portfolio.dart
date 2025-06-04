@@ -129,7 +129,7 @@ class TTabletPortfolio extends StatelessWidget {
                         child: TText(
                           text: "THE ATELIER",
                           letterSpacing: 6,
-                          fontSize: 30,
+                          fontSize: 40,
                           fontFamily: "Picasso",
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
@@ -166,7 +166,7 @@ class TTabletPortfolio extends StatelessWidget {
                       physics: NeverScrollableScrollPhysics(),
                       gridDelegate:
                           SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4,
+                        crossAxisCount: (MediaQuery.of(context).size.width/200).floor(),
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return Obx(
@@ -258,7 +258,7 @@ class TTabletPortfolio extends StatelessWidget {
                                     TText(
                                       text: tGridview[index]["title"],
                                       fontFamily: "AscendantSerif",
-                                      fontSize: 12,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                     ),
                                     SizedBox(
@@ -267,7 +267,7 @@ class TTabletPortfolio extends StatelessWidget {
                                     TText(
                                       text: tGridview[index]["text"],
                                       fontFamily: "AscendantSerif",
-                                      fontSize: 8,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w100,
                                     ),
                                     SizedBox(

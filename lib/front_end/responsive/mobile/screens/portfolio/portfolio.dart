@@ -13,6 +13,7 @@ class TMobilePortfolio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     RxList<bool> tapped = List.generate(12, (_) => false).obs;
     List<Map> tGridview = [
       {
@@ -128,7 +129,7 @@ class TMobilePortfolio extends StatelessWidget {
                         child: TText(
                           text: "THE ATELIER",
                           letterSpacing: 6,
-                          fontSize: 20,
+                          fontSize: 40,
                           fontFamily: "Picasso",
                           fontWeight: FontWeight.bold,
                           color: TColors.white,
@@ -165,7 +166,7 @@ class TMobilePortfolio extends StatelessWidget {
                       physics: NeverScrollableScrollPhysics(),
                       gridDelegate:
                           SliverSimpleGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4,
+                        crossAxisCount: (MediaQuery.of(context).size.width/200).floor(),
                       ),
                       itemBuilder: (BuildContext context, int index) {
                         return Obx(
@@ -259,7 +260,7 @@ class TMobilePortfolio extends StatelessWidget {
                                     TText(
                                       text: tGridview[index]["title"],
                                       fontFamily: "AscendantSerif",
-                                      fontSize: 12,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                     ),
                                     SizedBox(
@@ -268,7 +269,7 @@ class TMobilePortfolio extends StatelessWidget {
                                     TText(
                                       text: tGridview[index]["text"],
                                       fontFamily: "AscendantSerif",
-                                      fontSize: 8,
+                                      fontSize: 14,
                                       fontWeight: FontWeight.w100,
                                     ),
                                     SizedBox(

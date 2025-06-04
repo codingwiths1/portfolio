@@ -183,6 +183,7 @@ class TMobileHome extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+                SizedBox(height: 30,),
               ],
             ),
           ),

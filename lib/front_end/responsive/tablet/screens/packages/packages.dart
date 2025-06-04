@@ -85,7 +85,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "Brand",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -94,7 +94,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: " - ",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "Inter",
                                     color: TColors.black,
                                   ),
@@ -103,7 +103,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "inspired color palette",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -112,7 +112,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: " & ",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "Inter",
                                     color: TColors.black,
                                   ),
@@ -121,7 +121,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "typography",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -133,7 +133,7 @@ class TTabletPackages extends StatelessWidget {
                             text: "Premium contact form integration",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           days: 5,
                           length: 1,
@@ -164,7 +164,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "Basic SEO optimization",
                                   fontFamily: "AscendantSerif",
                                   color: TColors.black,
-                                  fontSize: 10,
+                                  fontSize: 14,
                                 ),
                               ),
                             ],
@@ -173,13 +173,13 @@ class TTabletPackages extends StatelessWidget {
                             text: "Strategic layout design for conversions",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           details2: TText(
                             text: "Premium mobile experience",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           days: 10,
                           length: 2,
@@ -193,7 +193,7 @@ class TTabletPackages extends StatelessWidget {
                             text: "Product showcase or portfolio integration",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           details2: Text.rich(
                             TextSpan(
@@ -202,7 +202,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "High",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -211,7 +211,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: " - ",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "Inter",
                                     color: TColors.black,
                                   ),
@@ -220,7 +220,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "end contact or booking flow",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -249,7 +249,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "Priority revisions",
                                   fontFamily: "AscendantSerif",
                                   color: TColors.black,
-                                  fontSize: 10,
+                                  fontSize: 14,
                                 ),
                               ),
                             ],
@@ -278,7 +278,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "Custom full",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -287,7 +287,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "-",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "Inter",
                                     color: TColors.black,
                                   ),
@@ -296,7 +296,7 @@ class TTabletPackages extends StatelessWidget {
                                   text: "width visuals, parallax design",
                                   style: TextStyle(
                                     overflow: TextOverflow.clip,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
                                   ),
@@ -308,7 +308,7 @@ class TTabletPackages extends StatelessWidget {
                             text: "Cinematic interactions",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           widget: Column(
                             children: [
@@ -336,7 +336,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "Fully bespoke UX",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -345,7 +345,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "/",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -354,7 +354,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "UX flow",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -389,7 +389,7 @@ class TTabletPackages extends StatelessWidget {
                                       text: "Luxury copywriting included",
                                       fontFamily: "AscendantSerif",
                                       color: TColors.black,
-                                      fontSize: 10,
+                                      fontSize: 14,
                                     ),
                                   ),
                                 ],
@@ -421,7 +421,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "Concierge",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -430,7 +430,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "-",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -439,7 +439,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "style collaboration",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -482,7 +482,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "E",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -491,7 +491,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "-",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -500,7 +500,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "commerce or booking systems",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -539,7 +539,7 @@ class TTabletPackages extends StatelessWidget {
                                                 "Advanced strategy, copy, design",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -548,7 +548,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: " & ",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -557,7 +557,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "launch",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -595,7 +595,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "Web",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -604,7 +604,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: " & ",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -613,7 +613,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "mobile apps,",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -622,7 +622,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: " full",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -631,7 +631,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "-",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "Inter",
                                               color: TColors.black,
                                             ),
@@ -640,7 +640,7 @@ class TTabletPackages extends StatelessWidget {
                                             text: "stack experience",
                                             style: TextStyle(
                                               overflow: TextOverflow.clip,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
                                             ),
@@ -661,13 +661,13 @@ class TTabletPackages extends StatelessWidget {
                             text: "Brand film or storytelling visuals",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           details2: TText(
                             text: "Ongoing digital care concierge",
                             fontFamily: "AscendantSerif",
                             color: TColors.black,
-                            fontSize: 10,
+                            fontSize: 14,
                           ),
                           days: 25,
                           length: 5,

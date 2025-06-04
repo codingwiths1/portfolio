@@ -195,7 +195,7 @@ class _TMobileCheckoutState extends State<TMobileCheckout> {
                                     letterSpacing: 2,
                                     fontFamily: "Picasso",
                                     fontWeight: FontWeight.w100,
-                                    fontSize: 12,
+                                    fontSize: 14,
                                   ),
                                 ),
                                 SizedBox(

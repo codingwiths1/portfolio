@@ -234,7 +234,7 @@ class TTabletTestimonials extends StatelessWidget {
                                         ),
                                         TText(
                                           text: details[index]["review"],
-                                          fontSize: 10,
+                                          fontSize: 14,
                                           fontStyle: FontStyle.italic,
                                         ),
                                       ],
@@ -257,14 +257,14 @@ class TTabletTestimonials extends StatelessWidget {
                                             fontStyle: FontStyle.italic,
                                             fontFamily: "AscendantSerif",
                                             fontWeight: FontWeight.w100,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                           ),
                                         ),
                                         TextSpan(
                                           text: " - ",
                                           style: TextStyle(
                                             fontWeight: FontWeight.w100,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                           ),
                                         ),
                                         TextSpan(
@@ -272,7 +272,7 @@ class TTabletTestimonials extends StatelessWidget {
                                           style: TextStyle(
                                             fontStyle: FontStyle.italic,
                                             fontWeight: FontWeight.w100,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                           ),
                                         ),
                                         TextSpan(
@@ -281,7 +281,7 @@ class TTabletTestimonials extends StatelessWidget {
                                             fontStyle: FontStyle.italic,
                                             fontFamily: "AscendantSerif",
                                             fontWeight: FontWeight.w100,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                           ),
                                         ),
                                       ],

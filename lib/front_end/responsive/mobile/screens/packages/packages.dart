@@ -95,7 +95,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "Brand",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -104,7 +104,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: " - ",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -113,7 +113,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "inspired color palette",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -122,7 +122,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: " & ",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -131,7 +131,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "typography",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -144,7 +144,7 @@ class TMobilePackages extends StatelessWidget {
                                     text: "Premium contact form integration",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   days: 5,
                                 ),
@@ -182,7 +182,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "Basic SEO optimization",
                                           fontFamily: "AscendantSerif",
                                           color: TColors.black,
-                                          fontSize: 10,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
@@ -192,13 +192,13 @@ class TMobilePackages extends StatelessWidget {
                                         "Strategic layout design for conversions",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   details2: TText(
                                     text: "Premium mobile experience",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   days: 10, length: 2,
                                 ),
@@ -219,7 +219,7 @@ class TMobilePackages extends StatelessWidget {
                                         "Product showcase or portfolio integration",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   details2: Text.rich(
                                     TextSpan(
@@ -228,7 +228,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "High",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -237,7 +237,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: " - ",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -246,7 +246,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "end contact or booking flow",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -276,7 +276,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "Priority revisions",
                                           fontFamily: "AscendantSerif",
                                           color: TColors.black,
-                                          fontSize: 10,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],
@@ -302,7 +302,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "Custom full",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -311,7 +311,7 @@ class TMobilePackages extends StatelessWidget {
                                           text: "-",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "Inter",
                                             color: TColors.black,
                                           ),
@@ -321,7 +321,7 @@ class TMobilePackages extends StatelessWidget {
                                               "width visuals, parallax design",
                                           style: TextStyle(
                                             overflow: TextOverflow.clip,
-                                            fontSize: 10,
+                                            fontSize: 14,
                                             fontFamily: "AscendantSerif",
                                             color: TColors.black,
                                           ),
@@ -333,7 +333,7 @@ class TMobilePackages extends StatelessWidget {
                                     text: "Cinematic interactions",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   widget: Column(
                                     children: [
@@ -363,7 +363,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -374,7 +374,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -384,7 +384,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -422,7 +422,7 @@ class TMobilePackages extends StatelessWidget {
                                                   "Luxury copywriting included",
                                               fontFamily: "AscendantSerif",
                                               color: TColors.black,
-                                              fontSize: 10,
+                                              fontSize: 14,
                                             ),
                                           ),
                                         ],
@@ -456,7 +456,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -467,7 +467,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -477,7 +477,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -529,7 +529,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -540,7 +540,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -551,7 +551,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -593,7 +593,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -604,7 +604,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -614,7 +614,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -655,7 +655,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -666,7 +666,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -676,7 +676,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -687,7 +687,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -697,7 +697,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily: "Inter",
                                                       color: TColors.black,
                                                     ),
@@ -707,7 +707,7 @@ class TMobilePackages extends StatelessWidget {
                                                     style: TextStyle(
                                                       overflow:
                                                           TextOverflow.clip,
-                                                      fontSize: 10,
+                                                      fontSize: 14,
                                                       fontFamily:
                                                           "AscendantSerif",
                                                       color: TColors.black,
@@ -729,13 +729,13 @@ class TMobilePackages extends StatelessWidget {
                                     text: "Brand film or storytelling visuals",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   details2: TText(
                                     text: "Ongoing digital care concierge",
                                     fontFamily: "AscendantSerif",
                                     color: TColors.black,
-                                    fontSize: 10,
+                                    fontSize: 14,
                                   ),
                                   days: 25, length: 5,
                                 ),

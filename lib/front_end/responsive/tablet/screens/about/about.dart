@@ -79,7 +79,7 @@ class TTabletAbout extends StatelessWidget {
                       child: TText(
                         text: "Bespoke Mobile Development",
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
+                        fontSize: 14,
                       ),
                     ),
                     SizedBox(
@@ -101,7 +101,7 @@ class TTabletAbout extends StatelessWidget {
                 TText(
                   text:
                       "I craft high-performance mobile apps tailored to reflect the unique identity and aspirations of your brand. Seamless functionality meets sophisticated design—built exclusively for those who value quality without compromise.",
-                  fontSize: 10,
+                  fontSize: 14,
                 ),
             ],
           ),
@@ -173,7 +173,7 @@ class TTabletAbout extends StatelessWidget {
                       child: TText(
                         text: "Elegant Web Experiences",
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
+                        fontSize: 14,
                       ),
                     ),
                     SizedBox(
@@ -195,7 +195,7 @@ class TTabletAbout extends StatelessWidget {
                 TText(
                   text:
                       "From minimalist landing pages to immersive digital platforms, I design and develop websites that not only look exceptional but perform flawlessly. Each line of code is precision-engineered to captivate and convert.",
-                  fontSize: 10,
+                  fontSize: 14,
                 ),
             ],
           ),
@@ -267,7 +267,7 @@ class TTabletAbout extends StatelessWidget {
                       child: TText(
                         text: "End-to-End Digital Craftsmanship",
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
+                        fontSize: 14,
                       ),
                     ),
                     SizedBox(
@@ -289,7 +289,7 @@ class TTabletAbout extends StatelessWidget {
                 TText(
                   text:
                       "From strategy to launch, I offer a seamless journey—blending design, development, and innovation into one cohesive experience. My work is never templated, always tailored, and designed to stand the test of time.",
-                  fontSize: 10,
+                  fontSize: 14,
                 ),
             ],
           ),
@@ -361,7 +361,7 @@ class TTabletAbout extends StatelessWidget {
                       child: TText(
                         text: "White-Glove Support & Collaboration",
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
+                        fontSize: 14,
                       ),
                     ),
                     SizedBox(
@@ -383,7 +383,7 @@ class TTabletAbout extends StatelessWidget {
                 TText(
                   text:
                       "Every project includes a level of personal attention reserved for luxury service. From the first consultation to post-launch refinement, I work closely with you—ensuring your vision is realized with clarity, confidence, and class.",
-                  fontSize: 10,
+                  fontSize: 14,
                 ),
             ],
           ),
@@ -502,7 +502,7 @@ class TTabletAbout extends StatelessWidget {
                         text:
                             "With a keen eye for detail and a passion for precision, I craft mobile and web experiences that exude sophistication and performance. As a seasoned developer, I partner with discerning clients to bring their boldest digital visions to life—flawlessly engineered, elegantly designed. Each project I touch reflects a commitment to excellence, because I don’t just build websites and apps—I create digital statements.",
                         fontWeight: FontWeight.w100,
-                        fontSize: 12,
+                        fontSize: 14,
                       ),
                       SizedBox(
                         height: 25,
